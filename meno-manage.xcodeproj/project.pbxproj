@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A00ED480C97A6D85E41356 /* Pods_meno_manage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */; };
 		ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC62021E102005DEE2E /* AppDelegate.swift */; };
 		ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC82021E102005DEE2E /* ViewController.swift */; };
 		ED1CDDCC2021E103005DEE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDCA2021E103005DEE2E /* Main.storyboard */; };
 		ED1CDDCE2021E103005DEE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDCD2021E103005DEE2E /* Assets.xcassets */; };
 		ED1CDDD12021E103005DEE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDCF2021E103005DEE2E /* LaunchScreen.storyboard */; };
+		ED1CDDD92021E230005DEE2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDD82021E230005DEE2E /* GoogleService-Info.plist */; };
+		ED1CDDDB2021E650005DEE2E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDDA2021E650005DEE2E /* SignUpViewController.swift */; };
+		ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */; };
+		ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB00202C91A500CBD69E /* PostViewController.swift */; };
+		ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB02202CC57E00CBD69E /* CommentCell.swift */; };
+		ED4BBB05202CD59800CBD69E /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB04202CD59800CBD69E /* CommentTableViewController.swift */; };
+		ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4A42028951B004E84B5 /* ShareSomethingCell.swift */; };
+		ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4A82028C001004E84B5 /* ShareSomething.swift */; };
+		ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */; };
+		ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */; };
+		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
+		EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4BE2029078F008C2A88 /* PostCell.swift */; };
+		EDFBD4C12029088E008C2A88 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4C02029088E008C2A88 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meno_manage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33D84BC58A5609BE5EC4022 /* Pods-meno-manage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meno-manage.release.xcconfig"; path = "Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage.release.xcconfig"; sourceTree = "<group>"; };
+		A38686F15C57A7693E326BDD /* Pods-meno-manage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meno-manage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage.debug.xcconfig"; sourceTree = "<group>"; };
 		ED1CDDC32021E102005DEE2E /* meno-manage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meno-manage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDDC62021E102005DEE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1CDDC82021E102005DEE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +39,19 @@
 		ED1CDDCD2021E103005DEE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED1CDDD02021E103005DEE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED1CDDD22021E103005DEE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED1CDDD82021E230005DEE2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED1CDDDA2021E650005DEE2E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		ED4BBB00202C91A500CBD69E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		ED4BBB02202CC57E00CBD69E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		ED4BBB04202CD59800CBD69E /* CommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
+		ED66B4A42028951B004E84B5 /* ShareSomethingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSomethingCell.swift; sourceTree = "<group>"; };
+		ED66B4A82028C001004E84B5 /* ShareSomething.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSomething.swift; sourceTree = "<group>"; };
+		ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
+		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EDFBD4BE2029078F008C2A88 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		EDFBD4C02029088E008C2A88 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A00ED480C97A6D85E41356 /* Pods_meno_manage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB375DA21C18433B64F59C65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDFA78E8CF33EF1C8A052E51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A38686F15C57A7693E326BDD /* Pods-meno-manage.debug.xcconfig */,
+				A33D84BC58A5609BE5EC4022 /* Pods-meno-manage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED1CDDBA2021E102005DEE2E = {
 			isa = PBXGroup;
 			children = (
 				ED1CDDC52021E102005DEE2E /* meno-manage */,
 				ED1CDDC42021E102005DEE2E /* Products */,
+				DDFA78E8CF33EF1C8A052E51 /* Pods */,
+				BB375DA21C18433B64F59C65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +104,51 @@
 		ED1CDDC52021E102005DEE2E /* meno-manage */ = {
 			isa = PBXGroup;
 			children = (
+				ED4BBAFF202C90FB00CBD69E /* Controller */,
+				ED66B4A7202897A4004E84B5 /* Model */,
+				ED66B4A3202894DE004E84B5 /* View */,
 				ED1CDDC62021E102005DEE2E /* AppDelegate.swift */,
-				ED1CDDC82021E102005DEE2E /* ViewController.swift */,
 				ED1CDDCA2021E103005DEE2E /* Main.storyboard */,
 				ED1CDDCD2021E103005DEE2E /* Assets.xcassets */,
 				ED1CDDCF2021E103005DEE2E /* LaunchScreen.storyboard */,
+				ED1CDDD82021E230005DEE2E /* GoogleService-Info.plist */,
 				ED1CDDD22021E103005DEE2E /* Info.plist */,
 			);
 			path = "meno-manage";
+			sourceTree = "<group>";
+		};
+		ED4BBAFF202C90FB00CBD69E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDCC3AB2202385630051B132 /* ProfileViewController.swift */,
+				ED1CDDC82021E102005DEE2E /* ViewController.swift */,
+				ED1CDDDA2021E650005DEE2E /* SignUpViewController.swift */,
+				ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */,
+				ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */,
+				ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */,
+				ED4BBB00202C91A500CBD69E /* PostViewController.swift */,
+				ED4BBB04202CD59800CBD69E /* CommentTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED66B4A3202894DE004E84B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED66B4A42028951B004E84B5 /* ShareSomethingCell.swift */,
+				EDFBD4BE2029078F008C2A88 /* PostCell.swift */,
+				ED4BBB02202CC57E00CBD69E /* CommentCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED66B4A7202897A4004E84B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED66B4A82028C001004E84B5 /* ShareSomething.swift */,
+				EDFBD4C02029088E008C2A88 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED1CDDD52021E103005DEE2E /* Build configuration list for PBXNativeTarget "meno-manage" */;
 			buildPhases = (
+				C89EFBED5176456633D6F66F /* [CP] Check Pods Manifest.lock */,
 				ED1CDDBF2021E102005DEE2E /* Sources */,
 				ED1CDDC02021E102005DEE2E /* Frameworks */,
 				ED1CDDC12021E102005DEE2E /* Resources */,
+				D690E62D685672401C449691 /* [CP] Embed Pods Frameworks */,
+				2C5D4C60E97CEE671C7D2D2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1CDDD12021E103005DEE2E /* LaunchScreen.storyboard in Resources */,
+				ED1CDDD92021E230005DEE2E /* GoogleService-Info.plist in Resources */,
 				ED1CDDCE2021E103005DEE2E /* Assets.xcassets in Resources */,
 				ED1CDDCC2021E103005DEE2E /* Main.storyboard in Resources */,
 			);
@@ -131,13 +222,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C5D4C60E97CEE671C7D2D2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C89EFBED5176456633D6F66F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meno-manage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D690E62D685672401C449691 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED1CDDBF2021E102005DEE2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */,
+				ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */,
+				ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */,
+				EDFBD4C12029088E008C2A88 /* Post.swift in Sources */,
+				ED1CDDDB2021E650005DEE2E /* SignUpViewController.swift in Sources */,
+				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
+				ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */,
+				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
+				ED4BBB05202CD59800CBD69E /* CommentTableViewController.swift in Sources */,
+				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,
+				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,
+				EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,10 +437,11 @@
 		};
 		ED1CDDD62021E103005DEE2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A38686F15C57A7693E326BDD /* Pods-meno-manage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AD5EA25C5U;
+				DEVELOPMENT_TEAM = M8W8RAWNQB;
 				INFOPLIST_FILE = "meno-manage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chriscampbell.meno-manage";
@@ -287,10 +453,11 @@
 		};
 		ED1CDDD72021E103005DEE2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33D84BC58A5609BE5EC4022 /* Pods-meno-manage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AD5EA25C5U;
+				DEVELOPMENT_TEAM = M8W8RAWNQB;
 				INFOPLIST_FILE = "meno-manage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chriscampbell.meno-manage";

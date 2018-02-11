@@ -1,0 +1,6 @@
+framework module Pods_meno_manage {
+  umbrella header "Pods-meno-manage-umbrella.h"
+
+  export *
+  module * { export * }
+}
