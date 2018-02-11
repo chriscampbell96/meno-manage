@@ -73,6 +73,7 @@ class CommunityViewController: UITableViewController {
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             cell.configCell(post: post)
+            refreshControl?.endRefreshing()
             return cell
         }else{
             return PostCell()

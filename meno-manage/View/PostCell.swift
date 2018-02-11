@@ -21,7 +21,7 @@ class PostCell: UITableViewCell {
     
     func configCell(post: Post) {
         self.post = post
-        self.username.text = post.username
+        self.username.text = "@" + post.username
         self.postText.text = post.postText
         
     }

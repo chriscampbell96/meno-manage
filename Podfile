@@ -12,5 +12,6 @@ pod 'FirebaseAuth'
 pod 'FirebaseDatabase'
 pod 'SwiftKeychainWrapper'
 pod 'FirebaseStorage'
+pod 'RealmSwift'
 
 end

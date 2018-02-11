@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DED5E3B9477607BD6B098EA6D7F4C8BF"
+               BlueprintIdentifier = "7B17EDC2157939E86E165C074325260B"
                BuildableName = "Pods_meno_manage.framework"
                BlueprintName = "Pods-meno-manage"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DED5E3B9477607BD6B098EA6D7F4C8BF"
+            BlueprintIdentifier = "7B17EDC2157939E86E165C074325260B"
             BuildableName = "Pods_meno_manage.framework"
             BlueprintName = "Pods-meno-manage"
             ReferencedContainer = "container:Pods.xcodeproj">
