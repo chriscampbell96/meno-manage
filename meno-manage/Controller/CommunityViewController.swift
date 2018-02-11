@@ -16,7 +16,7 @@ class CommunityViewController: UITableViewController {
     var selectedPost: Post!
     
 
-
+//testing GIT
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
