@@ -16,9 +16,10 @@
 		ED1CDDD92021E230005DEE2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDD82021E230005DEE2E /* GoogleService-Info.plist */; };
 		ED1CDDDB2021E650005DEE2E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDDA2021E650005DEE2E /* SignUpViewController.swift */; };
 		ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */; };
+		ED1DA6D72031B5FD0033A440 /* CommentPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DA6D62031B5FD0033A440 /* CommentPostViewController.swift */; };
 		ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB00202C91A500CBD69E /* PostViewController.swift */; };
 		ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB02202CC57E00CBD69E /* CommentCell.swift */; };
-		ED4BBB05202CD59800CBD69E /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB04202CD59800CBD69E /* CommentTableViewController.swift */; };
+		ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB04202CD59800CBD69E /* CommentViewController.swift */; };
 		ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4A42028951B004E84B5 /* ShareSomethingCell.swift */; };
 		ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4A82028C001004E84B5 /* ShareSomething.swift */; };
 		ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */; };
@@ -42,9 +43,10 @@
 		ED1CDDD82021E230005DEE2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED1CDDDA2021E650005DEE2E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		ED1DA6D62031B5FD0033A440 /* CommentPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostViewController.swift; sourceTree = "<group>"; };
 		ED4BBB00202C91A500CBD69E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		ED4BBB02202CC57E00CBD69E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		ED4BBB04202CD59800CBD69E /* CommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
+		ED4BBB04202CD59800CBD69E /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		ED66B4A42028951B004E84B5 /* ShareSomethingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSomethingCell.swift; sourceTree = "<group>"; };
 		ED66B4A82028C001004E84B5 /* ShareSomething.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSomething.swift; sourceTree = "<group>"; };
 		ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +129,8 @@
 				ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */,
 				ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */,
 				ED4BBB00202C91A500CBD69E /* PostViewController.swift */,
-				ED4BBB04202CD59800CBD69E /* CommentTableViewController.swift */,
+				ED4BBB04202CD59800CBD69E /* CommentViewController.swift */,
+				ED1DA6D62031B5FD0033A440 /* CommentPostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */,
+				ED1DA6D72031B5FD0033A440 /* CommentPostViewController.swift in Sources */,
 				ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */,
 				ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */,
 				EDFBD4C12029088E008C2A88 /* Post.swift in Sources */,
@@ -301,7 +305,7 @@
 				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
 				ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */,
 				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
-				ED4BBB05202CD59800CBD69E /* CommentTableViewController.swift in Sources */,
+				ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */,
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,

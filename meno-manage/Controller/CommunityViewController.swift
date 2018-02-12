@@ -27,6 +27,13 @@ class CommunityViewController: UITableViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(logoutPress))
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+      self.tableView.reloadData()
+      getPosts()
+    }
+    
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0;//Choose your custom row height
     }
@@ -35,6 +42,16 @@ class CommunityViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toComments"?:
+            let destination = segue.destination as! CommentViewController
+            destination.post = self.selectedPost
+        default:
+            return
+        }
     }
     
     func getUsersData(){
@@ -74,10 +91,21 @@ class CommunityViewController: UITableViewController {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             cell.configCell(post: post)
             refreshControl?.endRefreshing()
+            cell.commentBtn.addTarget(self, action: #selector(toComments(_:)), for: .touchUpInside)
             return cell
         }else{
             return PostCell()
         }
+    }
+    
+    @objc func toComments(_ sender: AnyObject) {
+        
+        let buttonPosition = sender.convert(CGPoint.zero, to: tableView)
+        let indexPath: IndexPath? =  tableView.indexPathForRow(at: buttonPosition)
+        
+        selectedPost = posts[(indexPath?.row)!]
+        performSegue(withIdentifier: "toComments", sender: nil)
+        
     }
 
     

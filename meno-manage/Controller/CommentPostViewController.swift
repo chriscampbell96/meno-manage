@@ -1,30 +1,34 @@
 //
-//  PostViewController.swift
+//  CommentPostViewController.swift
 //  meno-manage
 //
-//  Created by Christopher Campbell on 08/02/2018.
+//  Created by Christopher Campbell on 12/02/2018.
 //  Copyright © 2018 DevChris. All rights reserved.
 //
+
 
 import UIKit
 import Firebase
 
-class PostViewController: UIViewController {
+
+class CommentPostViewController: UIViewController {
     
     @IBOutlet weak var postText: UITextView!
-
+    
+    var passedPostId: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     @IBAction func post(_ sender: AnyObject) {
         let userID = Auth.auth().currentUser?.uid
         Database.database().reference().child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -42,14 +46,12 @@ class PostViewController: UIViewController {
                 "postText": self.postText.text as AnyObject
             ]
             
-            let firebasePost = Database.database().reference().child("postText").childByAutoId()
+            let firebasePost = Database.database().reference().child("postText").child(self.passedPostId!).child("comments").childByAutoId()
             firebasePost.setValue(post)
-            _ = self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
         }) { (error) in
             print(error.localizedDescription)
         }
     }
-
+    
 }
-
-//postSuccess
