@@ -56,12 +56,14 @@ class MoodTableViewController: UITableViewController {
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "editMood"{
             let destination = segue.destination as! PostMoodViewController
-            //todo
-//            let mood = moods[MoodTableViewController.indexPath.row]
-//            destination.incomingMood = mood
+            let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: tableView)
+            let indexPath: IndexPath? =  tableView.indexPathForRow(at: buttonPosition)
+            
+            let mood = moods[(indexPath?.row)!]
+            destination.incomingMood = mood
             
         }
     }

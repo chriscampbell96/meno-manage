@@ -15,6 +15,7 @@ class PostMoodViewController: UIViewController {
     let realm = try! Realm()
     var incomingMood: Mood? = nil
 
+
     
     
     @IBOutlet weak var moodLoggedText: UITextField!
@@ -24,6 +25,12 @@ class PostMoodViewController: UIViewController {
     @IBOutlet weak var commentLoggedText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let goodMood = incomingMood {
+            moodLoggedText.text = goodMood.mood
+            activitiesLoggedText.text = goodMood.activities
+            commentLoggedText.text = goodMood.comment
+
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -31,7 +38,6 @@ class PostMoodViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,14 +45,26 @@ class PostMoodViewController: UIViewController {
     }
     
     @IBAction func postMood(_ sender: AnyObject) {
-        let mood = Mood()
-        mood.mood = moodLoggedText.text!
-        mood.activities = activitiesLoggedText.text!
-        mood.comment = commentLoggedText.text!
         
-        try! realm.write {
-            realm.add(mood)
+        
+        if let goodMood = incomingMood {
+            try! realm.write{
+                goodMood.mood = moodLoggedText.text!
+                goodMood.comment = commentLoggedText.text!
+                goodMood.activities = activitiesLoggedText.text!
+            }
+        }else{
+            let mood = Mood()
+            mood.mood = moodLoggedText.text!
+            mood.activities = activitiesLoggedText.text!
+            mood.comment = commentLoggedText.text!
+            
+            try! realm.write {
+                realm.add(mood)
+            }
+            
         }
+
         
         navigationController?.popViewController(animated: true)
     }
