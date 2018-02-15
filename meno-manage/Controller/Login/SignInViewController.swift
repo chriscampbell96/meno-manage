@@ -19,8 +19,12 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
 //    override func viewDidAppear(_ animated: Bool) {
 //        if let _ = KeychainWrapper.standard.string(forKey: "uid"){
@@ -44,7 +48,9 @@ class SignInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
- 
+    
+    //Calls this function when the tap is recognized.
+
 
     @IBAction func signInPress(_ sender: Any) {
 

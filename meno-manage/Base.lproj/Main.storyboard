@@ -399,19 +399,69 @@
         <!--myMood-->
         <scene sceneID="dQn-ys-oow">
             <objects>
-                <tableViewController id="NJ7-xh-FrD" sceneMemberID="viewController">
+                <tableViewController id="NJ7-xh-FrD" customClass="MoodTableViewController" customModule="meno_manage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qhI-3s-Xkw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f39-Rb-h6f">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoodCell" rowHeight="114" id="f39-Rb-h6f" customClass="MoodCell" customModule="meno_manage" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f39-Rb-h6f" id="PLr-N1-sRJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2nA-s9-Zyp">
+                                            <rect key="frame" x="81" y="5" width="42" height="103.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niI-qe-TWs" customClass="dateLogged">
+                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c81-GI-bNM" customClass="moodLogged">
+                                                    <rect key="frame" x="0.0" y="21.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9t-0U-0U1" customClass="timeLogged">
+                                                    <rect key="frame" x="0.0" y="42" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emp-e2-nwx" customClass="activitiesLogged">
+                                                    <rect key="frame" x="0.0" y="62.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhS-RB-0Ki" customClass="commentLogged">
+                                                    <rect key="frame" x="0.0" y="83" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2nA-s9-Zyp" firstAttribute="top" secondItem="PLr-N1-sRJ" secondAttribute="top" constant="5" id="H6P-zj-y8Y"/>
+                                        <constraint firstItem="2nA-s9-Zyp" firstAttribute="leading" secondItem="PLr-N1-sRJ" secondAttribute="leading" constant="81" id="JIL-UW-Ljl"/>
+                                        <constraint firstAttribute="bottom" secondItem="2nA-s9-Zyp" secondAttribute="bottom" constant="5" id="zbI-Nm-72Y"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activitiesLogged" destination="emp-e2-nwx" id="KuO-Ic-J2z"/>
+                                    <outlet property="commentLogged" destination="hhS-RB-0Ki" id="uaH-7p-CVv"/>
+                                    <outlet property="dateLogged" destination="niI-qe-TWs" id="7gW-dT-z3o"/>
+                                    <outlet property="moodLogged" destination="c81-GI-bNM" id="Lcw-7M-x35"/>
+                                    <outlet property="timeLogged" destination="x9t-0U-0U1" id="3mf-CD-XD3"/>
+                                    <segue destination="HM6-dy-DEx" kind="show" identifier="editMood" id="XCY-MT-ZUf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -429,19 +479,53 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s0-Xl-pXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4359" y="-697"/>
+            <point key="canvasLocation" x="4357.6000000000004" y="-697.60119940029995"/>
         </scene>
         <!--Add New Mood-->
         <scene sceneID="UZ6-ig-a18">
             <objects>
-                <viewController id="HM6-dy-DEx" sceneMemberID="viewController">
+                <viewController id="HM6-dy-DEx" customClass="PostMoodViewController" customModule="meno_manage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FWd-I2-SGo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mood" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyR-DO-G6Q">
+                                <rect key="frame" x="139" y="160" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="activities" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-Ix-SWp">
+                                <rect key="frame" x="67" y="247" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="comments" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COa-vN-miB">
+                                <rect key="frame" x="67" y="424" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TcD-ks-jog"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Mood" id="xoV-dx-dd4"/>
+                    <navigationItem key="navigationItem" title="Add New Mood" id="xoV-dx-dd4">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="yca-dq-YxZ">
+                            <connections>
+                                <action selector="postMood:" destination="HM6-dy-DEx" id="8OK-ps-jQ6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activitiesLoggedText" destination="cBV-Ix-SWp" id="W2I-6X-3Ig"/>
+                        <outlet property="commentLoggedText" destination="COa-vN-miB" id="pUm-O1-LjV"/>
+                        <outlet property="moodLoggedText" destination="SyR-DO-G6Q" id="2Yx-l8-ggg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wn0-Rx-I4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -737,6 +821,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="eSc-aZ-SeB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="abm-9Q-v3X">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -756,6 +841,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="bXI-GE-e7R"/>
         <segue reference="BM4-oJ-7N4"/>
+        <segue reference="XCY-MT-ZUf"/>
         <segue reference="d7k-Rg-une"/>
     </inferredMetricsTieBreakers>
 </document>
