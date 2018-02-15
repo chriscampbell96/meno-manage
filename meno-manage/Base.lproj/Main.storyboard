@@ -317,41 +317,28 @@
                         <color key="backgroundColor" red="0.99982005360000004" green="0.82439512010000005" blue="0.97950392959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Vve-rM-AmH" kind="relationship" relationship="rootViewController" id="c2x-xc-35K"/>
+                        <segue destination="Naq-zG-jBV" kind="relationship" relationship="rootViewController" id="f3w-Dr-3YJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdO-vd-Z7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3389" y="-2240"/>
         </scene>
-        <!--Learn & Discover-->
-        <scene sceneID="5yC-cx-AbW">
+        <!--Learn-->
+        <scene sceneID="CIT-Hx-L5q">
             <objects>
-                <tableViewController id="Vve-rM-AmH" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N0d-US-z1q">
+                <viewController id="Naq-zG-jBV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1cp-e3-aao">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HjC-Iu-s02">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HjC-Iu-s02" id="7Qf-ff-rsR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Vve-rM-AmH" id="8zn-aQ-0MN"/>
-                            <outlet property="delegate" destination="Vve-rM-AmH" id="B5y-4y-53r"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Learn &amp; Discover" id="4rD-tZ-oug"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gwq-98-3i8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="z3H-yd-m6R"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Learn" id="QYp-BN-Xrw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pgz-z7-qAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4340" y="-2235"/>
+            <point key="canvasLocation" x="4333.6000000000004" y="-2240.3298350824589"/>
         </scene>
         <!--Symptom Checker-->
         <scene sceneID="x6j-WW-iEz">

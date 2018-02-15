@@ -201,9 +201,40 @@
 			path = myMood;
 			sourceTree = "<group>";
 		};
+		ED2C92272036138500261475 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		ED2C92282036138F00261475 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ED2C92292036139600261475 /* mySymptoms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mySymptoms;
+			sourceTree = "<group>";
+		};
+		ED2C922A2036148400261475 /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
 		ED4BBAFF202C90FB00CBD69E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED2C92292036139600261475 /* mySymptoms */,
+				ED2C92282036138F00261475 /* Home */,
+				ED2C92272036138500261475 /* Learn */,
 				ED2C50B420337D3000CB828C /* User Profile */,
 				ED2C50B320337D1500CB828C /* Login */,
 				ED2C50B220337CE300CB828C /* myCommunity */,
@@ -215,6 +246,7 @@
 		ED66B4A3202894DE004E84B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED2C922A2036148400261475 /* Learn */,
 				ED2C50B820337E6500CB828C /* myMood */,
 				ED2C50B720337D6400CB828C /* myCommunity */,
 			);
@@ -344,7 +376,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
@@ -355,7 +386,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
