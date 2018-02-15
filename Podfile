@@ -13,5 +13,6 @@ pod 'FirebaseDatabase'
 pod 'SwiftKeychainWrapper'
 pod 'FirebaseStorage'
 pod 'RealmSwift'
+pod 'RAMAnimatedTabBarController'
 
 end
