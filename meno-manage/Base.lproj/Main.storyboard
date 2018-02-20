@@ -327,18 +327,95 @@
         <!--Learn-->
         <scene sceneID="CIT-Hx-L5q">
             <objects>
-                <viewController id="Naq-zG-jBV" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Naq-zG-jBV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1cp-e3-aao">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yc-bD-yVa">
+                                <rect key="frame" x="164" y="183" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Videos"/>
+                                <connections>
+                                    <segue destination="jrz-8I-yBz" kind="show" id="atz-8g-DOK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-3F-pq4">
+                                <rect key="frame" x="162" y="221" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Articles"/>
+                                <connections>
+                                    <segue destination="6UB-a0-yXy" kind="show" id="xDN-mn-6Iy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="z3H-yd-m6R"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Learn" id="QYp-BN-Xrw"/>
+                    <navigationItem key="navigationItem" title="Learn" id="QYp-BN-Xrw">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="V8l-dY-X5G">
+                            <rect key="frame" x="126" y="7" width="123" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Videos"/>
+                                <segment title="Articles"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgz-z7-qAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4333.6000000000004" y="-2240.3298350824589"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="xoT-rv-GDp">
+            <objects>
+                <tableViewController id="jrz-8I-yBz" customClass="LearnTableViewController" customModule="meno_manage" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Atz-mW-ct0" customClass="Learn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="180" id="79m-gG-Shu">
+                                <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="79m-gG-Shu" id="peA-EK-Blq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLh-BB-Efu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p76-35-pIb">
+                                            <rect key="frame" x="20" y="100" width="335" height="80"/>
+                                            <color key="backgroundColor" red="0.16364182692307694" green="0.16364182692307694" blue="0.16364182692307694" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="6zN-4T-qZs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="p76-35-pIb" secondAttribute="trailing" constant="20" id="Lf9-wi-f0k"/>
+                                        <constraint firstAttribute="bottom" secondItem="p76-35-pIb" secondAttribute="bottom" id="M21-bE-hQx"/>
+                                        <constraint firstItem="p76-35-pIb" firstAttribute="leading" secondItem="peA-EK-Blq" secondAttribute="leading" constant="20" id="pww-gR-qIG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jrz-8I-yBz" id="vbQ-Xt-yTw"/>
+                            <outlet property="delegate" destination="jrz-8I-yBz" id="EkG-7H-yiC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Videos" id="yKR-0g-FSC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLm-4c-wpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5341.6000000000004" y="-2082.008995502249"/>
         </scene>
         <!--Symptom Checker-->
         <scene sceneID="x6j-WW-iEz">
@@ -879,6 +956,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KI-18-0dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2494" y="43"/>
+        </scene>
+        <!--Articles-->
+        <scene sceneID="enK-sB-caf">
+            <objects>
+                <tableViewController id="6UB-a0-yXy" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xle-EZ-L9t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="6UB-a0-yXy" id="Es0-4t-DKO"/>
+                            <outlet property="delegate" destination="6UB-a0-yXy" id="pWb-rU-Zky"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Articles" id="7qv-vh-YvN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdy-WA-ymD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5342" y="-2775"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

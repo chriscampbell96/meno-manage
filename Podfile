@@ -13,6 +13,7 @@ pod 'FirebaseDatabase'
 pod 'SwiftKeychainWrapper'
 pod 'FirebaseStorage'
 pod 'RealmSwift'
+pod 'Alamofire', '~> 4.5'
 
 
 end

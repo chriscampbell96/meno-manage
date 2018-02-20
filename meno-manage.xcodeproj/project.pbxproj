@@ -21,6 +21,9 @@
 		ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50B920337EA500CB828C /* MoodCell.swift */; };
 		ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */; };
 		ED2C50BE20338A9100CB828C /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50BD20338A9100CB828C /* Mood.swift */; };
+		ED490AC6203753790042136F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490AC5203753790042136F /* Video.swift */; };
+		ED490AC92037543B0042136F /* videoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490AC82037543B0042136F /* videoModel.swift */; };
+		ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490ACA2037581B0042136F /* LearnTableViewController.swift */; };
 		ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB00202C91A500CBD69E /* PostViewController.swift */; };
 		ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB02202CC57E00CBD69E /* CommentCell.swift */; };
 		ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB04202CD59800CBD69E /* CommentViewController.swift */; };
@@ -52,6 +55,9 @@
 		ED2C50B920337EA500CB828C /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMoodViewController.swift; sourceTree = "<group>"; };
 		ED2C50BD20338A9100CB828C /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		ED490AC5203753790042136F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		ED490AC82037543B0042136F /* videoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoModel.swift; sourceTree = "<group>"; };
+		ED490ACA2037581B0042136F /* LearnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewController.swift; sourceTree = "<group>"; };
 		ED4BBB00202C91A500CBD69E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		ED4BBB02202CC57E00CBD69E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		ED4BBB04202CD59800CBD69E /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 		ED2C92272036138500261475 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
+				ED490ACA2037581B0042136F /* LearnTableViewController.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -225,6 +232,15 @@
 		ED2C922A2036148400261475 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		ED490AC7203754080042136F /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				ED490AC5203753790042136F /* Video.swift */,
+				ED490AC82037543B0042136F /* videoModel.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -256,6 +272,7 @@
 		ED66B4A7202897A4004E84B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED490AC7203754080042136F /* Learn */,
 				ED2C50BF20338A9700CB828C /* myMood */,
 				ED2C50B620337D5500CB828C /* myCommunity */,
 			);
@@ -374,6 +391,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -384,6 +402,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -415,13 +434,16 @@
 				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
 				ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */,
 				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
+				ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */,
 				ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */,
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
+				ED490AC92037543B0042136F /* videoModel.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,
 				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,
 				ED2C50BE20338A9100CB828C /* Mood.swift in Sources */,
 				ED2C50AF20337CB400CB828C /* MoodTableViewController.swift in Sources */,
+				ED490AC6203753790042136F /* Video.swift in Sources */,
 				EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

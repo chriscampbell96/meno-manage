@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.6.0)
   - Firebase (4.9.0):
     - Firebase/Core (= 4.9.0)
   - Firebase/Core (4.9.0):
@@ -50,6 +51,7 @@ PODS:
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.5)
   - Firebase
   - Firebase/Core
   - FirebaseAuth
@@ -59,6 +61,7 @@ DEPENDENCIES:
   - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: aaaf68d5064a6c8fec435758f83a43b8db26ccaa
@@ -74,6 +77,6 @@ SPEC CHECKSUMS:
   RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 3ab8ae2772a8feac81e259e9ef52eaa7f3b8a208
+PODFILE CHECKSUM: ae2e71143f874354552598d7049f34aa25e25cd5
 
 COCOAPODS: 1.4.0
