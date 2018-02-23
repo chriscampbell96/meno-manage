@@ -14,6 +14,8 @@ pod 'SwiftKeychainWrapper'
 pod 'FirebaseStorage'
 pod 'RealmSwift'
 pod 'Alamofire', '~> 4.5'
+pod 'Charts'
+pod 'ChartsRealm'
 
 
 end

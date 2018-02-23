@@ -23,12 +23,18 @@ class PostMoodViewController: UIViewController {
     @IBOutlet weak var activitiesLoggedText: UITextView!
     
     @IBOutlet weak var commentLoggedText: UITextView!
+    
+    @IBOutlet weak var dateLoggedLBL: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let goodMood = incomingMood {
             moodLoggedText.text = goodMood.mood
             activitiesLoggedText.text = goodMood.activities
             commentLoggedText.text = goodMood.comment
+            dateLoggedLBL.text = goodMood.date
+            print(goodMood.date)
 
         }
 
@@ -45,19 +51,26 @@ class PostMoodViewController: UIViewController {
     }
     
     @IBAction func postMood(_ sender: AnyObject) {
-        
+        //Date time to string...
+        let dateformatter = DateFormatter()
+        dateformatter.dateStyle = DateFormatter.Style.short
+        dateformatter.timeStyle = DateFormatter.Style.short
+        let now = dateformatter.string(from: NSDate() as Date)
         
         if let goodMood = incomingMood {
             try! realm.write{
                 goodMood.mood = moodLoggedText.text!
                 goodMood.comment = commentLoggedText.text!
                 goodMood.activities = activitiesLoggedText.text!
+                goodMood.date = dateLoggedLBL.text!
             }
         }else{
             let mood = Mood()
             mood.mood = moodLoggedText.text!
             mood.activities = activitiesLoggedText.text!
             mood.comment = commentLoggedText.text!
+            mood.date = now
+
             
             try! realm.write {
                 realm.add(mood)

@@ -9,19 +9,22 @@
 import Foundation
 import RealmSwift
 
+
 @objcMembers class Mood: Object {
+
     
     dynamic var mood: String = ""
     dynamic var comment: String = ""
     dynamic var activities: String = ""
-//    dynamic var time: String = ""
-//    dynamic var date: String = ""
+    dynamic var time: String = ""
+    dynamic var date: String = ""
     
-    convenience init(mood: String, comment: String, activities: String) {
+    convenience init(mood: String, comment: String, activities: String, date: String) {
         self.init()
         self.mood = mood
         self.comment = comment
         self.activities = activities
+        self.date = date
     }
     
     //date time toString...

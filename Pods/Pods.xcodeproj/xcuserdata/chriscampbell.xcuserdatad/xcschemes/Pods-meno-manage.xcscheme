@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "326018AE951552360DF14C6D4AF48FEB"
+               BlueprintIdentifier = "05D5815D80ACAF878DF820D9E72E5FCC"
                BuildableName = "Pods_meno_manage.framework"
                BlueprintName = "Pods-meno-manage"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "326018AE951552360DF14C6D4AF48FEB"
+            BlueprintIdentifier = "05D5815D80ACAF878DF820D9E72E5FCC"
             BuildableName = "Pods_meno_manage.framework"
             BlueprintName = "Pods-meno-manage"
             ReferencedContainer = "container:Pods.xcodeproj">

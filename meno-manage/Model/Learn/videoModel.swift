@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import Alamofire
 
 class videoModel: NSObject {
+    
+    let API_KEY = "AIzaSyBIa0q2McdseZ08mAWY5i8H9--3Vc5eKKA"
+    let PLAYLIST_ID = "PLPS5nXWnJacv_gVQKoNBX9MLRLKR7PLlS"
+    let YOUTUBE_URL = "https://www.googleapis.com/youtube/v3/playlistItems"
+
+    func getFeedVideos(){
+        
+//        Alamofire.request(url: "https://www.googleapis.com/youtube/v3/playlistItems", method:, parameters: ["part":"snippet","playlistID":PLAYLIST_ID,"key":API_KEY], encoding: JSONEncoding.default, headers: nil)
+//
+    }
     
     func getVideos() -> [Video] {
         

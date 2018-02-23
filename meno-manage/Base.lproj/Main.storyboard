@@ -412,10 +412,34 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Videos" id="yKR-0g-FSC"/>
+                    <connections>
+                        <segue destination="flh-QA-Isi" kind="show" id="3W9-iS-mqh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLm-4c-wpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5341.6000000000004" y="-2082.008995502249"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RRY-hV-Py7">
+            <objects>
+                <viewController id="flh-QA-Isi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gsn-nw-up8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H02-xo-JKL">
+                                <rect key="frame" x="0.0" y="116" width="375" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GFp-nJ-qwg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqP-Hv-8j3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6076" y="-1846.3268365817094"/>
         </scene>
         <!--Symptom Checker-->
         <scene sceneID="x6j-WW-iEz">
@@ -465,6 +489,77 @@
             <point key="canvasLocation" x="3406" y="-1461"/>
         </scene>
         <!--myMood-->
+        <scene sceneID="Dnw-HP-VZc">
+            <objects>
+                <viewController id="LU8-52-EbY" customClass="MoodHomeViewController" customModule="meno_manage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WEd-Um-XsU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKM-Y2-y3n">
+                                <rect key="frame" x="0.0" y="116" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.97548818640304835" green="0.90021249589654651" blue="0.99982005360000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="xi6-oN-PeF"/>
+                                </constraints>
+                                <state key="normal" title="How are you feeling right now?">
+                                    <color key="titleColor" red="0.9887088505001177" green="0.99924418853534946" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.89249258667883213" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HM6-dy-DEx" kind="show" id="hPq-LG-OW2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weekly Mood Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYR-U8-LZa">
+                                <rect key="frame" x="97" y="213" width="180" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmA-uU-cX1" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="242" width="343" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97606402635574341" green="0.90113919973373413" blue="0.99981182813644409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzk-hc-eqz" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="462" width="343" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afS-VM-fwh">
+                                <rect key="frame" x="140" y="433" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pKM-Y2-y3n" firstAttribute="leading" secondItem="s36-wV-AlK" secondAttribute="leading" id="ac5-Eq-wbH"/>
+                            <constraint firstItem="pKM-Y2-y3n" firstAttribute="trailing" secondItem="s36-wV-AlK" secondAttribute="trailing" id="gnc-Fc-hOh"/>
+                            <constraint firstItem="pKM-Y2-y3n" firstAttribute="top" secondItem="s36-wV-AlK" secondAttribute="top" id="u9h-K9-zPW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s36-wV-AlK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="myMood" id="0hb-Dn-0fq">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="ihO-8P-eZN">
+                            <connections>
+                                <segue destination="NJ7-xh-FrD" kind="show" id="nLN-nB-pUO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barChartView" destination="OmA-uU-cX1" id="OEx-jk-N9J"/>
+                        <outlet property="pieChartView" destination="Qzk-hc-eqz" id="S7E-OW-Wm7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CNQ-X7-3th" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4333.6000000000004" y="-697.60119940029995"/>
+        </scene>
+        <!--All Moods-->
         <scene sceneID="dQn-ys-oow">
             <objects>
                 <tableViewController id="NJ7-xh-FrD" customClass="MoodTableViewController" customModule="meno_manage" customModuleProvider="target" sceneMemberID="viewController">
@@ -484,18 +579,12 @@
                                             <rect key="frame" x="81" y="5" width="274" height="103.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niI-qe-TWs" customClass="dateLogged">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c81-GI-bNM" customClass="moodLogged">
-                                                    <rect key="frame" x="0.0" y="21.5" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9t-0U-0U1" customClass="timeLogged">
                                                     <rect key="frame" x="0.0" y="42" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -528,7 +617,6 @@
                                     <outlet property="commentLogged" destination="hhS-RB-0Ki" id="uaH-7p-CVv"/>
                                     <outlet property="dateLogged" destination="niI-qe-TWs" id="7gW-dT-z3o"/>
                                     <outlet property="moodLogged" destination="c81-GI-bNM" id="Lcw-7M-x35"/>
-                                    <outlet property="timeLogged" destination="x9t-0U-0U1" id="3mf-CD-XD3"/>
                                     <segue destination="HM6-dy-DEx" kind="show" identifier="editMood" id="XCY-MT-ZUf"/>
                                 </connections>
                             </tableViewCell>
@@ -538,7 +626,7 @@
                             <outlet property="delegate" destination="NJ7-xh-FrD" id="b66-cA-6Dc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="myMood" id="nKq-FF-Th0">
+                    <navigationItem key="navigationItem" title="All Moods" id="nKq-FF-Th0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="glj-t8-7MX">
                             <connections>
                                 <segue destination="HM6-dy-DEx" kind="show" id="Pyb-Qm-kTK"/>
@@ -548,7 +636,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s0-Xl-pXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4357.6000000000004" y="-697.60119940029995"/>
+            <point key="canvasLocation" x="5194" y="-697"/>
         </scene>
         <!--Add New Mood-->
         <scene sceneID="UZ6-ig-a18">
@@ -617,11 +705,13 @@
                                     <constraint firstAttribute="trailing" secondItem="SyR-DO-G6Q" secondAttribute="trailing" id="sQj-kl-XtX"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgG-Oj-l00">
-                                <rect key="frame" x="0.0" y="507" width="240" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiO-ND-7hR" customClass="dateLoggedLBL">
+                                <rect key="frame" x="20" y="116" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -642,12 +732,13 @@
                     <connections>
                         <outlet property="activitiesLoggedText" destination="cBV-Ix-SWp" id="W2I-6X-3Ig"/>
                         <outlet property="commentLoggedText" destination="COa-vN-miB" id="pUm-O1-LjV"/>
+                        <outlet property="dateLoggedLBL" destination="EiO-ND-7hR" id="2ar-8P-MzK"/>
                         <outlet property="moodLoggedText" destination="SyR-DO-G6Q" id="2Yx-l8-ggg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wn0-Rx-I4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5341.6000000000004" y="-698.5007496251875"/>
+            <point key="canvasLocation" x="6178" y="-698"/>
         </scene>
         <!--myMood-->
         <scene sceneID="vMe-DD-0Bk">
@@ -660,7 +751,7 @@
                         <color key="backgroundColor" red="0.9998200535774231" green="0.82439512014389038" blue="0.97950392961502075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NJ7-xh-FrD" kind="relationship" relationship="rootViewController" id="qyC-ja-osa"/>
+                        <segue destination="LU8-52-EbY" kind="relationship" relationship="rootViewController" id="5Rm-L9-gjN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kD-sg-U2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -980,7 +1071,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="bXI-GE-e7R"/>
         <segue reference="BM4-oJ-7N4"/>
-        <segue reference="Pyb-Qm-kTK"/>
+        <segue reference="hPq-LG-OW2"/>
         <segue reference="d7k-Rg-une"/>
     </inferredMetricsTieBreakers>
 </document>

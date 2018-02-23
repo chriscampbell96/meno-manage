@@ -52,6 +52,7 @@ class MoodTableViewController: UITableViewController {
         cell.moodLogged.text = mood.mood
         cell.activitiesLogged.text = mood.activities
         cell.commentLogged.text = mood.comment
+        cell.dateLogged.text = mood.date
         
         return cell
     }

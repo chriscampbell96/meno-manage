@@ -15,7 +15,9 @@ class LearnTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.videos = videoModel().getVideos()
+//        self.videos = videoModel().getVideos()
+        let model = videoModel()
+        model.getFeedVideos()
         
         self.tableView.dataSource = self
         self.tableView.delegate = self

@@ -32,6 +32,8 @@ class MoodCell: UITableViewCell {
         moodLogged.text = myMood.mood
         activitiesLogged.text = myMood.activities
         commentLogged.text = myMood.comment
+        dateLogged.text = myMood.date
+
     }
     
 
