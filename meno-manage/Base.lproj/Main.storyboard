@@ -502,41 +502,63 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="xi6-oN-PeF"/>
                                 </constraints>
+                                <color key="tintColor" red="0.085568419268294255" green="0.15495353336215312" blue="0.18060782068062831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="How are you feeling right now?">
-                                    <color key="titleColor" red="0.9887088505001177" green="0.99924418853534946" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.60204925400842224" green="0.60773811065736427" blue="0.6102612347294939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.89249258667883213" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="HM6-dy-DEx" kind="show" id="hPq-LG-OW2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2a6-Wq-fMF">
+                                <rect key="frame" x="0.0" y="185" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.97407392538058379" green="0.8988522185191089" blue="1" alpha="0.31708722461685823" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="81y-Sg-2eo"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="&lt; Today &gt;">
+                                            <attributes>
+                                                <color key="NSColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weekly Mood Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYR-U8-LZa">
-                                <rect key="frame" x="97" y="213" width="180" height="21"/>
+                                <rect key="frame" x="21" y="263" width="180" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmA-uU-cX1" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="242" width="343" height="183"/>
+                                <rect key="frame" x="16" y="292" width="343" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97606402635574341" green="0.90113919973373413" blue="0.99981182813644409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzk-hc-eqz" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="462" width="343" height="156"/>
+                                <rect key="frame" x="16" y="512" width="343" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afS-VM-fwh">
-                                <rect key="frame" x="140" y="433" width="95" height="21"/>
+                                <rect key="frame" x="20" y="483" width="95" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2a6-Wq-fMF" firstAttribute="trailing" secondItem="s36-wV-AlK" secondAttribute="trailing" id="9Xb-9j-Uk3"/>
+                            <constraint firstItem="2a6-Wq-fMF" firstAttribute="top" secondItem="s36-wV-AlK" secondAttribute="top" constant="69" id="F17-Z9-ZOd"/>
+                            <constraint firstItem="2a6-Wq-fMF" firstAttribute="leading" secondItem="s36-wV-AlK" secondAttribute="leading" id="GBb-Vv-X9u"/>
                             <constraint firstItem="pKM-Y2-y3n" firstAttribute="leading" secondItem="s36-wV-AlK" secondAttribute="leading" id="ac5-Eq-wbH"/>
                             <constraint firstItem="pKM-Y2-y3n" firstAttribute="trailing" secondItem="s36-wV-AlK" secondAttribute="trailing" id="gnc-Fc-hOh"/>
                             <constraint firstItem="pKM-Y2-y3n" firstAttribute="top" secondItem="s36-wV-AlK" secondAttribute="top" id="u9h-K9-zPW"/>
@@ -544,7 +566,8 @@
                         <viewLayoutGuide key="safeArea" id="s36-wV-AlK"/>
                     </view>
                     <navigationItem key="navigationItem" title="myMood" id="0hb-Dn-0fq">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="ihO-8P-eZN">
+                        <barButtonItem key="rightBarButtonItem" title="View All Entries" style="plain" id="ihO-8P-eZN">
+                            <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="NJ7-xh-FrD" kind="show" id="nLN-nB-pUO"/>
                             </connections>
@@ -578,10 +601,16 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2nA-s9-Zyp">
                                             <rect key="frame" x="81" y="5" width="274" height="103.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niI-qe-TWs" customClass="dateLogged">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niI-qe-TWs" customClass="dateLogged">
+                                                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="42"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c81-GI-bNM" customClass="moodLogged">
@@ -649,8 +678,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yxD-QG-cNM">
                                 <rect key="frame" x="20" y="139" width="335.5" height="422.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhy-5S-fxB">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhy-5S-fxB">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -674,7 +703,7 @@
                                             <constraint firstAttribute="height" constant="128" id="PkH-DZ-ec8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try describing your day." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6i-vp-saV">
                                         <rect key="frame" x="0.0" y="259" width="182.5" height="20.5"/>
@@ -682,11 +711,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="comments" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COa-vN-miB">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="comments" translatesAutoresizingMaskIntoConstraints="NO" id="COa-vN-miB">
                                         <rect key="frame" x="0.0" y="294.5" width="335.5" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <color key="textColor" red="0.1588585076317274" green="0.1568876384298008" blue="0.18060782068062831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.69685378515621732" blue="0.98192740177196947" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -705,13 +735,6 @@
                                     <constraint firstAttribute="trailing" secondItem="SyR-DO-G6Q" secondAttribute="trailing" id="sQj-kl-XtX"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiO-ND-7hR" customClass="dateLoggedLBL">
-                                <rect key="frame" x="20" y="116" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -732,7 +755,6 @@
                     <connections>
                         <outlet property="activitiesLoggedText" destination="cBV-Ix-SWp" id="W2I-6X-3Ig"/>
                         <outlet property="commentLoggedText" destination="COa-vN-miB" id="pUm-O1-LjV"/>
-                        <outlet property="dateLoggedLBL" destination="EiO-ND-7hR" id="2ar-8P-MzK"/>
                         <outlet property="moodLoggedText" destination="SyR-DO-G6Q" id="2Yx-l8-ggg"/>
                     </connections>
                 </viewController>
@@ -1070,8 +1092,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bXI-GE-e7R"/>
-        <segue reference="BM4-oJ-7N4"/>
-        <segue reference="hPq-LG-OW2"/>
+        <segue reference="QIV-bL-5TA"/>
+        <segue reference="Pyb-Qm-kTK"/>
         <segue reference="d7k-Rg-une"/>
     </inferredMetricsTieBreakers>
 </document>

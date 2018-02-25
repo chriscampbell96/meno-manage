@@ -9,11 +9,18 @@
 import UIKit
 import Charts
 import ChartsRealm
+import RealmSwift
 
 class MoodHomeViewController: UIViewController {
     var months: [String]!
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var pieChartView: PieChartView!
+    
+    //global v's
+    var moods: Results<Mood>!
+    var realm = try! Realm()
+    
+    //init variables...
 
     
     
@@ -21,12 +28,34 @@ class MoodHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        let great = getGreatMood()
+        let good = getGoodMood()
+        let meh = getMehMood()
+        let sad = getSadMood()
+        let awful = getAwfulMood()
         
-        setChart(dataPoints: months, values: unitsSold)
-        pieChart(dataPoints: months, values: unitsSold)
+        months = ["Great", "Good", "Meh", "Sad", "Awful"]
+        let unitsSold = [great, good, meh, sad, awful] as [Any]
+
+        setChart(dataPoints: months, values: unitsSold as! [Double])
+        pieChart(dataPoints: months, values: unitsSold as! [Double])
     // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let great = getGreatMood()
+        let good = getGoodMood()
+        let meh = getMehMood()
+        let sad = getSadMood()
+        let awful = getAwfulMood()
+        
+        months = ["Great", "Good", "Meh", "Sad", "Awful"]
+        let unitsSold = [great, good, meh, sad, awful] as [Any]
+        
+        
+        
+        setChart(dataPoints: months, values: unitsSold as! [Double])
+        pieChart(dataPoints: months, values: unitsSold as! [Double])
     }
     
 
@@ -36,6 +65,32 @@ class MoodHomeViewController: UIViewController {
         
     }
     
+    //get moods
+    func getGreatMood() -> Double{
+        let greatMood = realm.objects(Mood.self).filter("mood = 'test'")
+        print(greatMood.count)
+        return Double(greatMood.count)
+    }
+    func getGoodMood() -> Double{
+        let goodMood = realm.objects(Mood.self).filter("mood = 'good'")
+        print(goodMood.count)
+        return Double(goodMood.count)
+    }
+    func getMehMood() -> Double{
+        let mehMood = realm.objects(Mood.self).filter("mood = 'meh'")
+        print(mehMood.count)
+        return Double(mehMood.count)
+    }
+    func getSadMood() -> Double{
+        let sadMood = realm.objects(Mood.self).filter("mood = 'sad'")
+        print(sadMood.count)
+        return Double(sadMood.count)
+    }
+    func getAwfulMood() -> Double{
+        let awfulMood = realm.objects(Mood.self).filter("mood = 'awful'")
+        print(awfulMood.count)
+        return Double(awfulMood.count)
+    }
     
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "You need to provide data for the chart."
