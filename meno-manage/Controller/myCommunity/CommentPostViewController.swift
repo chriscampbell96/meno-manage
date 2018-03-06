@@ -28,6 +28,9 @@ class CommentPostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func post(_ sender: AnyObject) {
         let userID = Auth.auth().currentUser?.uid
@@ -48,7 +51,8 @@ class CommentPostViewController: UIViewController {
             
             let firebasePost = Database.database().reference().child("postText").child(self.passedPostId!).child("comments").childByAutoId()
             firebasePost.setValue(post)
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+
         }) { (error) in
             print(error.localizedDescription)
         }

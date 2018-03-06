@@ -21,12 +21,23 @@
 		ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50B920337EA500CB828C /* MoodCell.swift */; };
 		ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */; };
 		ED2C50BE20338A9100CB828C /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50BD20338A9100CB828C /* Mood.swift */; };
+		ED337C5F204607A200C6BE8A /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */; };
+		ED337C62204607D100C6BE8A /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C61204607D100C6BE8A /* Interest.swift */; };
+		ED337C64204607DB00C6BE8A /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C63204607DA00C6BE8A /* InterestsViewController.swift */; };
 		ED490AC6203753790042136F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490AC5203753790042136F /* Video.swift */; };
 		ED490AC92037543B0042136F /* videoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490AC82037543B0042136F /* videoModel.swift */; };
 		ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490ACA2037581B0042136F /* LearnTableViewController.swift */; };
 		ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB00202C91A500CBD69E /* PostViewController.swift */; };
 		ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB02202CC57E00CBD69E /* CommentCell.swift */; };
 		ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BBB04202CD59800CBD69E /* CommentViewController.swift */; };
+		ED611F47204EE7A60087697C /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F3F204EE7A50087697C /* Math.swift */; };
+		ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F40204EE7A50087697C /* UIColor+Hex.swift */; };
+		ED611F49204EE7A60087697C /* UIBezierPath+Clone.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F41204EE7A50087697C /* UIBezierPath+Clone.swift */; };
+		ED611F4A204EE7A60087697C /* CGRect+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F42204EE7A50087697C /* CGRect+Center.swift */; };
+		ED611F4B204EE7A60087697C /* BreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F43204EE7A50087697C /* BreatheView.swift */; };
+		ED611F4C204EE7A60087697C /* CGPoint+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F44204EE7A50087697C /* CGPoint+Hashable.swift */; };
+		ED611F4D204EE7A60087697C /* BreatheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F45204EE7A50087697C /* BreatheViewController.swift */; };
+		ED611F4E204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611F46204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift */; };
 		ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4A42028951B004E84B5 /* ShareSomethingCell.swift */; };
 		ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4A82028C001004E84B5 /* ShareSomething.swift */; };
 		ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */; };
@@ -56,12 +67,23 @@
 		ED2C50B920337EA500CB828C /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMoodViewController.swift; sourceTree = "<group>"; };
 		ED2C50BD20338A9100CB828C /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED337C61204607D100C6BE8A /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		ED337C63204607DA00C6BE8A /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		ED490AC5203753790042136F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		ED490AC82037543B0042136F /* videoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoModel.swift; sourceTree = "<group>"; };
 		ED490ACA2037581B0042136F /* LearnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewController.swift; sourceTree = "<group>"; };
 		ED4BBB00202C91A500CBD69E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		ED4BBB02202CC57E00CBD69E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		ED4BBB04202CD59800CBD69E /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		ED611F3F204EE7A50087697C /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Math.swift; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/Math.swift"; sourceTree = "<group>"; };
+		ED611F40204EE7A50087697C /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/UIColor+Hex.swift"; sourceTree = "<group>"; };
+		ED611F41204EE7A50087697C /* UIBezierPath+Clone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBezierPath+Clone.swift"; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/UIBezierPath+Clone.swift"; sourceTree = "<group>"; };
+		ED611F42204EE7A50087697C /* CGRect+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGRect+Center.swift"; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/CGRect+Center.swift"; sourceTree = "<group>"; };
+		ED611F43204EE7A50087697C /* BreatheView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BreatheView.swift; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/BreatheView.swift"; sourceTree = "<group>"; };
+		ED611F44204EE7A50087697C /* CGPoint+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+Hashable.swift"; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/CGPoint+Hashable.swift"; sourceTree = "<group>"; };
+		ED611F45204EE7A50087697C /* BreatheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BreatheViewController.swift; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/BreatheViewController.swift"; sourceTree = "<group>"; };
+		ED611F46204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CAMediaTimingFunction+CustomTypes.swift"; path = "../../../../../../../../Volumes/My Passport for Mac/Downloads/BreatheView-master/BreatheView/CAMediaTimingFunction+CustomTypes.swift"; sourceTree = "<group>"; };
 		ED66B4A42028951B004E84B5 /* ShareSomethingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSomethingCell.swift; sourceTree = "<group>"; };
 		ED66B4A82028C001004E84B5 /* ShareSomething.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSomething.swift; sourceTree = "<group>"; };
 		ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +144,7 @@
 		ED1CDDC52021E102005DEE2E /* meno-manage */ = {
 			isa = PBXGroup;
 			children = (
+				ED611F3E204EE7760087697C /* Breathe */,
 				ED4BBAFF202C90FB00CBD69E /* Controller */,
 				ED66B4A7202897A4004E84B5 /* Model */,
 				ED66B4A3202894DE004E84B5 /* View */,
@@ -239,6 +262,30 @@
 			path = Learn;
 			sourceTree = "<group>";
 		};
+		ED337C582045FCE900C6BE8A /* Relax */ = {
+			isa = PBXGroup;
+			children = (
+				ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */,
+				ED337C63204607DA00C6BE8A /* InterestsViewController.swift */,
+			);
+			path = Relax;
+			sourceTree = "<group>";
+		};
+		ED337C5B2046008D00C6BE8A /* Relax */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Relax;
+			sourceTree = "<group>";
+		};
+		ED337C60204607BE00C6BE8A /* Relax */ = {
+			isa = PBXGroup;
+			children = (
+				ED337C61204607D100C6BE8A /* Interest.swift */,
+			);
+			path = Relax;
+			sourceTree = "<group>";
+		};
 		ED490AC7203754080042136F /* Learn */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +298,7 @@
 		ED4BBAFF202C90FB00CBD69E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED337C582045FCE900C6BE8A /* Relax */,
 				ED2C92292036139600261475 /* mySymptoms */,
 				ED2C92282036138F00261475 /* Home */,
 				ED2C92272036138500261475 /* Learn */,
@@ -262,9 +310,26 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		ED611F3E204EE7760087697C /* Breathe */ = {
+			isa = PBXGroup;
+			children = (
+				ED611F43204EE7A50087697C /* BreatheView.swift */,
+				ED611F46204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift */,
+				ED611F44204EE7A50087697C /* CGPoint+Hashable.swift */,
+				ED611F42204EE7A50087697C /* CGRect+Center.swift */,
+				ED611F3F204EE7A50087697C /* Math.swift */,
+				ED611F41204EE7A50087697C /* UIBezierPath+Clone.swift */,
+				ED611F40204EE7A50087697C /* UIColor+Hex.swift */,
+				ED611F45204EE7A50087697C /* BreatheViewController.swift */,
+			);
+			name = Breathe;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		ED66B4A3202894DE004E84B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED337C5B2046008D00C6BE8A /* Relax */,
 				ED2C922A2036148400261475 /* Learn */,
 				ED2C50B820337E6500CB828C /* myMood */,
 				ED2C50B720337D6400CB828C /* myCommunity */,
@@ -275,6 +340,7 @@
 		ED66B4A7202897A4004E84B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED337C60204607BE00C6BE8A /* Relax */,
 				ED490AC7203754080042136F /* Learn */,
 				ED2C50BF20338A9700CB828C /* myMood */,
 				ED2C50B620337D5500CB828C /* myCommunity */,
@@ -430,14 +496,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED611F4A204EE7A60087697C /* CGRect+Center.swift in Sources */,
+				ED337C5F204607A200C6BE8A /* InterestCollectionViewCell.swift in Sources */,
 				ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */,
 				ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */,
 				ED1DA6D72031B5FD0033A440 /* CommentPostViewController.swift in Sources */,
+				ED611F4B204EE7A60087697C /* BreatheView.swift in Sources */,
 				ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */,
+				ED611F49204EE7A60087697C /* UIBezierPath+Clone.swift in Sources */,
+				ED611F4C204EE7A60087697C /* CGPoint+Hashable.swift in Sources */,
 				ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */,
+				ED337C64204607DB00C6BE8A /* InterestsViewController.swift in Sources */,
 				EDFBD4C12029088E008C2A88 /* Post.swift in Sources */,
 				ED1CDDDB2021E650005DEE2E /* SignUpViewController.swift in Sources */,
 				ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */,
+				ED337C62204607D100C6BE8A /* Interest.swift in Sources */,
+				ED611F4D204EE7A60087697C /* BreatheViewController.swift in Sources */,
+				ED611F47204EE7A60087697C /* Math.swift in Sources */,
 				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
 				ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */,
 				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
@@ -447,8 +522,10 @@
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
 				ED490AC92037543B0042136F /* videoModel.swift in Sources */,
+				ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,
 				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,
+				ED611F4E204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift in Sources */,
 				ED2C50BE20338A9100CB828C /* Mood.swift in Sources */,
 				ED2C50AF20337CB400CB828C /* MoodTableViewController.swift in Sources */,
 				ED490AC6203753790042136F /* Video.swift in Sources */,

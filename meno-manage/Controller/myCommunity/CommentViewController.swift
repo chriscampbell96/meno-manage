@@ -16,8 +16,15 @@ class CommentViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("loaded")
+        getPost()
         getComments()
-        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+        getComments()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,8 +42,12 @@ class CommentViewController: UITableViewController {
         }
     }
     
+    func getPost(){
+        
+    }
+    
     func getComments() {
-    Database.database().reference().child("postText").child(post.postKey).child("comments").observeSingleEvent(of: .value) { (snapshot) in
+        Database.database().reference().child("postText").child(post.postKey).child("comments").observeSingleEvent(of: .value) { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else { return }
             self.posts.removeAll()
             for data in snapshot.reversed() {
@@ -47,20 +58,17 @@ class CommentViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return posts.count
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
-
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print (posts.count)
+        return posts.count
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as? CommentCell else { return UITableViewCell() }
         cell.configCell(post: posts[indexPath.row])

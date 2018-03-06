@@ -33,7 +33,7 @@ class PostMoodViewController: UIViewController {
             moodLoggedText.text = goodMood.mood
             activitiesLoggedText.text = goodMood.activities
             commentLoggedText.text = goodMood.comment
-            dateLoggedLBL.text = goodMood.date
+//            dateLoggedLBL.text = goodMood.date
             print(goodMood.date)
 
         }
@@ -62,7 +62,6 @@ class PostMoodViewController: UIViewController {
                 goodMood.mood = moodLoggedText.text!
                 goodMood.comment = commentLoggedText.text!
                 goodMood.activities = activitiesLoggedText.text!
-                goodMood.date = dateLoggedLBL.text!
             }
         }else{
             let mood = Mood()

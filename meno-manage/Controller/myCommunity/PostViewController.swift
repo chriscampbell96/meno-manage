@@ -28,6 +28,7 @@ class PostViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
 
     @IBAction func post(_ sender: AnyObject) {
         let userID = Auth.auth().currentUser?.uid
