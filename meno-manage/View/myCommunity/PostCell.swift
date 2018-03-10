@@ -14,6 +14,7 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var postText: UILabel!
+    @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var commentBtn: UIButton!
 
     var post: Post!
@@ -22,6 +23,7 @@ class PostCell: UITableViewCell {
     func configCell(post: Post) {
         self.post = post
         self.username.text = "@" + post.username
+        self.postTitle.text = post.postTitle
         self.postText.text = post.postText
         
     }

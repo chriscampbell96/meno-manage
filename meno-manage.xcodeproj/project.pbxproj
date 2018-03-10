@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		28A00ED480C97A6D85E41356 /* Pods_meno_manage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */; };
+		ED09CBFB2052D8F40043FCDD /* MoodChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */; };
+		ED09CBFC2052D8F40043FCDD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */; };
+		ED09CBFE2052FFDB0043FCDD /*  monthlymoodocount.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED09CBFD2052FFDB0043FCDD /*  monthlymoodocount.xib */; };
+		ED09CC00205303270043FCDD /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09CBFF205303270043FCDD /* ChartView.swift */; };
 		ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC62021E102005DEE2E /* AppDelegate.swift */; };
 		ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC82021E102005DEE2E /* ViewController.swift */; };
 		ED1CDDCC2021E103005DEE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDCA2021E103005DEE2E /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 		ED337C5F204607A200C6BE8A /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */; };
 		ED337C62204607D100C6BE8A /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C61204607D100C6BE8A /* Interest.swift */; };
 		ED337C64204607DB00C6BE8A /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C63204607DA00C6BE8A /* InterestsViewController.swift */; };
+		ED3D72BD2054262100B3E22C /* RSSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72BB2054262100B3E22C /* RSSwift.xcdatamodeld */; };
+		ED3D72C12054263C00B3E22C /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72BE2054263C00B3E22C /* FeedItemViewController.swift */; };
+		ED3D72C22054263C00B3E22C /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72BF2054263C00B3E22C /* FeedListViewController.swift */; };
+		ED3D72C32054263C00B3E22C /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72C02054263C00B3E22C /* XmlParserManager.swift */; };
 		ED490AC6203753790042136F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490AC5203753790042136F /* Video.swift */; };
 		ED490AC92037543B0042136F /* videoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490AC82037543B0042136F /* videoModel.swift */; };
 		ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED490ACA2037581B0042136F /* LearnTableViewController.swift */; };
@@ -52,6 +60,10 @@
 		4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meno_manage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33D84BC58A5609BE5EC4022 /* Pods-meno-manage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meno-manage.release.xcconfig"; path = "Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage.release.xcconfig"; sourceTree = "<group>"; };
 		A38686F15C57A7693E326BDD /* Pods-meno-manage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meno-manage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage.debug.xcconfig"; sourceTree = "<group>"; };
+		ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodChartsViewController.swift; sourceTree = "<group>"; };
+		ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		ED09CBFD2052FFDB0043FCDD /*  monthlymoodocount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = " monthlymoodocount.xib"; sourceTree = "<group>"; };
+		ED09CBFF205303270043FCDD /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		ED1CDDC32021E102005DEE2E /* meno-manage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meno-manage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDDC62021E102005DEE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1CDDC82021E102005DEE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +82,10 @@
 		ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED337C61204607D100C6BE8A /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		ED337C63204607DA00C6BE8A /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		ED3D72BC2054262100B3E22C /* RSSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSwift.xcdatamodel; sourceTree = "<group>"; };
+		ED3D72BE2054263C00B3E22C /* FeedItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemViewController.swift; sourceTree = "<group>"; };
+		ED3D72BF2054263C00B3E22C /* FeedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
+		ED3D72C02054263C00B3E22C /* XmlParserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParserManager.swift; sourceTree = "<group>"; };
 		ED490AC5203753790042136F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		ED490AC82037543B0042136F /* videoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoModel.swift; sourceTree = "<group>"; };
 		ED490ACA2037581B0042136F /* LearnTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +139,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED09CBF42052D4550043FCDD /* MoodCharts */ = {
+			isa = PBXGroup;
+			children = (
+				ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */,
+				ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */,
+				ED09CBFD2052FFDB0043FCDD /*  monthlymoodocount.xib */,
+				ED09CBFF205303270043FCDD /* ChartView.swift */,
+			);
+			path = MoodCharts;
+			sourceTree = "<group>";
+		};
 		ED1CDDBA2021E102005DEE2E = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +171,7 @@
 		ED1CDDC52021E102005DEE2E /* meno-manage */ = {
 			isa = PBXGroup;
 			children = (
+				ED3D72BA205425E600B3E22C /* ArticleList */,
 				ED611F3E204EE7760087697C /* Breathe */,
 				ED4BBAFF202C90FB00CBD69E /* Controller */,
 				ED66B4A7202897A4004E84B5 /* Model */,
@@ -154,6 +182,7 @@
 				ED1CDDCF2021E103005DEE2E /* LaunchScreen.storyboard */,
 				ED1CDDD82021E230005DEE2E /* GoogleService-Info.plist */,
 				ED1CDDD22021E103005DEE2E /* Info.plist */,
+				ED3D72BB2054262100B3E22C /* RSSwift.xcdatamodeld */,
 			);
 			path = "meno-manage";
 			sourceTree = "<group>";
@@ -191,6 +220,7 @@
 		ED2C50B520337D3F00CB828C /* myMood */ = {
 			isa = PBXGroup;
 			children = (
+				ED09CBF42052D4550043FCDD /* MoodCharts */,
 				ED2C50AE20337CB400CB828C /* MoodTableViewController.swift */,
 				ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */,
 				ED757471203F03B400DF0610 /* MoodHomeViewController.swift */,
@@ -284,6 +314,16 @@
 				ED337C61204607D100C6BE8A /* Interest.swift */,
 			);
 			path = Relax;
+			sourceTree = "<group>";
+		};
+		ED3D72BA205425E600B3E22C /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				ED3D72BE2054263C00B3E22C /* FeedItemViewController.swift */,
+				ED3D72BF2054263C00B3E22C /* FeedListViewController.swift */,
+				ED3D72C02054263C00B3E22C /* XmlParserManager.swift */,
+			);
+			path = ArticleList;
 			sourceTree = "<group>";
 		};
 		ED490AC7203754080042136F /* Learn */ = {
@@ -413,6 +453,7 @@
 				ED1CDDD12021E103005DEE2E /* LaunchScreen.storyboard in Resources */,
 				ED1CDDD92021E230005DEE2E /* GoogleService-Info.plist in Resources */,
 				ED1CDDCE2021E103005DEE2E /* Assets.xcassets in Resources */,
+				ED09CBFE2052FFDB0043FCDD /*  monthlymoodocount.xib in Resources */,
 				ED1CDDCC2021E103005DEE2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +539,7 @@
 			files = (
 				ED611F4A204EE7A60087697C /* CGRect+Center.swift in Sources */,
 				ED337C5F204607A200C6BE8A /* InterestCollectionViewCell.swift in Sources */,
+				ED09CBFC2052D8F40043FCDD /* CollectionViewCell.swift in Sources */,
 				ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */,
 				ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */,
 				ED1DA6D72031B5FD0033A440 /* CommentPostViewController.swift in Sources */,
@@ -513,20 +555,26 @@
 				ED337C62204607D100C6BE8A /* Interest.swift in Sources */,
 				ED611F4D204EE7A60087697C /* BreatheViewController.swift in Sources */,
 				ED611F47204EE7A60087697C /* Math.swift in Sources */,
+				ED3D72C32054263C00B3E22C /* XmlParserManager.swift in Sources */,
 				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
 				ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */,
 				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
+				ED3D72C12054263C00B3E22C /* FeedItemViewController.swift in Sources */,
+				ED3D72C22054263C00B3E22C /* FeedListViewController.swift in Sources */,
 				ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */,
+				ED09CC00205303270043FCDD /* ChartView.swift in Sources */,
 				ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */,
 				ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */,
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
+				ED09CBFB2052D8F40043FCDD /* MoodChartsViewController.swift in Sources */,
 				ED490AC92037543B0042136F /* videoModel.swift in Sources */,
 				ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,
 				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,
 				ED611F4E204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift in Sources */,
 				ED2C50BE20338A9100CB828C /* Mood.swift in Sources */,
+				ED3D72BD2054262100B3E22C /* RSSwift.xcdatamodeld in Sources */,
 				ED2C50AF20337CB400CB828C /* MoodTableViewController.swift in Sources */,
 				ED490AC6203753790042136F /* Video.swift in Sources */,
 				EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */,
@@ -720,6 +768,18 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED3D72BB2054262100B3E22C /* RSSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED3D72BC2054262100B3E22C /* RSSwift.xcdatamodel */,
+			);
+			path = RSSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ED1CDDBB2021E102005DEE2E /* Project object */;
 }

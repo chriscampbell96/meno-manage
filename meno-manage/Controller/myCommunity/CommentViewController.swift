@@ -16,7 +16,6 @@ class CommentViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loaded")
         getPost()
         getComments()
     }
@@ -24,7 +23,8 @@ class CommentViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
         getComments()
-
+        addView()
+        print("ran")
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,13 +59,24 @@ class CommentViewController: UITableViewController {
         }
     }
     
+    func addView(){
+//        Database.database().reference().child("postText").child(post.postKey).setValue(["views": +1])
+        let postViews = Database.database().reference().child("postText").child(post.postKey).child("views")
+
+        Database.database().reference().child("postText").child(post.postKey).updateChildValues(["views": +1    ])
+    
+
+        print(postViews)
+        print("added")
+    
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print (posts.count)
         return posts.count
     }
     

@@ -13,6 +13,8 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var postText: UITextView!
 
+    @IBOutlet weak var postTitle: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +46,7 @@ class PostViewController: UIViewController {
                 "views": views as AnyObject,
                 "uid": userID as AnyObject,
                 "username": username as AnyObject,
+                "title": self.postTitle.text as AnyObject,
                 "postText": self.postText.text as AnyObject
             ]
             

@@ -12,6 +12,7 @@ import Firebase
 class Post {
     private var _username: String!
     private var _postText: String!
+    private var _postTitle: String!
     private var _postKey:  String!
     private var _postRef: DatabaseReference!
     
@@ -28,9 +29,14 @@ class Post {
         return _postKey
     }
     
+    var postTitle: String {
+        return _postTitle
+    }
+    
     init(postText: String, username: String) {
         _postText = postText
         _username = username
+        _postTitle = postTitle
     }
     
     init(postKey: String, postData: Dictionary<String, AnyObject>) {
@@ -38,6 +44,10 @@ class Post {
         
         if let username = postData["username"] as? String {
             _username = username
+        }
+        
+        if let postTitle = postData["title"] as? String {
+            _postTitle = postTitle
         }
         
         
