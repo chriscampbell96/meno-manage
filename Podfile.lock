@@ -6,6 +6,7 @@ PODS:
   - ChartsRealm (3.0.5):
     - Charts (= 3.0.5)
     - RealmSwift (~> 3.1.1)
+  - CountdownLabel (3.0.0)
   - Firebase (4.10.1):
     - Firebase/Core (= 4.10.1)
   - Firebase/Core (4.10.1):
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.5)
   - Charts
   - ChartsRealm
+  - CountdownLabel
   - Firebase
   - Firebase/Core
   - FirebaseAuth
@@ -72,6 +74,7 @@ SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   ChartsRealm: a08d5fd4d3bfb51d0f0608e4d2218253919fa396
+  CountdownLabel: 4534a68892b1deb73fda18702dfdc2c8444cec08
   Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseAuth: d040bb7a9db6dfc29d0e7ec82d48be51352b2581
@@ -87,6 +90,6 @@ SPEC CHECKSUMS:
   RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 47fbe97a1722917f1f44aa6d0a657116fc7a8de1
+PODFILE CHECKSUM: 16532a380a8104e545c047b73948f325ab04fcda
 
 COCOAPODS: 1.4.0

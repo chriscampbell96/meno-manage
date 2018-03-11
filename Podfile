@@ -16,6 +16,6 @@ pod 'RealmSwift'
 pod 'Alamofire', '~> 4.5'
 pod 'Charts'
 pod 'ChartsRealm'
-
+pod 'CountdownLabel'
 
 end

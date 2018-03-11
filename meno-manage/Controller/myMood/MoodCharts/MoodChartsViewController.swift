@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  cardLayout
-//
-//  Created by Riley Norris on 11/4/17.
-//  Copyright © 2017 Riley Norris. All rights reserved.
-//
-
 import UIKit
 import Realm
 import RealmSwift
@@ -20,6 +12,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let chartViews = ["monthlymoodocount","monthlymoodocount","monthlymoodocount","monthlymoodocount","monthlymoodocount"]
     
+    
+//    let chartViews = [UIView(ChartView), UIView(ChartView), UIView(ChartView), UIView(ChartView), UIView(ChartView)]
     
     
     

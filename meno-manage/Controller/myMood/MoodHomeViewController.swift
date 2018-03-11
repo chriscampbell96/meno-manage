@@ -104,7 +104,8 @@ class MoodHomeViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Units Sold")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: nil)
+        self.barChartView.legend.enabled = false
         let chartData = BarChartData(dataSet: chartDataSet)
         barChartView.data = chartData
         
@@ -120,7 +121,8 @@ class MoodHomeViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Units Sold")
+        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: nil)
+        self.pieChartView.legend.enabled = false
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         pieChartView.data = pieChartData
 
