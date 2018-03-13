@@ -43,6 +43,7 @@ class MoodHomeViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         let great = getGreatMood()
         let good = getGoodMood()
         let meh = getMehMood()
