@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DE5A2DF2873FE4DE215ECA4D554E021"
-               BuildableName = "Pods_meno_manage.framework"
-               BlueprintName = "Pods-meno-manage"
+               BlueprintIdentifier = "4D5B8B1BE64F80268007C79821DDDC20"
+               BuildableName = "JTAppleCalendar.framework"
+               BlueprintName = "JTAppleCalendar"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6DE5A2DF2873FE4DE215ECA4D554E021"
-            BuildableName = "Pods_meno_manage.framework"
-            BlueprintName = "Pods-meno-manage"
+            BlueprintIdentifier = "4D5B8B1BE64F80268007C79821DDDC20"
+            BuildableName = "JTAppleCalendar.framework"
+            BlueprintName = "JTAppleCalendar"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

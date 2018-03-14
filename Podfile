@@ -17,6 +17,6 @@ pod 'Alamofire', '~> 4.5'
 pod 'Charts'
 pod 'ChartsRealm'
 pod 'CountdownLabel'
-pod 'MBCalendarKit', '~> 5.0.0'
+pod 'JTAppleCalendar', '~> 7.0'
 
 end
