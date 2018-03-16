@@ -950,23 +950,23 @@
                         <viewLayoutGuide key="safeArea" id="g4E-AP-Aui"/>
                     </view>
                     <navigationItem key="navigationItem" title="myMood" id="Wb3-hS-zVH">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="calendar" landscapeImage="calendar" style="plain" id="Tdb-Sz-oRS">
+                            <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="changeDate:" destination="jt1-iI-GSI" id="iOA-0G-tnV"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem style="plain" systemItem="add" id="dic-Go-h2m">
                                 <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="lEf-xc-xfn" kind="show" id="HrW-SU-tKM"/>
+                                    <segue destination="o9r-fp-64X" kind="show" id="KPU-Bh-RJC"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem style="plain" systemItem="organize" id="AAf-5O-nC8">
                                 <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="WCV-eE-34q" kind="show" id="sH5-UR-uRW"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="calendar" landscapeImage="calendar" style="plain" id="Tdb-Sz-oRS">
-                                <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="changeDate:" destination="jt1-iI-GSI" id="iOA-0G-tnV"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -1044,9 +1044,7 @@
                                     <outlet property="commentLogged" destination="vYB-9d-bIb" id="OSj-JO-Ifx"/>
                                     <outlet property="dateLogged" destination="VCy-j0-pUj" id="S5S-dt-Px6"/>
                                     <outlet property="moodLogged" destination="s7K-r1-8qd" id="MmV-Ge-vGH"/>
-                                    <segue destination="lEf-xc-xfn" kind="show" identifier="editMood" id="t2m-HE-AWP">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="o9r-fp-64X" kind="show" identifier="editMood" trigger="accessoryAction" id="RcV-EY-hJV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1060,13 +1058,14 @@
                             <barButtonItem systemItem="add" id="AV3-8U-sDd">
                                 <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="lEf-xc-xfn" kind="show" id="oos-1b-Rkj">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="o9r-fp-64X" kind="show" id="vg8-DL-BmO"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem style="plain" systemItem="action" id="kxn-ZI-ycd">
                                 <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="o9r-fp-64X" kind="show" id="bxK-cR-cKg"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -1074,102 +1073,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxe-gq-UYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5231" y="-3752"/>
-        </scene>
-        <!--Add New Mood-->
-        <scene sceneID="w6a-UZ-iPH">
-            <objects>
-                <viewController id="lEf-xc-xfn" customClass="PostMoodViewController" customModule="meno_manage" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KlG-DT-3ey">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tKF-7O-w0K">
-                                <rect key="frame" x="20" y="139" width="335.5" height="422.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvI-ds-hYY">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mood" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrB-lj-tqn">
-                                        <rect key="frame" x="0.0" y="35.5" width="335.5" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What activities have you been doing?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nx-KT-XRg">
-                                        <rect key="frame" x="0.0" y="80.5" width="284" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="activities" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-Br-EzE">
-                                        <rect key="frame" x="0.0" y="116" width="335.5" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="f71-XW-oLy"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try describing your day." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ww-hl-5zm">
-                                        <rect key="frame" x="0.0" y="259" width="182.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="comments" translatesAutoresizingMaskIntoConstraints="NO" id="ank-K4-ZmI">
-                                        <rect key="frame" x="0.0" y="294.5" width="335.5" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="0.1588585076" green="0.1568876384" blue="0.1806078207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.69685378519999996" blue="0.98192740180000004" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ank-K4-ZmI" secondAttribute="trailing" id="14q-cl-ceM"/>
-                                    <constraint firstItem="qXL-Br-EzE" firstAttribute="top" secondItem="0Nx-KT-XRg" secondAttribute="bottom" constant="15" id="3rc-h2-Ih4"/>
-                                    <constraint firstItem="ank-K4-ZmI" firstAttribute="leading" secondItem="tKF-7O-w0K" secondAttribute="leading" id="DkP-Qd-QBR"/>
-                                    <constraint firstAttribute="trailing" secondItem="qXL-Br-EzE" secondAttribute="trailing" id="Dr5-uk-ccI"/>
-                                    <constraint firstItem="4Ww-hl-5zm" firstAttribute="top" secondItem="qXL-Br-EzE" secondAttribute="bottom" constant="15" id="E4F-lW-yLy"/>
-                                    <constraint firstItem="hrB-lj-tqn" firstAttribute="leading" secondItem="tKF-7O-w0K" secondAttribute="leading" id="NIS-n2-x47"/>
-                                    <constraint firstItem="ank-K4-ZmI" firstAttribute="top" secondItem="4Ww-hl-5zm" secondAttribute="bottom" constant="15" id="YOK-Ra-3dv"/>
-                                    <constraint firstItem="qXL-Br-EzE" firstAttribute="leading" secondItem="tKF-7O-w0K" secondAttribute="leading" id="bzc-77-rjs"/>
-                                    <constraint firstAttribute="trailing" secondItem="hrB-lj-tqn" secondAttribute="trailing" id="ezF-aj-B7U"/>
-                                    <constraint firstItem="0Nx-KT-XRg" firstAttribute="top" secondItem="hrB-lj-tqn" secondAttribute="bottom" constant="15" id="hdV-QA-MZe"/>
-                                    <constraint firstItem="hrB-lj-tqn" firstAttribute="top" secondItem="pvI-ds-hYY" secondAttribute="bottom" constant="15" id="j1b-ut-3IE"/>
-                                    <constraint firstAttribute="bottom" secondItem="ank-K4-ZmI" secondAttribute="bottom" id="zr1-2q-QEH"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="DAZ-mF-gL6" firstAttribute="trailing" secondItem="tKF-7O-w0K" secondAttribute="trailing" constant="19.5" id="DHo-qF-NbS"/>
-                            <constraint firstItem="DAZ-mF-gL6" firstAttribute="bottom" secondItem="tKF-7O-w0K" secondAttribute="bottom" constant="56.5" id="hf4-RB-net"/>
-                            <constraint firstItem="tKF-7O-w0K" firstAttribute="leading" secondItem="DAZ-mF-gL6" secondAttribute="leading" constant="20" id="iAl-jR-TIY"/>
-                            <constraint firstItem="tKF-7O-w0K" firstAttribute="top" secondItem="DAZ-mF-gL6" secondAttribute="top" constant="23" id="tYh-4N-Nz5"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DAZ-mF-gL6"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add New Mood" id="aRd-fb-rkt" colorLabel="IBBuiltInLabel-Green">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="9OO-Fk-ex1">
-                            <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="postMood:" destination="lEf-xc-xfn" id="spI-9F-eeh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="activitiesLoggedText" destination="qXL-Br-EzE" id="zbz-Wa-8UC"/>
-                        <outlet property="commentLoggedText" destination="ank-K4-ZmI" id="jBy-ez-Sa0"/>
-                        <outlet property="moodLoggedText" destination="hrB-lj-tqn" id="A3f-nf-gMR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddz-Fe-38E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6231" y="-3752"/>
         </scene>
         <!--Articles-->
         <scene sceneID="xBa-V1-TbV">
@@ -1469,6 +1372,105 @@
             </objects>
             <point key="canvasLocation" x="4333.6000000000004" y="-2993.2533733133437"/>
         </scene>
+        <!--Add New Mood-->
+        <scene sceneID="fh2-aS-NXU">
+            <objects>
+                <viewController id="o9r-fp-64X" customClass="NewPostMoodViewController" customModule="meno_manage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Scs-hZ-MRy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUf-m4-oOv">
+                                <rect key="frame" x="16" y="265" width="343" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addMood:" destination="o9r-fp-64X" eventType="editingDidBegin" id="sXx-iJ-qi0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you feeling?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtM-aa-5Ta">
+                                <rect key="frame" x="16" y="214" width="218" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRu-sG-MNk">
+                                <rect key="frame" x="16" y="392" width="343" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="addActivity:" destination="o9r-fp-64X" eventType="editingDidBegin" id="1Lq-Vf-ejo"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add activity/work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfG-kn-Crw">
+                                <rect key="frame" x="16" y="341" width="218" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9l-2Q-UHk">
+                                <rect key="frame" x="16" y="513" width="343" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-cl-x1t">
+                                <rect key="frame" x="16" y="462" width="218" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="APb-gk-g1d">
+                                <rect key="frame" x="16" y="176" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="setDate:" destination="o9r-fp-64X" eventType="editingDidBegin" id="OTM-E7-MoY"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yap-vk-E44">
+                                <rect key="frame" x="16" y="136" width="115" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xkQ-U7-6VA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Mood" id="EAg-eG-w02" colorLabel="IBBuiltInLabel-Green">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="TNl-mg-d5b">
+                            <color key="tintColor" red="0.60204925399999998" green="0.60773811069999994" blue="0.61026123470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="postMood:" destination="o9r-fp-64X" id="gGB-q6-cL1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityLoggedText" destination="SRu-sG-MNk" id="8kU-tM-GnZ"/>
+                        <outlet property="commentLoggedText" destination="o9l-2Q-UHk" id="OBa-j0-qWT"/>
+                        <outlet property="dateLoggedText" destination="APb-gk-g1d" id="Lzm-vx-sLq"/>
+                        <outlet property="moodLoggedText" destination="qUf-m4-oOv" id="azX-ny-AxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVn-kt-Uxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7069.6000000000004" y="-3752.4737631184412"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar" width="28" height="23"/>
@@ -1478,7 +1480,7 @@
         <image name="user" width="25" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HrW-SU-tKM"/>
+        <segue reference="RcV-EY-hJV"/>
         <segue reference="bXI-GE-e7R"/>
         <segue reference="QIV-bL-5TA"/>
         <segue reference="d7k-Rg-une"/>

@@ -53,6 +53,7 @@
 		ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */; };
 		ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED757471203F03B400DF0610 /* MoodHomeViewController.swift */; };
 		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
+		EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */; };
 		EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4BE2029078F008C2A88 /* PostCell.swift */; };
 		EDFBD4C12029088E008C2A88 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4C02029088E008C2A88 /* Post.swift */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
 		ED757471203F03B400DF0610 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
 		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMoodViewController.swift; sourceTree = "<group>"; };
 		EDFBD4BE2029078F008C2A88 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		EDFBD4C02029088E008C2A88 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +228,7 @@
 				ED2C50AE20337CB400CB828C /* MoodTableViewController.swift */,
 				ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */,
 				ED757471203F03B400DF0610 /* MoodHomeViewController.swift */,
+				EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */,
 			);
 			path = myMood;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				ED15530A2059B62D0065B143 /* BreatheHomeViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
 				ED34A6BB2058624D00B69F3C /* TopCellCollectionViewCell.swift in Sources */,
+				EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */,
 				ED09CBFB2052D8F40043FCDD /* MoodChartsViewController.swift in Sources */,
 				ED490AC92037543B0042136F /* videoModel.swift in Sources */,
 				ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */,

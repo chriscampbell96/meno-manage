@@ -77,27 +77,27 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     //get moods
     func getGreatMood() -> Double{
-        let greatMood = realm.objects(Mood.self).filter("mood = 'great'")
+        let greatMood = realm.objects(Mood.self).filter("mood = 'Great'")
         print(greatMood.count)
         return Double(greatMood.count)
     }
     func getGoodMood() -> Double{
-        let goodMood = realm.objects(Mood.self).filter("mood = 'good'")
+        let goodMood = realm.objects(Mood.self).filter("mood = 'Good'")
         print(goodMood.count)
         return Double(goodMood.count)
     }
     func getMehMood() -> Double{
-        let mehMood = realm.objects(Mood.self).filter("mood = 'meh'")
+        let mehMood = realm.objects(Mood.self).filter("mood = 'Meh'")
         print(mehMood.count)
         return Double(mehMood.count)
     }
     func getSadMood() -> Double{
-        let sadMood = realm.objects(Mood.self).filter("mood = 'sad'")
+        let sadMood = realm.objects(Mood.self).filter("mood = 'Sad'")
         print(sadMood.count)
         return Double(sadMood.count)
     }
     func getAwfulMood() -> Double{
-        let awfulMood = realm.objects(Mood.self).filter("mood = 'awful'")
+        let awfulMood = realm.objects(Mood.self).filter("mood = 'Awful'")
         print(awfulMood.count)
         return Double(awfulMood.count)
     }
