@@ -3,12 +3,14 @@ import Realm
 import RealmSwift
 import Charts
 import ChartsRealm
+import EPCalendarPicker
 
 
-class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, EPCalendarPickerDelegate {
     
     @IBOutlet weak var mainCollection: UICollectionView!
     
+    @IBOutlet weak var changeDate: UIBarButtonItem!
     
     func getDayOfWeek(today:String)->Int {
         
@@ -31,22 +33,22 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
 
     
     let months = ["Great", "Good", "Meh", "Sad", "Awful"]
-    let unitsSold = [1.0, 2.0, 3.0, 4.0, 5.0] as! [Double]
+
     
     let months1 = ["Great", "Good", "Meh", "Sad", "Awful"]
-    let unitsSold1 = [2.0, 7.0, 3.0, 1.0, 8.0] as! [Double]
+
 
     var moodList: [String]!
     var getMoodList: [Double]!
-    //global v's
+    
+    var weekList: [String]!
+        //global v's
     var moods: Results<Mood>!
     var realm = try! Realm()
     
     //init variables...
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         let great = getGreatMood()
         let good = getGoodMood()
         let meh = getMehMood()
@@ -69,6 +71,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         
         moodList = ["Great", "Good", "Meh", "Sad", "Awful"]
         getMoodList = [great, good, meh, sad, awful]
+        
+        weekList = ["S", "M", "T", "W", "T", "F", "S" ]
     }
     
     //get moods
@@ -222,6 +226,58 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         
         return UICollectionViewCell()
 
+    }
+    
+    
+    
+    @IBAction func changeDate(_ sender: AnyObject) {
+        let calendarPicker = EPCalendarPicker(startYear: 2017, endYear: 2018, multiSelection: false, selectedDates: [])
+        calendarPicker.calendarDelegate = self
+        calendarPicker.startDate = Date()
+        calendarPicker.hightlightsToday = true
+        calendarPicker.showsTodaysButton = true
+        calendarPicker.hideDaysFromOtherMonth = true
+        calendarPicker.tintColor = UIColor.orange
+        //        calendarPicker.barTintColor = UIColor.greenColor()
+        calendarPicker.dayDisabledTintColor = UIColor.gray
+        calendarPicker.title = "Date Picker"
+        
+        
+        //        calendarPicker.backgroundImage = UIImage(named: "background_image")
+        //        calendarPicker.backgroundColor = UIColor.blueColor()
+        
+        let navigationController = UINavigationController(rootViewController: calendarPicker)
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    func epCalendarPicker(_: EPCalendarPicker, didCancel error : NSError) {
+        print("User cancelled selection")
+        
+    }
+    func epCalendarPicker(_: EPCalendarPicker, didSelectDate date : Date) {
+        
+        
+//       print("User selected date: \n\(date)")
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let myString = formatter.string(from: date)
+        // convert your string to date
+        let yourDate = formatter.date(from: myString)
+        //then again set the date format whhich type of output you need
+        print(yourDate!)
+        
+        
+//        formatter.dateFormat = "dd-MMM-yyyy"
+//        // again convert your date to string
+//        let myStringafd = formatter.string(from: yourDate!)
+//
+//        print(myStringafd)
+//
+    }
+    func epCalendarPicker(_: EPCalendarPicker, didSelectMultipleDate dates : [Date]) {
+        print("User selected dates: \n\(dates)")
     }
     
 

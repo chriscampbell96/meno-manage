@@ -12,4 +12,6 @@ class TopCellCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var topDesc: UILabel!
     @IBOutlet weak var topAsk: UILabel!
+    
+    
 }

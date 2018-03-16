@@ -18,5 +18,8 @@ pod 'Charts'
 pod 'ChartsRealm'
 pod 'CountdownLabel'
 pod 'JTAppleCalendar', '~> 7.0'
+pod 'RLBAlertsPickers'
+pod 'EPCalendarPicker'
+pod 'SwiftyPickerPopover'
 
 end
