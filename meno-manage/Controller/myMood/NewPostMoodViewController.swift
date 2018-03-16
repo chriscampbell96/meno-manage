@@ -20,23 +20,43 @@ class NewPostMoodViewController: UIViewController {
     @IBOutlet weak var activityLoggedText: UITextField!
     @IBOutlet weak var commentLoggedText: UITextField!
     @IBOutlet weak var dateLoggedText: UITextField!
+    @IBOutlet weak var timeLoggedText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let dateformatter = DateFormatter()
-        dateformatter.dateStyle = DateFormatter.Style.short
-        dateformatter.timeStyle = DateFormatter.Style.short
-        let now = dateformatter.string(from: NSDate() as Date)
-        
-        dateLoggedText.text = now
+
+        setTime()
+        setDate()
+    
 
         if let goodMood = incomingMood {
             moodLoggedText.text = goodMood.mood
             activityLoggedText.text = goodMood.activities
             commentLoggedText.text = goodMood.comment
+            dateLoggedText.text = goodMood.date
             print(goodMood.date)
         }
+        
+    }
+    
+    func setTime(){
+        
+        let dateformatter = DateFormatter()
+        dateformatter.dateStyle = DateFormatter.Style.none
+        dateformatter.timeStyle = DateFormatter.Style.short
+        let time = dateformatter.string(from: NSDate() as Date)
+        timeLoggedText.text = time
+
+    }
+    
+    func setDate(){
+        
+        let dateformatter = DateFormatter()
+        dateformatter.dateStyle = DateFormatter.Style.short
+        dateformatter.timeStyle = DateFormatter.Style.none
+        let now = dateformatter.string(from: NSDate() as Date)
+        
+        dateLoggedText.text = now
         
     }
     
@@ -52,10 +72,7 @@ class NewPostMoodViewController: UIViewController {
     
     @IBAction func postMood(_ sender: AnyObject) {
         //Date time to string...
-        let dateformatter = DateFormatter()
-        dateformatter.dateStyle = DateFormatter.Style.short
-        dateformatter.timeStyle = DateFormatter.Style.short
-        let now = dateformatter.string(from: NSDate() as Date)
+
         
         if let goodMood = incomingMood {
             try! realm.write{
@@ -82,6 +99,25 @@ class NewPostMoodViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func setTime(_ sender: UITextField) {
+        
+        // DatePickerPopover appears:
+        DatePickerPopover(title: "DatePicker .time 5minInt.")
+            .setDateMode(.time)
+            .setMinuteInterval(5)
+            .setPermittedArrowDirections(.up)
+            .setDoneButton(action: { popover, selectedDate in print("selectedDate \(selectedDate)")
+                
+                let dateformatter = DateFormatter()
+                dateformatter.dateStyle = DateFormatter.Style.none
+                dateformatter.timeStyle = DateFormatter.Style.short
+                let newTime = dateformatter.string(from: selectedDate as Date)
+                
+                sender.text = newTime
+            } )
+            .setCancelButton(action: { _, _ in print("cancel")})
+            .appear(originView: sender, baseViewController: self)
+    }
     @IBAction func setDate(_ sender: UITextField) {
                 /// DatePickerPopover appears:
                 let p = DatePickerPopover(title: "Clearable DatePicker")
@@ -90,7 +126,7 @@ class NewPostMoodViewController: UIViewController {
                         
                         let dateformatter = DateFormatter()
                         dateformatter.dateStyle = DateFormatter.Style.short
-                        dateformatter.timeStyle = DateFormatter.Style.short
+                        dateformatter.timeStyle = DateFormatter.Style.none
                         let changed = dateformatter.string(from: selectedDate as Date)
                         sender.text = changed
                     } )
@@ -108,25 +144,6 @@ class NewPostMoodViewController: UIViewController {
                 p.disappearAutomatically(after: 3.0)
     }
     
-//    @IBAction func changeDate(_ sender: UIButton) {
-//        /// DatePickerPopover appears:
-//        let p = DatePickerPopover(title: "Clearable DatePicker")
-//            .setLocale(identifier: "en_GB") //en_GB is dd-MM-YYYY. en_US is MM-dd-YYYY. They are both in English.
-//            .setDoneButton(action: { popover, selectedDate in print("selectedDate \(selectedDate)")
-//            } )
-//
-//            .setCancelButton(action: { _, _ in print("cancel")})
-//            .setClearButton(action: { popover, selectedDate in
-//                print("clear")
-//                //Rewind
-//                popover.setSelectedDate(Date()).reload()
-//                //Instead, hide it.
-//                //                popover.disappear()
-//            })
-//
-//        p.appear(originView: sender, baseViewController: self)
-//        p.disappearAutomatically(after: 3.0)
-//    }
     
     @IBAction func addMood(_ sender: UITextField) {
         StringPickerPopover(title: "Add Mood", choices: ["Great","Good", "Meh", "Sad", "Awful"])

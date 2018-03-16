@@ -24,7 +24,6 @@ class CommentViewController: UITableViewController {
         self.tableView.reloadData()
         getComments()
         addView()
-        print("ran")
     }
 
     override func didReceiveMemoryWarning() {

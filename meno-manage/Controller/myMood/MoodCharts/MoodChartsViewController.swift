@@ -28,8 +28,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     //chart 1
-    let locationNames = ["Log New Mood Now!", "Average Daily Mood", "Total Mood Count", "Monthly Mood Count"]
-    let locationDescription = ["How are you feeling today?","Your average daily mood for each day of the week.", "A count of every mood since they day yo first logged.", "A count of all the moods in the month of "]
+    let locationNames = ["Log New Mood Now!", "Average Daily Mood", "Total Mood Count", "All Time Mood Count", "Often Together"]
+    let locationDescription = ["How are you feeling today?","Your average daily mood for each day of the week.", "A count of every mood since they day yo first logged.", "A count of all the moods in the month of", "Find out which activities are assosiated with your moods!"]
 
     
     let months = ["Great", "Good", "Meh", "Sad", "Awful"]
@@ -40,6 +40,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
 
     var moodList: [String]!
     var getMoodList: [Double]!
+    var changed: String!
     
     var weekList: [String]!
         //global v's
@@ -54,7 +55,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let meh = getMehMood()
         let sad = getSadMood()
         let awful = getAwfulMood()
-        
+        print(changed)
+
         moodList = ["Great", "Good", "Meh", "Sad", "Awful"]
         getMoodList = [great, good, meh, sad, awful]
 
@@ -78,27 +80,22 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     //get moods
     func getGreatMood() -> Double{
         let greatMood = realm.objects(Mood.self).filter("mood = 'Great'")
-        print(greatMood.count)
         return Double(greatMood.count)
     }
     func getGoodMood() -> Double{
         let goodMood = realm.objects(Mood.self).filter("mood = 'Good'")
-        print(goodMood.count)
         return Double(goodMood.count)
     }
     func getMehMood() -> Double{
         let mehMood = realm.objects(Mood.self).filter("mood = 'Meh'")
-        print(mehMood.count)
         return Double(mehMood.count)
     }
     func getSadMood() -> Double{
         let sadMood = realm.objects(Mood.self).filter("mood = 'Sad'")
-        print(sadMood.count)
         return Double(sadMood.count)
     }
     func getAwfulMood() -> Double{
         let awfulMood = realm.objects(Mood.self).filter("mood = 'Awful'")
-        print(awfulMood.count)
         return Double(awfulMood.count)
     }
     
@@ -236,15 +233,11 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         calendarPicker.startDate = Date()
         calendarPicker.hightlightsToday = true
         calendarPicker.showsTodaysButton = true
-        calendarPicker.hideDaysFromOtherMonth = true
+        calendarPicker.hideDaysFromOtherMonth = false
         calendarPicker.tintColor = UIColor.orange
         //        calendarPicker.barTintColor = UIColor.greenColor()
         calendarPicker.dayDisabledTintColor = UIColor.gray
-        calendarPicker.title = "Date Picker"
-        
-        
-        //        calendarPicker.backgroundImage = UIImage(named: "background_image")
-        //        calendarPicker.backgroundColor = UIColor.blueColor()
+        calendarPicker.title = "Filter Charts By Date"
         
         let navigationController = UINavigationController(rootViewController: calendarPicker)
         self.present(navigationController, animated: true, completion: nil)
@@ -256,25 +249,14 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     func epCalendarPicker(_: EPCalendarPicker, didSelectDate date : Date) {
         
+        let dateformatter = DateFormatter()
+        dateformatter.dateStyle = DateFormatter.Style.short
+        dateformatter.timeStyle = DateFormatter.Style.none
+        let changed = dateformatter.string(from: date as Date)
+
+        print(changed)
         
-//       print("User selected date: \n\(date)")
-        let formatter = DateFormatter()
-        // initially set the format based on your datepicker date
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        let myString = formatter.string(from: date)
-        // convert your string to date
-        let yourDate = formatter.date(from: myString)
-        //then again set the date format whhich type of output you need
-        print(yourDate!)
-        
-        
-//        formatter.dateFormat = "dd-MMM-yyyy"
-//        // again convert your date to string
-//        let myStringafd = formatter.string(from: yourDate!)
-//
-//        print(myStringafd)
-//
+    
     }
     func epCalendarPicker(_: EPCalendarPicker, didSelectMultipleDate dates : [Date]) {
         print("User selected dates: \n\(dates)")

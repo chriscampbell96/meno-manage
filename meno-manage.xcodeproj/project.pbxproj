@@ -54,6 +54,7 @@
 		ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED757471203F03B400DF0610 /* MoodHomeViewController.swift */; };
 		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
 		EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */; };
+		EDF8870C205C289500036BE9 /* OftenTogetherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8870B205C289500036BE9 /* OftenTogetherCollectionViewCell.swift */; };
 		EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4BE2029078F008C2A88 /* PostCell.swift */; };
 		EDFBD4C12029088E008C2A88 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4C02029088E008C2A88 /* Post.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		ED757471203F03B400DF0610 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
 		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMoodViewController.swift; sourceTree = "<group>"; };
+		EDF8870B205C289500036BE9 /* OftenTogetherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OftenTogetherCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDFBD4BE2029078F008C2A88 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		EDFBD4C02029088E008C2A88 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */,
 				ED34A6B820585E5800B69F3C /* SecondCollectionViewCell.swift */,
 				ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */,
+				EDF8870B205C289500036BE9 /* OftenTogetherCollectionViewCell.swift */,
 			);
 			path = MoodCharts;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */,
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED15530A2059B62D0065B143 /* BreatheHomeViewController.swift in Sources */,
+				EDF8870C205C289500036BE9 /* OftenTogetherCollectionViewCell.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
 				ED34A6BB2058624D00B69F3C /* TopCellCollectionViewCell.swift in Sources */,
 				EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */,

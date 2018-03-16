@@ -21,10 +21,13 @@ class SecondCollectionViewCell: UICollectionViewCell {
         
          ChartView2.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
         
+
+        
         var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
             let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
+
             dataEntries.append(dataEntry)
         }
         
