@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		28A00ED480C97A6D85E41356 /* Pods_meno_manage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */; };
+		ED007542205D32B400308502 /* DailyAverageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED007541205D32B400308502 /* DailyAverageCollectionViewCell.swift */; };
+		ED007544205D679800308502 /* ArticleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED007543205D679800308502 /* ArticleListTableViewController.swift */; };
+		ED007546205D698F00308502 /* PublisherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED007545205D698F00308502 /* PublisherTableViewCell.swift */; };
+		ED007548205D9F4100308502 /* relax.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED007547205D9F4100308502 /* relax.swift */; };
 		ED09CBFB2052D8F40043FCDD /* MoodChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */; };
 		ED09CBFC2052D8F40043FCDD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */; };
 		ED15530A2059B62D0065B143 /* BreatheHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1553092059B62D0065B143 /* BreatheHomeViewController.swift */; };
@@ -24,9 +28,6 @@
 		ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50B920337EA500CB828C /* MoodCell.swift */; };
 		ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */; };
 		ED2C50BE20338A9100CB828C /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50BD20338A9100CB828C /* Mood.swift */; };
-		ED337C5F204607A200C6BE8A /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */; };
-		ED337C62204607D100C6BE8A /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C61204607D100C6BE8A /* Interest.swift */; };
-		ED337C64204607DB00C6BE8A /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED337C63204607DA00C6BE8A /* InterestsViewController.swift */; };
 		ED34A6B920585E5800B69F3C /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34A6B820585E5800B69F3C /* SecondCollectionViewCell.swift */; };
 		ED34A6BB2058624D00B69F3C /* TopCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */; };
 		ED3D72BD2054262100B3E22C /* RSSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72BB2054262100B3E22C /* RSSwift.xcdatamodeld */; };
@@ -54,7 +55,6 @@
 		ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED757471203F03B400DF0610 /* MoodHomeViewController.swift */; };
 		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
 		EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */; };
-		EDF8870C205C289500036BE9 /* OftenTogetherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8870B205C289500036BE9 /* OftenTogetherCollectionViewCell.swift */; };
 		EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4BE2029078F008C2A88 /* PostCell.swift */; };
 		EDFBD4C12029088E008C2A88 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4C02029088E008C2A88 /* Post.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +63,10 @@
 		4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meno_manage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33D84BC58A5609BE5EC4022 /* Pods-meno-manage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meno-manage.release.xcconfig"; path = "Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage.release.xcconfig"; sourceTree = "<group>"; };
 		A38686F15C57A7693E326BDD /* Pods-meno-manage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meno-manage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meno-manage/Pods-meno-manage.debug.xcconfig"; sourceTree = "<group>"; };
+		ED007541205D32B400308502 /* DailyAverageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAverageCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED007543205D679800308502 /* ArticleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewController.swift; sourceTree = "<group>"; };
+		ED007545205D698F00308502 /* PublisherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherTableViewCell.swift; sourceTree = "<group>"; };
+		ED007547205D9F4100308502 /* relax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = relax.swift; sourceTree = "<group>"; };
 		ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodChartsViewController.swift; sourceTree = "<group>"; };
 		ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		ED1553092059B62D0065B143 /* BreatheHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BreatheHomeViewController.swift; path = "meno-manage/Breathe/BreatheHomeViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -81,9 +85,6 @@
 		ED2C50B920337EA500CB828C /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMoodViewController.swift; sourceTree = "<group>"; };
 		ED2C50BD20338A9100CB828C /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
-		ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
-		ED337C61204607D100C6BE8A /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
-		ED337C63204607DA00C6BE8A /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		ED34A6B820585E5800B69F3C /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED3D72BC2054262100B3E22C /* RSSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSwift.xcdatamodel; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		ED757471203F03B400DF0610 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
 		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMoodViewController.swift; sourceTree = "<group>"; };
-		EDF8870B205C289500036BE9 /* OftenTogetherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OftenTogetherCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDFBD4BE2029078F008C2A88 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		EDFBD4C02029088E008C2A88 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +152,7 @@
 				ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */,
 				ED34A6B820585E5800B69F3C /* SecondCollectionViewCell.swift */,
 				ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */,
-				EDF8870B205C289500036BE9 /* OftenTogetherCollectionViewCell.swift */,
+				ED007541205D32B400308502 /* DailyAverageCollectionViewCell.swift */,
 			);
 			path = MoodCharts;
 			sourceTree = "<group>";
@@ -300,15 +300,6 @@
 			path = Learn;
 			sourceTree = "<group>";
 		};
-		ED337C582045FCE900C6BE8A /* Relax */ = {
-			isa = PBXGroup;
-			children = (
-				ED337C5E204607A200C6BE8A /* InterestCollectionViewCell.swift */,
-				ED337C63204607DA00C6BE8A /* InterestsViewController.swift */,
-			);
-			path = Relax;
-			sourceTree = "<group>";
-		};
 		ED337C5B2046008D00C6BE8A /* Relax */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,7 +310,7 @@
 		ED337C60204607BE00C6BE8A /* Relax */ = {
 			isa = PBXGroup;
 			children = (
-				ED337C61204607D100C6BE8A /* Interest.swift */,
+				ED007547205D9F4100308502 /* relax.swift */,
 			);
 			path = Relax;
 			sourceTree = "<group>";
@@ -330,6 +321,8 @@
 				ED3D72BE2054263C00B3E22C /* FeedItemViewController.swift */,
 				ED3D72BF2054263C00B3E22C /* FeedListViewController.swift */,
 				ED3D72C02054263C00B3E22C /* XmlParserManager.swift */,
+				ED007543205D679800308502 /* ArticleListTableViewController.swift */,
+				ED007545205D698F00308502 /* PublisherTableViewCell.swift */,
 			);
 			path = ArticleList;
 			sourceTree = "<group>";
@@ -346,7 +339,6 @@
 		ED4BBAFF202C90FB00CBD69E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ED337C582045FCE900C6BE8A /* Relax */,
 				ED2C92292036139600261475 /* mySymptoms */,
 				ED2C92282036138F00261475 /* Home */,
 				ED2C92272036138500261475 /* Learn */,
@@ -556,7 +548,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED611F4A204EE7A60087697C /* CGRect+Center.swift in Sources */,
-				ED337C5F204607A200C6BE8A /* InterestCollectionViewCell.swift in Sources */,
 				ED09CBFC2052D8F40043FCDD /* CollectionViewCell.swift in Sources */,
 				ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */,
 				ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */,
@@ -564,20 +555,22 @@
 				ED611F4B204EE7A60087697C /* BreatheView.swift in Sources */,
 				ED34A6B920585E5800B69F3C /* SecondCollectionViewCell.swift in Sources */,
 				ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */,
+				ED007548205D9F4100308502 /* relax.swift in Sources */,
 				ED611F49204EE7A60087697C /* UIBezierPath+Clone.swift in Sources */,
 				ED611F4C204EE7A60087697C /* CGPoint+Hashable.swift in Sources */,
+				ED007546205D698F00308502 /* PublisherTableViewCell.swift in Sources */,
 				ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */,
-				ED337C64204607DB00C6BE8A /* InterestsViewController.swift in Sources */,
 				EDFBD4C12029088E008C2A88 /* Post.swift in Sources */,
 				ED1CDDDB2021E650005DEE2E /* SignUpViewController.swift in Sources */,
 				ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */,
-				ED337C62204607D100C6BE8A /* Interest.swift in Sources */,
+				ED007542205D32B400308502 /* DailyAverageCollectionViewCell.swift in Sources */,
 				ED611F4D204EE7A60087697C /* BreatheViewController.swift in Sources */,
 				ED611F47204EE7A60087697C /* Math.swift in Sources */,
 				ED3D72C32054263C00B3E22C /* XmlParserManager.swift in Sources */,
 				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
 				ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */,
 				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
+				ED007544205D679800308502 /* ArticleListTableViewController.swift in Sources */,
 				ED3D72C12054263C00B3E22C /* FeedItemViewController.swift in Sources */,
 				ED3D72C22054263C00B3E22C /* FeedListViewController.swift in Sources */,
 				ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */,
@@ -585,7 +578,6 @@
 				ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */,
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED15530A2059B62D0065B143 /* BreatheHomeViewController.swift in Sources */,
-				EDF8870C205C289500036BE9 /* OftenTogetherCollectionViewCell.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
 				ED34A6BB2058624D00B69F3C /* TopCellCollectionViewCell.swift in Sources */,
 				EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */,

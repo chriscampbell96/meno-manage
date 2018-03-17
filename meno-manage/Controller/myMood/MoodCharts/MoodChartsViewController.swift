@@ -28,8 +28,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     //chart 1
-    let locationNames = ["Log New Mood Now!", "Average Daily Mood", "Total Mood Count", "All Time Mood Count", "Often Together"]
-    let locationDescription = ["How are you feeling today?","Your average daily mood for each day of the week.", "A count of every mood since they day yo first logged.", "A count of all the moods in the month of", "Find out which activities are assosiated with your moods!"]
+    let locationNames = ["Log New Mood Now!", "All Time Mood Count", "Daily Mood Count", "Daily Average", "Often Together", "Activity Vs. Mood"]
+    let locationDescription = ["How are you feeling today?","Your average daily mood for each day of the week.", "A count of every mood since they day yo first logged.", "A count of all the moods in the month of", "Find out which activities are assosiated with your moods!", "This is a test"]
 
     
     let months = ["Great", "Good", "Meh", "Sad", "Awful"]
@@ -64,7 +64,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidAppear(_ animated: Bool) {
         self.mainCollection.reloadData()
-        
+
         let great = getGreatMood()
         let good = getGoodMood()
         let meh = getMehMood()
@@ -126,7 +126,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -135,31 +135,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        var cell: UICollectionViewCell?
         
         if indexPath.row == 0 {
-            let topCell = collectionView.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as! TopCellCollectionViewCell
-            
-            topCell.topAsk.text = locationNames[indexPath.row]
-            topCell.topDesc.text = locationDescription[indexPath.row]
-            
-            //This creates the shadows and modifies the cards a little bit
-            topCell.contentView.layer.cornerRadius = 4.0
-            topCell.contentView.layer.borderWidth = 1.0
-            topCell.contentView.layer.borderColor = UIColor.clear.cgColor
-            topCell.contentView.layer.masksToBounds = false
-            topCell.layer.shadowColor = UIColor.gray.cgColor
-            topCell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            topCell.layer.shadowRadius = 4.0
-            topCell.layer.shadowOpacity = 1.0
-            topCell.layer.masksToBounds = false
-            topCell.layer.shadowPath = UIBezierPath(roundedRect: topCell.bounds, cornerRadius: topCell.contentView.layer.cornerRadius).cgPath
-            
-            
-            return topCell
-        }
-        
-        if indexPath.row == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
             
             cell.ChartName.text = locationNames[indexPath.row]
@@ -179,7 +156,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             
             return cell
         }
-        if indexPath.row == 2 {
+        if indexPath.row == 1 {
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! CollectionViewCell
             
             cell2.ChartName.text = locationNames[indexPath.row]
@@ -199,7 +176,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             
             return cell2
         }
-        if indexPath.row == 3 {
+        if indexPath.row == 2 {
             let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! SecondCollectionViewCell
             
             cell3.NewDesc.text = locationNames[indexPath.row]
@@ -219,6 +196,29 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             
             return cell3
         }
+//        if indexPath.row == 3 {
+//            let cell4 = collectionView.dequeueReusableCell(withReuseIdentifier: "dailyOverview", for: indexPath) as! DailyAverageCollectionViewCell
+////            
+////            cell4.ChartName.text = locationNames[indexPath.row]
+////            cell4.ChartDescription.text = locationDescription[indexPath.row]
+////            cell4.AfternoonLabel.text = "Meh"
+////            cell4.MorningLabel.text = "Sad"
+////            cell4.EveningLabel.text = "Good"
+//            
+//            
+//            cell4.contentView.layer.cornerRadius = 4.0
+//            cell4.contentView.layer.borderWidth = 1.0
+//            cell4.contentView.layer.borderColor = UIColor.clear.cgColor
+//            cell4.contentView.layer.masksToBounds = false
+//            cell4.layer.shadowColor = UIColor.gray.cgColor
+//            cell4.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+//            cell4.layer.shadowRadius = 4.0
+//            cell4.layer.shadowOpacity = 1.0
+//            cell4.layer.masksToBounds = false
+//            cell4.layer.shadowPath = UIBezierPath(roundedRect: cell4.bounds, cornerRadius: cell4.contentView.layer.cornerRadius).cgPath
+//            
+//            return cell4
+//        }
 
         
         return UICollectionViewCell()
