@@ -65,8 +65,8 @@ class BreatheHomeViewController: UIViewController{
         
         let startOfWeek = Date().startOfWeek
         let endOfWeek = Date().endOfWeek
-        print(startOfWeek)
-        print(endOfWeek)
+        print(startOfWeek as Any)
+        print(endOfWeek as Any)
         print(days)
     }
     
