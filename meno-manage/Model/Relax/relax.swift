@@ -14,11 +14,11 @@ import RealmSwift
     
     
     dynamic var relax: String = ""
-    dynamic var duration: String = ""
+    dynamic var duration: Double = 0.0
     dynamic var time: String = ""
     dynamic var date: String = ""
     
-    convenience init(relax: String, duration: String, time: String, date: String) {
+    convenience init(relax: String, duration: Double, time: String, date: String) {
         self.init()
         self.relax = relax
         self.duration = duration
