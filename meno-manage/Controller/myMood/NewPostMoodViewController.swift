@@ -155,7 +155,7 @@ class NewPostMoodViewController: UIViewController {
     
     
     @IBAction func addActivity(_ sender: UITextField) {
-        StringPickerPopover(title: "Add Activity", choices: ["Work","Friends", "Relax", "Date", "Sports", "Shopping", "Gaming", "Reading", "Relaxing", "Travelling", "Cleaning", "Cooking"])
+        StringPickerPopover(title: "Add Activity", choices: ["Work","Friends", "Relax", "Date", "Sports", "Shopping", "Gaming", "Reading", "Relaxing", "Travelling", "Cleaning", "Cooking", "Other"])
             .setDoneButton(action: { popover, selectedRow, selectedString in
                 sender.text = selectedString
             })

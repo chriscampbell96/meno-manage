@@ -10,7 +10,12 @@ import UIKit
 import Realm
 import RealmSwift
 
-class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    
+    
+
     
     
     var relaxs: Results<Relax>!
@@ -128,6 +133,40 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chartCell", for: indexPath) as! LineViewCollectionViewCell
+            
+            cell.chartDescription.text = "This is a test"
+            cell.chartTitle.text = "Testing the chart implementation"
+            
+            cell.contentView.layer.cornerRadius = 4.0
+            cell.contentView.layer.borderWidth = 1.0
+            cell.contentView.layer.borderColor = UIColor.clear.cgColor
+            cell.contentView.layer.masksToBounds = false
+            cell.layer.shadowColor = UIColor.gray.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            cell.layer.shadowRadius = 4.0
+            cell.layer.shadowOpacity = 1.0
+            cell.layer.masksToBounds = false
+            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+            
+            return cell
+        }
+        return UICollectionViewCell()
+        
     }
     
     

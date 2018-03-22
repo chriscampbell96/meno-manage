@@ -58,6 +58,10 @@
 		ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */; };
 		ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED757471203F03B400DF0610 /* MoodHomeViewController.swift */; };
 		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
+		EDEB8A052063CF71005FEE7E /* MoodHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A042063CF71005FEE7E /* MoodHomeTableViewCell.swift */; };
+		EDEB8A0A2063D396005FEE7E /* LineViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A092063D396005FEE7E /* LineViewCollectionViewCell.swift */; };
+		EDEB8A0E2063D962005FEE7E /* MyPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A0D2063D962005FEE7E /* MyPostsTableViewController.swift */; };
+		EDEB8A102063D9AD005FEE7E /* MyPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A0F2063D9AD005FEE7E /* MyPostsTableViewCell.swift */; };
 		EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */; };
 		EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4BE2029078F008C2A88 /* PostCell.swift */; };
 		EDFBD4C12029088E008C2A88 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBD4C02029088E008C2A88 /* Post.swift */; };
@@ -119,6 +123,10 @@
 		ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
 		ED757471203F03B400DF0610 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
 		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EDEB8A042063CF71005FEE7E /* MoodHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeTableViewCell.swift; sourceTree = "<group>"; };
+		EDEB8A092063D396005FEE7E /* LineViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDEB8A0D2063D962005FEE7E /* MyPostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsTableViewController.swift; sourceTree = "<group>"; };
+		EDEB8A0F2063D9AD005FEE7E /* MyPostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsTableViewCell.swift; sourceTree = "<group>"; };
 		EDF88709205BD87800036BE9 /* NewPostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMoodViewController.swift; sourceTree = "<group>"; };
 		EDFBD4BE2029078F008C2A88 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		EDFBD4C02029088E008C2A88 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 				ED34A6B820585E5800B69F3C /* SecondCollectionViewCell.swift */,
 				ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */,
 				ED007541205D32B400308502 /* DailyAverageCollectionViewCell.swift */,
+				EDEB8A042063CF71005FEE7E /* MoodHomeTableViewCell.swift */,
 			);
 			path = MoodCharts;
 			sourceTree = "<group>";
@@ -209,6 +218,8 @@
 				ED4BBB00202C91A500CBD69E /* PostViewController.swift */,
 				ED4BBB04202CD59800CBD69E /* CommentViewController.swift */,
 				ED1DA6D62031B5FD0033A440 /* CommentPostViewController.swift */,
+				EDEB8A0D2063D962005FEE7E /* MyPostsTableViewController.swift */,
+				EDEB8A0F2063D9AD005FEE7E /* MyPostsTableViewCell.swift */,
 			);
 			path = myCommunity;
 			sourceTree = "<group>";
@@ -374,6 +385,7 @@
 				ED33EE41205F04BC00ECC133 /* BreatheHomeStatsViewController.swift */,
 				ED33EE43205F04CF00ECC133 /* ReadingsTableViewCell.swift */,
 				ED33EE46205F2F4E00ECC133 /* BreatheCollectionViewCell.swift */,
+				EDEB8A092063D396005FEE7E /* LineViewCollectionViewCell.swift */,
 			);
 			name = Breathe;
 			path = "New Group";
@@ -565,9 +577,11 @@
 				ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */,
 				ED1DA6D72031B5FD0033A440 /* CommentPostViewController.swift in Sources */,
 				ED611F4B204EE7A60087697C /* BreatheView.swift in Sources */,
+				EDEB8A0E2063D962005FEE7E /* MyPostsTableViewController.swift in Sources */,
 				ED34A6B920585E5800B69F3C /* SecondCollectionViewCell.swift in Sources */,
 				ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */,
 				ED007548205D9F4100308502 /* relax.swift in Sources */,
+				EDEB8A052063CF71005FEE7E /* MoodHomeTableViewCell.swift in Sources */,
 				ED611F49204EE7A60087697C /* UIBezierPath+Clone.swift in Sources */,
 				ED611F4C204EE7A60087697C /* CGPoint+Hashable.swift in Sources */,
 				ED007546205D698F00308502 /* PublisherTableViewCell.swift in Sources */,
@@ -577,6 +591,7 @@
 				ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */,
 				ED007542205D32B400308502 /* DailyAverageCollectionViewCell.swift in Sources */,
 				ED611F4D204EE7A60087697C /* BreatheViewController.swift in Sources */,
+				EDEB8A102063D9AD005FEE7E /* MyPostsTableViewCell.swift in Sources */,
 				ED611F47204EE7A60087697C /* Math.swift in Sources */,
 				ED3D72C32054263C00B3E22C /* XmlParserManager.swift in Sources */,
 				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
@@ -584,6 +599,7 @@
 				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
 				ED007544205D679800308502 /* ArticleListTableViewController.swift in Sources */,
 				ED3D72C12054263C00B3E22C /* FeedItemViewController.swift in Sources */,
+				EDEB8A0A2063D396005FEE7E /* LineViewCollectionViewCell.swift in Sources */,
 				ED3D72C22054263C00B3E22C /* FeedListViewController.swift in Sources */,
 				ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */,
 				ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */,
