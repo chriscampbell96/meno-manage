@@ -15,6 +15,7 @@ class MoodCell: UITableViewCell {
     @IBOutlet weak var timeLogged: UILabel!
     @IBOutlet weak var activitiesLogged: UILabel!
     @IBOutlet weak var commentLogged: UILabel!
+    @IBOutlet weak var symptomLogged: UILabel!
     
     
     override func awakeFromNib() {
@@ -33,6 +34,7 @@ class MoodCell: UITableViewCell {
         activitiesLogged.text = myMood.activities
         commentLogged.text = myMood.comment
         dateLogged.text = myMood.date
+        symptomLogged.text = myMood.symptom
 
     }
     

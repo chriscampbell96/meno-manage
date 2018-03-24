@@ -21,6 +21,8 @@ class NewPostMoodViewController: UIViewController {
     @IBOutlet weak var commentLoggedText: UITextField!
     @IBOutlet weak var dateLoggedText: UITextField!
     @IBOutlet weak var timeLoggedText: UITextField!
+    @IBOutlet weak var symptomLoggedText: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class NewPostMoodViewController: UIViewController {
             activityLoggedText.text = goodMood.activities
             commentLoggedText.text = goodMood.comment
             dateLoggedText.text = goodMood.date
+            timeLoggedText.text = goodMood.time
+            symptomLoggedText.text = goodMood.symptom
             print(goodMood.date)
         }
         
@@ -80,6 +84,8 @@ class NewPostMoodViewController: UIViewController {
                 goodMood.comment = commentLoggedText.text!
                 goodMood.activities = activityLoggedText.text!
                 goodMood.date = dateLoggedText.text!
+                goodMood.symptom = symptomLoggedText.text!
+                goodMood.time = timeLoggedText.text!
             }
         }else{
             let mood = Mood()
@@ -87,6 +93,8 @@ class NewPostMoodViewController: UIViewController {
             mood.activities = activityLoggedText.text!
             mood.comment = commentLoggedText.text!
             mood.date = dateLoggedText.text!
+            mood.symptom = symptomLoggedText.text!
+            mood.time = timeLoggedText.text!
             
             
             try! realm.write {
@@ -162,6 +170,13 @@ class NewPostMoodViewController: UIViewController {
             .appear(originView: sender, baseViewController: self)
     }
 
-
+    @IBAction func addSymptoms(_ sender: UITextField) {
+        StringPickerPopover(title: "Add Activity", choices: ["Irregular period", "Vaginal dryness", "Hot flash", "Chills", "Night sweats", "Poor sleep", "Loss of libido", "Dry skin", "Thinning of hair", "Loss of breast fullness"])
+            .setDoneButton(action: { popover, selectedRow, selectedString in
+                sender.text = selectedString
+            })
+            .appear(originView: sender, baseViewController: self)
+    }
+    
 
 }

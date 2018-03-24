@@ -23,9 +23,10 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
     
     var statlabels: [String]!
     var stats: [String]!
+    var weekdays: [String]!
     
     var allSessions: String!
-    
+    var currentWeekThis: [String]!
 
 
     @IBOutlet weak var mainStats: UITableView!
@@ -36,9 +37,11 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         let allTimeLogged = getAllTime()
         let totalSessions = getTotalSessions()
         let todayLogged = getToday()
-        
+        let currentWeekThis = getCurrentWeek()
+
         statlabels = [todayLogged, "🗓 7 Days", "🗓 30 Days", "📊 All Time", "🔥 Best Streak" , "📈 Total Sessions Logged"]
         stats = [todayLogged + "sec", "coming soon", "coming soon", allTimeLogged + "sec", "coming soon", totalSessions]
+        weekdays = ["M","T","W","T","F","S","S"]
  
     }
     
@@ -49,7 +52,8 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         let todayLogged = getToday()
         let allTimeLogged = getAllTime()
 
-        
+        let currentWeekThis = getCurrentWeek()
+        print(currentWeekThis)
         statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time", "🔥 Best Streak" , "📈 Total Sessions Logged"]
         stats = [todayLogged + "sec", "coming soon", "coming soon", allTimeLogged + "sec", "coming soon", totalSessions]
     }
@@ -63,29 +67,7 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
 //        let reading = realm.objects(Relax.self)
 
     }
-    
-//    func getCurrentWeek(){
-//        let calendar = Calendar.current
-//        let today = calendar.startOfDay(for: Date())
-//        let dayOfWeek = calendar.component(.weekday, from: today)
-//        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
-//        
-//        let formatter = DateFormatter()
-//        formatter.dateStyle = .short
-//        formatter.timeStyle = .none
-//        
-//        
-//        
-//        let days = (weekdays.lowerBound ..< weekdays.upperBound)
-//            .flatMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: today) }  // use `compactMap` in Xcode 9.3 and later
-//            .filter { !calendar.isDateInWeekend($0) }
-//        
-//        let startOfWeek = Date().startOfWeek
-//        let endOfWeek = Date().endOfWeek
-//        print(startOfWeek as Any)
-//        print(endOfWeek as Any)
-//        print(days)
-//    }
+
     
     func getToday() -> String{
         
@@ -149,8 +131,9 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chartCell", for: indexPath) as! LineViewCollectionViewCell
             
-            cell.chartDescription.text = "This is a test"
-            cell.chartTitle.text = "Testing the chart implementation"
+            cell.chartTitle.text = "Weekly Session Overview"
+            cell.chartDescription.text = "A count of the sessions logged for the past week."
+            cell.configure(dataPoints: weekdays, values: [1.0,2.0,3.0,4.0,5.0,6.0,7.0])
             
             cell.contentView.layer.cornerRadius = 4.0
             cell.contentView.layer.borderWidth = 1.0
@@ -167,6 +150,28 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         }
         return UICollectionViewCell()
         
+    }
+    func getCurrentWeek() -> [Date]{
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        let dayOfWeek = calendar.component(.weekday, from: today)
+        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        
+        
+        
+        let days = (weekdays.lowerBound ..< weekdays.upperBound)
+            .flatMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: today) }  // use `compactMap` in Xcode 9.3 and later
+            .filter { !calendar.isDateInWeekend($0) }
+        
+        let startOfWeek = Date().startOfWeek
+        let endOfWeek = Date().endOfWeek
+//        print(startOfWeek as Any)
+//        print(endOfWeek as Any)
+        return days
     }
     
     

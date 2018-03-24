@@ -18,13 +18,16 @@ import RealmSwift
     dynamic var activities: String = ""
     dynamic var time: String = ""
     dynamic var date: String = ""
+    dynamic var symptom: String = ""
     
-    convenience init(mood: String, comment: String, activities: String, date: String) {
+    convenience init(mood: String, comment: String, activities: String, date: String, time: String, symptom: String) {
         self.init()
         self.mood = mood
         self.comment = comment
         self.activities = activities
         self.date = date
+        self.time = time
+        self.symptom = symptom
     }
     
     //date time toString...

@@ -65,17 +65,6 @@ class ArticleListTableViewController: UITableViewController {
         
     }
     
-        
-//        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//            let post = posts[indexPath.row]
-//            if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-//                cell.configCell(post: post)
-//                refreshControl?.endRefreshing()
-//                cell.commentBtn.addTarget(self, action: #selector(toComments(_:)), for: .touchUpInside)
-//                return cell
-//            }else{
-//                return PostCell()
-//            }
-//        }
+
 
 }

@@ -11,6 +11,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     @IBOutlet weak var mainCollection: UICollectionView!
+    @IBOutlet weak var mainTableView: UITableView!
     
     @IBOutlet weak var changeDate: UIBarButtonItem!
     
@@ -74,6 +75,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     //init variables...
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MOOD DATA
         let great = getGreatMood()
         let good = getGoodMood()
         let meh = getMehMood()
@@ -83,8 +86,22 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let totalMoods = getTotalSessions()
         let allTimeAverage = getAverage()
         getCurrentWeek()
+        
+        //    "Irregular period", "Vaginal dryness", "Hot flash", "Chills", "Night sweats", "Poor sleep", "Loss of libido", "Dry skin", "Thinning of hair", "Loss of breast fullness"
+        //SYMPTOM DATA
+        let IP = String(getIPeriod())
+        let VG = String(getVag())
+        let flash = String(getFlash())
+        let chills = String(getChills())
+        let NS = String(getNightSweats())
+        let PS = String(getPoorSleep())
+        let libido = String(getLossLibido())
+        let DS = String(getDrySkin())
+        let TH = String(getHair())
+        let BF = String(getBreast())
+        
         let s1Data2: [String] = ["Row 3", "Row 3", "Row 3"]
-        let s2Data2: [String] = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+        let s2Data2: [String] = [IP, VG, flash, chills, NS, PS, libido, DS, TH, BF]
         let s3Data2: [String] = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
 
 
@@ -98,14 +115,14 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
         stats = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
         
+        print(getGreatWork())
 
-
-
+        print(getIPeriod())
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.mainCollection.reloadData()
-        
+        self.mainTableView.reloadData()
         
         let totalMoods = getTotalSessions()
                 getCurrentWeek()
@@ -126,6 +143,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         stats = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
 
     }
+    
     
     //get moods
     func getGreatMood() -> Double{
@@ -148,6 +166,324 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let awfulMood = realm.objects(Mood.self).filter("mood = 'Awful'")
         return Double(awfulMood.count)
     }
+    
+    //GET COUNT FOR SYMPTOMS
+    func getIPeriod() -> Int{
+        let IPsymptom = realm.objects(Mood.self).filter("symptom = 'Irregular period'")
+        return Int(IPsymptom.count)
+    }
+    func getVag() -> Int{
+        let vagDry = realm.objects(Mood.self).filter("symptom = 'Vaginal dryness'")
+        return Int(vagDry.count)
+    }
+    func getFlash() -> Int{
+        let hotFlash = realm.objects(Mood.self).filter("symptom = 'Hot flash'")
+        return Int(hotFlash.count)
+    }
+    func getChills() -> Int{
+        let chills = realm.objects(Mood.self).filter("symptom = 'Chills'")
+        return Int(chills.count)
+    }
+    func getNightSweats() -> Int{
+        let nightsweats = realm.objects(Mood.self).filter("symptom = 'Night sweats'")
+        return Int(nightsweats.count)
+    }
+    func getPoorSleep() -> Int{
+        let poorsleep = realm.objects(Mood.self).filter("symptom = 'Poor sleep'")
+        return Int(poorsleep.count)
+    }
+    func getLossLibido() -> Int{
+        let libido = realm.objects(Mood.self).filter("symptom = 'Loss of libido'")
+        return Int(libido.count)
+    }
+    func getDrySkin() -> Int{
+        let dryskin = realm.objects(Mood.self).filter("symptom = 'Dry skin'")
+        return Int(dryskin.count)
+    }
+    func getHair() -> Int{
+        let hair = realm.objects(Mood.self).filter("symptom = 'Thinning of hair'")
+        return Int(hair.count)
+    }
+    func getBreast() -> Int{
+        let breast = realm.objects(Mood.self).filter("symptom = 'Loss of breast fullness'")
+        return Int(breast.count)
+    }
+    
+    
+//    GET GREAT MOOD ACTIVITIES
+    func getGreatWork() -> Int{
+        let greatWork = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Work'")
+        return Int(greatWork.count)
+    }
+    func getGreatFriends() -> Int{
+        let greatFriends = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Friends'")
+        return Int(greatFriends.count)
+    }
+    func getGreatRelax() -> Int{
+        let greatRelax = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Relax'")
+        return Int(greatRelax.count)
+    }
+    func getGreatDate() -> Int{
+        let greatDate = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Date'")
+        return Int(greatDate.count)
+    }
+    func getGreatShopping() -> Int{
+        let greatShopping = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Shopping'")
+        return Int(greatShopping.count)
+    }
+    func getGreatSport() -> Int{
+        let greatSport = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Sport'")
+        return Int(greatSport.count)
+    }
+    func getGreatGaming() -> Int{
+        let greatGaming = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Gaming'")
+        return Int(greatGaming.count)
+    }
+    func getGreatReading() -> Int{
+        let greatReading = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Reading'")
+        return Int(greatReading.count)
+    }
+    func getGreatRelaxing() -> Int{
+        let greatRelaxing = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Relaxing'")
+        return Int(greatRelaxing.count)
+    }
+    func getGreatTravelling() -> Int{
+        let greatTravelling = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Travelling'")
+        return Int(greatTravelling.count)
+    }
+    func getGreatCleaning() -> Int{
+        let greatCleaning = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Cleaning'")
+        return Int(greatCleaning.count)
+    }
+    func getGreatCooking() -> Int{
+        let greatCooking = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Cooking'")
+        return Int(greatCooking.count)
+    }
+    func getGreatOther() -> Int{
+        let greatOther = realm.objects(Mood.self).filter("mood = 'Great' AND activities = 'Other'")
+        return Int(greatOther.count)
+    }
+    
+    
+    //    GET GOOD MOOD ACTIVITIES
+    func getGoodWork() -> Int{
+        let goodWork = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Work'")
+        return Int(goodWork.count)
+    }
+    func getGoodFriends() -> Int{
+        let goodFriends = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Friends'")
+        return Int(goodFriends.count)
+    }
+    func getGoodRelax() -> Int{
+        let goodRelax = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Relax'")
+        return Int(goodRelax.count)
+    }
+    func getGoodDate() -> Int{
+        let goodDate = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Date'")
+        return Int(goodDate.count)
+    }
+    func getGoodShopping() -> Int{
+        let goodShopping = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Shopping'")
+        return Int(goodShopping.count)
+    }
+    func getGoodSport() -> Int{
+        let goodSport = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Sport'")
+        return Int(goodSport.count)
+    }
+    func getGoodGaming() -> Int{
+        let goodGaming = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Gaming'")
+        return Int(goodGaming.count)
+    }
+    func getGoodReading() -> Int{
+        let goodReading = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Reading'")
+        return Int(goodReading.count)
+    }
+    func getGoodRelaxing() -> Int{
+        let goodRelaxing = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Relaxing'")
+        return Int(goodRelaxing.count)
+    }
+    func getGoodTravelling() -> Int{
+        let GoodTravelling = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Travelling'")
+        return Int(GoodTravelling.count)
+    }
+    func getGoodCleaning() -> Int{
+        let GoodCleaning = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Cleaning'")
+        return Int(GoodCleaning.count)
+    }
+    func getGoodCooking() -> Int{
+        let GoodCooking = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Cooking'")
+        return Int(GoodCooking.count)
+    }
+    func getGoodOther() -> Int{
+        let GoodOther = realm.objects(Mood.self).filter("mood = 'Good' AND activities = 'Other'")
+        return Int(GoodOther.count)
+    }
+    
+    //    GET MEH MOOD ACTIVITIES
+    func getMehWork() -> Int{
+        let MehWork = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Work'")
+        return Int(MehWork.count)
+    }
+    func getMehFriends() -> Int{
+        let MehFriends = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Friends'")
+        return Int(MehFriends.count)
+    }
+    func getMehRelax() -> Int{
+        let MehRelax = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Relax'")
+        return Int(MehRelax.count)
+    }
+    func getMehDate() -> Int{
+        let MehDate = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Date'")
+        return Int(MehDate.count)
+    }
+    func getMehShopping() -> Int{
+        let MehShopping = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Shopping'")
+        return Int(MehShopping.count)
+    }
+    func getMehSport() -> Int{
+        let MehSport = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Sport'")
+        return Int(MehSport.count)
+    }
+    func getMehGaming() -> Int{
+        let MehGaming = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Gaming'")
+        return Int(MehGaming.count)
+    }
+    func getMehReading() -> Int{
+        let MehReading = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Reading'")
+        return Int(MehReading.count)
+    }
+    func getMehRelaxing() -> Int{
+        let MehRelaxing = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Relaxing'")
+        return Int(MehRelaxing.count)
+    }
+    func getMehTravelling() -> Int{
+        let MehTravelling = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Travelling'")
+        return Int(MehTravelling.count)
+    }
+    func getMehCleaning() -> Int{
+        let MehCleaning = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Cleaning'")
+        return Int(MehCleaning.count)
+    }
+    func getMehCooking() -> Int{
+        let MehCooking = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Cooking'")
+        return Int(MehCooking.count)
+    }
+    func getMehOther() -> Int{
+        let MehOther = realm.objects(Mood.self).filter("mood = 'Meh' AND activities = 'Other'")
+        return Int(MehOther.count)
+    }
+    
+    //    GET SAD MOOD ACTIVITIES
+    func getSadWork() -> Int{
+        let SadWork = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Work'")
+        return Int(SadWork.count)
+    }
+    func getSadFriends() -> Int{
+        let SadFriends = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Friends'")
+        return Int(SadFriends.count)
+    }
+    func getSadRelax() -> Int{
+        let SadRelax = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Relax'")
+        return Int(SadRelax.count)
+    }
+    func getSadDate() -> Int{
+        let SadDate = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Date'")
+        return Int(SadDate.count)
+    }
+    func getSadShopping() -> Int{
+        let SadShopping = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Shopping'")
+        return Int(SadShopping.count)
+    }
+    func getSadSport() -> Int{
+        let SadSport = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Sport'")
+        return Int(SadSport.count)
+    }
+    func getSadGaming() -> Int{
+        let SadGaming = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Gaming'")
+        return Int(SadGaming.count)
+    }
+    func getSadReading() -> Int{
+        let SadReading = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Reading'")
+        return Int(SadReading.count)
+    }
+    func getSadRelaxing() -> Int{
+        let SadRelaxing = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Relaxing'")
+        return Int(SadRelaxing.count)
+    }
+    func getSadTravelling() -> Int{
+        let SadTravelling = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Travelling'")
+        return Int(SadTravelling.count)
+    }
+    func getSadCleaning() -> Int{
+        let SadCleaning = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Cleaning'")
+        return Int(SadCleaning.count)
+    }
+    func getSadCooking() -> Int{
+        let SadCooking = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Cooking'")
+        return Int(SadCooking.count)
+    }
+    func getSadOther() -> Int{
+        let SadOther = realm.objects(Mood.self).filter("mood = 'Sad' AND activities = 'Other'")
+        return Int(SadOther.count)
+    }
+    
+    
+    //    GET AWFUL MOOD ACTIVITIES
+    func getAwfulWork() -> Int{
+        let AwfulWork = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Work'")
+        return Int(AwfulWork.count)
+    }
+    func getAwfulFriends() -> Int{
+        let AwfulFriends = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Friends'")
+        return Int(AwfulFriends.count)
+    }
+    func getAwfulRelax() -> Int{
+        let AwfulRelax = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Relax'")
+        return Int(AwfulRelax.count)
+    }
+    func getAwfulDate() -> Int{
+        let AwfulDate = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Date'")
+        return Int(AwfulDate.count)
+    }
+    func getAwfulShopping() -> Int{
+        let AwfulShopping = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Shopping'")
+        return Int(AwfulShopping.count)
+    }
+    func getAwfulSport() -> Int{
+        let AwfulSport = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Sport'")
+        return Int(AwfulSport.count)
+    }
+    func getAwfulGaming() -> Int{
+        let AwfulGaming = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Gaming'")
+        return Int(AwfulGaming.count)
+    }
+    func getAwfulReading() -> Int{
+        let AwfulReading = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Reading'")
+        return Int(AwfulReading.count)
+    }
+    func getAwfulRelaxing() -> Int{
+        let AwfulRelaxing = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Relaxing'")
+        return Int(AwfulRelaxing.count)
+    }
+    func getAwfulTravelling() -> Int{
+        let AwfulTravelling = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Travelling'")
+        return Int(AwfulTravelling.count)
+    }
+    func getAwfulCleaning() -> Int{
+        let AwfulCleaning = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Cleaning'")
+        return Int(AwfulCleaning.count)
+    }
+    func getAwfulCooking() -> Int{
+        let AwfulCooking = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Cooking'")
+        return Int(AwfulCooking.count)
+    }
+    func getAwfulOther() -> Int{
+        let AwfulOther = realm.objects(Mood.self).filter("mood = 'Awful' AND activities = 'Other'")
+        return Int(AwfulOther.count)
+    }
+    
+    
+    
     
     func getAverage() -> String{
         let good = getGoodMood()
@@ -366,24 +702,11 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         
         let startOfWeek = Date().startOfWeek
         let endOfWeek = Date().endOfWeek
-        print(startOfWeek as Any)
-        print(endOfWeek as Any)
-        print(days)
+//        print(startOfWeek as Any)
+//        print(endOfWeek as Any)
+//        print(days)
     }
     
 
 }
-//extension Date {
-//    var startOfWeek: Date? {
-//        let gregorian = Calendar(identifier: .gregorian)
-//        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
-//        return gregorian.date(byAdding: .day, value: 1, to: sunday)
-//    }
-//
-//    var endOfWeek: Date? {
-//        let gregorian = Calendar(identifier: .gregorian)
-//        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
-//        return gregorian.date(byAdding: .day, value: 7, to: sunday)
-//    }
-//}
 
