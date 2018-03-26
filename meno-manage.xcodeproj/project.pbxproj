@@ -57,6 +57,7 @@
 		ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */; };
 		ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */; };
 		ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED757471203F03B400DF0610 /* MoodHomeViewController.swift */; };
+		ED9216042069534B00B42509 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9216032069534B00B42509 /* HealthKit.framework */; };
 		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
 		EDEB8A052063CF71005FEE7E /* MoodHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A042063CF71005FEE7E /* MoodHomeTableViewCell.swift */; };
 		EDEB8A0A2063D396005FEE7E /* LineViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A092063D396005FEE7E /* LineViewCollectionViewCell.swift */; };
@@ -122,6 +123,8 @@
 		ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
 		ED757471203F03B400DF0610 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
+		ED9216022069533F00B42509 /* meno-manage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "meno-manage.entitlements"; sourceTree = "<group>"; };
+		ED9216032069534B00B42509 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EDEB8A042063CF71005FEE7E /* MoodHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeTableViewCell.swift; sourceTree = "<group>"; };
 		EDEB8A092063D396005FEE7E /* LineViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28A00ED480C97A6D85E41356 /* Pods_meno_manage.framework in Frameworks */,
+				ED9216042069534B00B42509 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +151,7 @@
 		BB375DA21C18433B64F59C65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED9216032069534B00B42509 /* HealthKit.framework */,
 				4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */,
 			);
 			name = Frameworks;
@@ -195,6 +200,7 @@
 		ED1CDDC52021E102005DEE2E /* meno-manage */ = {
 			isa = PBXGroup;
 			children = (
+				ED9216022069533F00B42509 /* meno-manage.entitlements */,
 				ED3D72BA205425E600B3E22C /* ArticleList */,
 				ED611F3E204EE7760087697C /* Breathe */,
 				ED4BBAFF202C90FB00CBD69E /* Controller */,
@@ -449,6 +455,14 @@
 					ED1CDDC22021E102005DEE2E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -761,6 +775,7 @@
 			baseConfigurationReference = A38686F15C57A7693E326BDD /* Pods-meno-manage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "meno-manage/meno-manage.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8W8RAWNQB;
@@ -779,6 +794,7 @@
 			baseConfigurationReference = A33D84BC58A5609BE5EC4022 /* Pods-meno-manage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "meno-manage/meno-manage.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8W8RAWNQB;
