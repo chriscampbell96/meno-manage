@@ -21,5 +21,9 @@ pod 'JTAppleCalendar', '~> 7.0'
 pod 'RLBAlertsPickers'
 pod 'EPCalendarPicker'
 pod 'SwiftyPickerPopover'
+pod 'ResearchKit'
+pod 'DZNEmptyDataSet'
+pod 'MWFeedParser'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 
 end

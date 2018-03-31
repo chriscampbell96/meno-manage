@@ -19,13 +19,15 @@ class CommentPostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.postText.layer.borderWidth = 1
+        self.postText.layer.borderColor = UIColor.black.cgColor
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

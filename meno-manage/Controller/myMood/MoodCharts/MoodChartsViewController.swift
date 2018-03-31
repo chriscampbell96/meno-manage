@@ -100,13 +100,30 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let TH = String(getHair())
         let BF = String(getBreast())
         
+        //"Work","Friends", "Relax", "Date", "Sports", "Shopping", "Gaming", "Reading", "Relaxing", "Travelling", "Cleaning", "Cooking", "Other"
+        // GET GREAT ACTIVITIES:
+        let GRWork = String(getGreatWork())
+        let GRFriends = String(getGreatFriends())
+        let GRRelax = String(getGreatRelax())
+        let GRDate = String(getGreatDate())
+        let GRSport = String(getGreatSport())
+        let GRShopping = String(getGreatShopping())
+        let GRGaming = String(getGreatGaming())
+        let GRReading = String(getGreatReading())
+        let GRRelaxing = String(getGreatRelaxing())
+        let GRTravelling = String(getGreatTravelling())
+        let GRCleaning = String(getGreatCleaning())
+        let GRCooking = String(getGreatCooking())
+        let GROther = String(getGreatOther())
+        
+        
         let s1Data2: [String] = ["Row 3", "Row 3", "Row 3"]
         let s2Data2: [String] = [IP, VG, flash, chills, NS, PS, libido, DS, TH, BF]
         let s3Data2: [String] = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
-
+        let greatActivity: [String] = [GRWork, GRFriends, GRRelax, GRDate, GRSport, GRShopping, GRGaming, GRReading, GRRelaxing, GRTravelling, GRCleaning, GRCooking, GROther]
 
         sectionData = [0:s3Data, 1:s2Data, 2:newData, 3:newData, 4:newData,5:newData,6:newData]
-        sectionData2 = [0:s3Data2, 1:s2Data2, 2:newData2, 3:newData2, 4:newData2,5:newData2,6:newData2 ]
+        sectionData2 = [0:s3Data2, 1:s2Data2, 2:greatActivity, 3:newData2, 4:newData2,5:newData2,6:newData2 ]
 
 
         moodList = ["Great", "Good", "Meh", "Sad", "Awful"]
@@ -534,7 +551,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -604,7 +621,29 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             
             return cell3
         }
-
+        if indexPath.row == 3 {
+            let cell4 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! DayTimeCollectionViewCell
+            
+            cell4.cellTitle.text = locationNames[indexPath.row]
+            cell4.cellDescription.text = locationDescription[indexPath.row]
+            cell4.morningLabel.text = "testing"
+            cell4.nightLabel.text = "working?"
+            cell4.nightLabel.text = "Please"
+            
+            
+            cell4.contentView.layer.cornerRadius = 4.0
+            cell4.contentView.layer.borderWidth = 1.0
+            cell4.contentView.layer.borderColor = UIColor.clear.cgColor
+            cell4.contentView.layer.masksToBounds = false
+            cell4.layer.shadowColor = UIColor.gray.cgColor
+            cell4.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            cell4.layer.shadowRadius = 4.0
+            cell4.layer.shadowOpacity = 1.0
+            cell4.layer.masksToBounds = false
+            cell4.layer.shadowPath = UIBezierPath(roundedRect: cell4.bounds, cornerRadius: cell4.contentView.layer.cornerRadius).cgPath
+            
+            return cell4
+        }
         
         return UICollectionViewCell()
 

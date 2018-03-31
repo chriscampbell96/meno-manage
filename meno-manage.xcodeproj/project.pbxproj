@@ -24,6 +24,9 @@
 		ED1CDDDB2021E650005DEE2E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDDA2021E650005DEE2E /* SignUpViewController.swift */; };
 		ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */; };
 		ED1DA6D72031B5FD0033A440 /* CommentPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DA6D62031B5FD0033A440 /* CommentPostViewController.swift */; };
+		ED1F9A67206FE0CB002B3469 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1F9A66206FE0CB002B3469 /* ConsentTask.swift */; };
+		ED284BAF20697EF400B0F11A /* HealthHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED284BAE20697EF400B0F11A /* HealthHomeViewController.swift */; };
+		ED284BB32069931F00B0F11A /* DayTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED284BB22069931F00B0F11A /* DayTimeCollectionViewCell.swift */; };
 		ED2C50AF20337CB400CB828C /* MoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50AE20337CB400CB828C /* MoodTableViewController.swift */; };
 		ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50B920337EA500CB828C /* MoodCell.swift */; };
 		ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */; };
@@ -57,6 +60,15 @@
 		ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */; };
 		ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */; };
 		ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED757471203F03B400DF0610 /* MoodHomeViewController.swift */; };
+		ED8B069C206FB38900287CEF /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0692206FB38000287CEF /* FavoriteItem.swift */; };
+		ED8B069D206FB38900287CEF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0693206FB38100287CEF /* FavoritesViewController.swift */; };
+		ED8B069E206FB38900287CEF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0694206FB38200287CEF /* FeedViewController.swift */; };
+		ED8B069F206FB38900287CEF /* MyUIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0695206FB38400287CEF /* MyUIAlertController.swift */; };
+		ED8B06A0206FB38900287CEF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0697206FB38500287CEF /* FeedCell.swift */; };
+		ED8B06A1206FB38900287CEF /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0698206FB38500287CEF /* ItemCell.swift */; };
+		ED8B06A2206FB38900287CEF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B069A206FB38800287CEF /* DataManager.swift */; };
+		ED8B06A3206FB38900287CEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B069B206FB38800287CEF /* HomeViewController.swift */; };
+		ED8B06A5206FC05B00287CEF /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8B06A4206FC05B00287CEF /* SafariServices.framework */; };
 		ED9216042069534B00B42509 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9216032069534B00B42509 /* HealthKit.framework */; };
 		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
 		EDEB8A052063CF71005FEE7E /* MoodHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A042063CF71005FEE7E /* MoodHomeTableViewCell.swift */; };
@@ -90,6 +102,9 @@
 		ED1CDDDA2021E650005DEE2E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		ED1DA6D62031B5FD0033A440 /* CommentPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostViewController.swift; sourceTree = "<group>"; };
+		ED1F9A66206FE0CB002B3469 /* ConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		ED284BAE20697EF400B0F11A /* HealthHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHomeViewController.swift; sourceTree = "<group>"; };
+		ED284BB22069931F00B0F11A /* DayTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED2C50AE20337CB400CB828C /* MoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewController.swift; sourceTree = "<group>"; };
 		ED2C50B920337EA500CB828C /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		ED2C50BB2033821A00CB828C /* PostMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMoodViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +138,15 @@
 		ED66B4AA2028C227004E84B5 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageViewController.swift; sourceTree = "<group>"; };
 		ED757471203F03B400DF0610 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
+		ED8B0692206FB38000287CEF /* FavoriteItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
+		ED8B0693206FB38100287CEF /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		ED8B0694206FB38200287CEF /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		ED8B0695206FB38400287CEF /* MyUIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUIAlertController.swift; sourceTree = "<group>"; };
+		ED8B0697206FB38500287CEF /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		ED8B0698206FB38500287CEF /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		ED8B069A206FB38800287CEF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		ED8B069B206FB38800287CEF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ED8B06A4206FC05B00287CEF /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		ED9216022069533F00B42509 /* meno-manage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "meno-manage.entitlements"; sourceTree = "<group>"; };
 		ED9216032069534B00B42509 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8B06A5206FC05B00287CEF /* SafariServices.framework in Frameworks */,
 				28A00ED480C97A6D85E41356 /* Pods_meno_manage.framework in Frameworks */,
 				ED9216042069534B00B42509 /* HealthKit.framework in Frameworks */,
 			);
@@ -151,6 +176,7 @@
 		BB375DA21C18433B64F59C65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED8B06A4206FC05B00287CEF /* SafariServices.framework */,
 				ED9216032069534B00B42509 /* HealthKit.framework */,
 				4CBF08891D0CAD8CD9DBAEE5 /* Pods_meno_manage.framework */,
 			);
@@ -175,6 +201,7 @@
 				ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */,
 				ED007541205D32B400308502 /* DailyAverageCollectionViewCell.swift */,
 				EDEB8A042063CF71005FEE7E /* MoodHomeTableViewCell.swift */,
+				ED284BB22069931F00B0F11A /* DayTimeCollectionViewCell.swift */,
 			);
 			path = MoodCharts;
 			sourceTree = "<group>";
@@ -200,6 +227,8 @@
 		ED1CDDC52021E102005DEE2E /* meno-manage */ = {
 			isa = PBXGroup;
 			children = (
+				ED8B0690206FB11300287CEF /* RSS ARTICLES */,
+				ED284BAD20697ED700B0F11A /* HealthKit */,
 				ED9216022069533F00B42509 /* meno-manage.entitlements */,
 				ED3D72BA205425E600B3E22C /* ArticleList */,
 				ED611F3E204EE7760087697C /* Breathe */,
@@ -215,6 +244,21 @@
 				ED3D72BB2054262100B3E22C /* RSSwift.xcdatamodeld */,
 			);
 			path = "meno-manage";
+			sourceTree = "<group>";
+		};
+		ED284BAC20697EC800B0F11A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		ED284BAD20697ED700B0F11A /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				ED284BAE20697EF400B0F11A /* HealthHomeViewController.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		ED2C50B220337CE300CB828C /* myCommunity */ = {
@@ -237,6 +281,7 @@
 				ED1CDDDC2021E65F005DEE2E /* SignInViewController.swift */,
 				ED66B4AC2028C793004E84B5 /* SetImageViewController.swift */,
 				ED1CDDC82021E102005DEE2E /* ViewController.swift */,
+				ED1F9A66206FE0CB002B3469 /* ConsentTask.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -364,6 +409,7 @@
 		ED4BBAFF202C90FB00CBD69E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED284BAC20697EC800B0F11A /* New Group */,
 				ED2C92292036139600261475 /* mySymptoms */,
 				ED2C92282036138F00261475 /* Home */,
 				ED2C92272036138500261475 /* Learn */,
@@ -417,6 +463,45 @@
 				ED2C50B620337D5500CB828C /* myCommunity */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ED8B0690206FB11300287CEF /* RSS ARTICLES */ = {
+			isa = PBXGroup;
+			children = (
+				ED8B0696206FB38500287CEF /* Cells */,
+				ED8B0693206FB38100287CEF /* FavoritesViewController.swift */,
+				ED8B0694206FB38200287CEF /* FeedViewController.swift */,
+				ED8B069B206FB38800287CEF /* HomeViewController.swift */,
+				ED8B0699206FB38800287CEF /* Manager */,
+				ED8B0691206FB38000287CEF /* Model */,
+				ED8B0695206FB38400287CEF /* MyUIAlertController.swift */,
+			);
+			path = "RSS ARTICLES";
+			sourceTree = "<group>";
+		};
+		ED8B0691206FB38000287CEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED8B0692206FB38000287CEF /* FavoriteItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED8B0696206FB38500287CEF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED8B0697206FB38500287CEF /* FeedCell.swift */,
+				ED8B0698206FB38500287CEF /* ItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED8B0699206FB38800287CEF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ED8B069A206FB38800287CEF /* DataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,13 +628,17 @@
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/CountdownLabel/CountdownLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/EPCalendarPicker/EPCalendarPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/MWFeedParser/MWFeedParser.framework",
 				"${BUILT_PRODUCTS_DIR}/RLBAlertsPickers/RLBAlertsPickers.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ResearchKit/ResearchKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyPickerPopover/SwiftyPickerPopover.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -561,13 +650,17 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountdownLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EPCalendarPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWFeedParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RLBAlertsPickers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResearchKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPickerPopover.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -590,20 +683,27 @@
 				ED2C50BA20337EA500CB828C /* MoodCell.swift in Sources */,
 				ED4BBB03202CC57E00CBD69E /* CommentCell.swift in Sources */,
 				ED1DA6D72031B5FD0033A440 /* CommentPostViewController.swift in Sources */,
+				ED8B06A3206FB38900287CEF /* HomeViewController.swift in Sources */,
 				ED611F4B204EE7A60087697C /* BreatheView.swift in Sources */,
 				EDEB8A0E2063D962005FEE7E /* MyPostsTableViewController.swift in Sources */,
 				ED34A6B920585E5800B69F3C /* SecondCollectionViewCell.swift in Sources */,
 				ED4BBB01202C91A500CBD69E /* PostViewController.swift in Sources */,
 				ED007548205D9F4100308502 /* relax.swift in Sources */,
+				ED8B06A1206FB38900287CEF /* ItemCell.swift in Sources */,
+				ED8B069D206FB38900287CEF /* FavoritesViewController.swift in Sources */,
 				EDEB8A052063CF71005FEE7E /* MoodHomeTableViewCell.swift in Sources */,
+				ED284BB32069931F00B0F11A /* DayTimeCollectionViewCell.swift in Sources */,
 				ED611F49204EE7A60087697C /* UIBezierPath+Clone.swift in Sources */,
 				ED611F4C204EE7A60087697C /* CGPoint+Hashable.swift in Sources */,
 				ED007546205D698F00308502 /* PublisherTableViewCell.swift in Sources */,
+				ED8B06A2206FB38900287CEF /* DataManager.swift in Sources */,
 				ED1CDDDD2021E65F005DEE2E /* SignInViewController.swift in Sources */,
 				EDFBD4C12029088E008C2A88 /* Post.swift in Sources */,
+				ED8B069E206FB38900287CEF /* FeedViewController.swift in Sources */,
 				ED1CDDDB2021E650005DEE2E /* SignUpViewController.swift in Sources */,
 				ED2C50BC2033821A00CB828C /* PostMoodViewController.swift in Sources */,
 				ED007542205D32B400308502 /* DailyAverageCollectionViewCell.swift in Sources */,
+				ED1F9A67206FE0CB002B3469 /* ConsentTask.swift in Sources */,
 				ED611F4D204EE7A60087697C /* BreatheViewController.swift in Sources */,
 				EDEB8A102063D9AD005FEE7E /* MyPostsTableViewCell.swift in Sources */,
 				ED611F47204EE7A60087697C /* Math.swift in Sources */,
@@ -620,13 +720,16 @@
 				ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */,
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED33EE47205F2F4E00ECC133 /* BreatheCollectionViewCell.swift in Sources */,
+				ED284BAF20697EF400B0F11A /* HealthHomeViewController.swift in Sources */,
 				ED15530A2059B62D0065B143 /* BreatheHomeViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
+				ED8B06A0206FB38900287CEF /* FeedCell.swift in Sources */,
 				ED33EE3E205EE55D00ECC133 /* RelaxTableViewCell.swift in Sources */,
 				ED34A6BB2058624D00B69F3C /* TopCellCollectionViewCell.swift in Sources */,
 				EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */,
 				ED09CBFB2052D8F40043FCDD /* MoodChartsViewController.swift in Sources */,
 				ED33EE42205F04BC00ECC133 /* BreatheHomeStatsViewController.swift in Sources */,
+				ED8B069C206FB38900287CEF /* FavoriteItem.swift in Sources */,
 				ED490AC92037543B0042136F /* videoModel.swift in Sources */,
 				ED33EE44205F04CF00ECC133 /* ReadingsTableViewCell.swift in Sources */,
 				ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */,
@@ -634,6 +737,7 @@
 				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,
 				ED611F4E204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift in Sources */,
 				ED2C50BE20338A9100CB828C /* Mood.swift in Sources */,
+				ED8B069F206FB38900287CEF /* MyUIAlertController.swift in Sources */,
 				ED3D72BD2054262100B3E22C /* RSSwift.xcdatamodeld in Sources */,
 				ED2C50AF20337CB400CB828C /* MoodTableViewController.swift in Sources */,
 				ED490AC6203753790042136F /* Video.swift in Sources */,
