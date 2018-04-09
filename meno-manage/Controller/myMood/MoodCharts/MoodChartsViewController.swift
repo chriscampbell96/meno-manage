@@ -662,15 +662,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         return sections.count
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "moodHomeCell") as?
-//            MoodHomeTableViewCell else {return UITableViewCell()}
-//        cell.statsTitle.text = statlabels[indexPath.row]
-//        cell.statsStats.text = stats[indexPath.row]
-//
-//
-//        return cell
-//    }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {

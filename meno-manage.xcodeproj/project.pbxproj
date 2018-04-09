@@ -37,6 +37,7 @@
 		ED33EE47205F2F4E00ECC133 /* BreatheCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33EE46205F2F4E00ECC133 /* BreatheCollectionViewCell.swift */; };
 		ED34A6B920585E5800B69F3C /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34A6B820585E5800B69F3C /* SecondCollectionViewCell.swift */; };
 		ED34A6BB2058624D00B69F3C /* TopCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */; };
+		ED375C0B20790E80002D1489 /* HealthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED375C0A20790E80002D1489 /* HealthTableViewCell.swift */; };
 		ED3D72BD2054262100B3E22C /* RSSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72BB2054262100B3E22C /* RSSwift.xcdatamodeld */; };
 		ED3D72C12054263C00B3E22C /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72BE2054263C00B3E22C /* FeedItemViewController.swift */; };
 		ED3D72C22054263C00B3E22C /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D72BF2054263C00B3E22C /* FeedListViewController.swift */; };
@@ -115,6 +116,7 @@
 		ED33EE46205F2F4E00ECC133 /* BreatheCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED34A6B820585E5800B69F3C /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED34A6BA2058624D00B69F3C /* TopCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED375C0A20790E80002D1489 /* HealthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTableViewCell.swift; sourceTree = "<group>"; };
 		ED3D72BC2054262100B3E22C /* RSSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSwift.xcdatamodel; sourceTree = "<group>"; };
 		ED3D72BE2054263C00B3E22C /* FeedItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemViewController.swift; sourceTree = "<group>"; };
 		ED3D72BF2054263C00B3E22C /* FeedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				ED284BAE20697EF400B0F11A /* HealthHomeViewController.swift */,
+				ED375C0A20790E80002D1489 /* HealthTableViewCell.swift */,
 			);
 			path = HealthKit;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				ED15530A2059B62D0065B143 /* BreatheHomeViewController.swift in Sources */,
 				ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */,
 				ED8B06A0206FB38900287CEF /* FeedCell.swift in Sources */,
+				ED375C0B20790E80002D1489 /* HealthTableViewCell.swift in Sources */,
 				ED33EE3E205EE55D00ECC133 /* RelaxTableViewCell.swift in Sources */,
 				ED34A6BB2058624D00B69F3C /* TopCellCollectionViewCell.swift in Sources */,
 				EDF8870A205BD87800036BE9 /* NewPostMoodViewController.swift in Sources */,

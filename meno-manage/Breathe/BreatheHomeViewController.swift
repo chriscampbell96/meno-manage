@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import Realm
+import HealthKit
 
 class BreatheHomeViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource{
     
@@ -23,7 +24,7 @@ class BreatheHomeViewController: UIViewController,  UITableViewDelegate, UITable
     var relaxs: Results<Relax>!
     var realm = try! Realm()
     
-    
+        let healthkitStore = HKHealthStore()
     
 
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class BreatheHomeViewController: UIViewController,  UITableViewDelegate, UITable
         print("running")
         print(relaxs)
         // Do any additional setup after loading the view.
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {

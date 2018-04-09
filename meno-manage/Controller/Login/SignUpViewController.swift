@@ -10,12 +10,14 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 import SwiftKeychainWrapper
+import HealthKit
 
 class SignUpViewController: UIViewController {
 
     
     var ref = Database.database().reference()
-
+    let healthkitStore = HKHealthStore()
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var username: UITextField!
@@ -24,6 +26,43 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if HKHealthStore.isHealthDataAvailable() {
+            // add code to use HealthKit here...
+            
+            let typestoRead = Set([
+                HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
+                HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.menstrualFlow)!,
+                HKObjectType.activitySummaryType(),
+                HKQuantityType.quantityType(forIdentifier: .stepCount)!,
+                HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
+                HKQuantityType.quantityType(forIdentifier: .basalEnergyBurned)!,
+                HKQuantityType.quantityType(forIdentifier: .bodyMass)!,
+                HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!
+
+                
+                ])
+            
+            let typestoShare = Set([
+                HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
+                HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.menstrualFlow)!,
+                HKObjectType.activitySummaryType(),
+                HKQuantityType.quantityType(forIdentifier: .stepCount)!,
+                HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
+                HKQuantityType.quantityType(forIdentifier: .basalEnergyBurned)!,
+                HKQuantityType.quantityType(forIdentifier: .bodyMass)!,
+                HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!
+             
+                
+                
+                
+                ])
+            
+            self.healthkitStore.requestAuthorization(toShare: typestoShare as? Set<HKSampleType>, read: typestoRead) { (success, error) -> Void in
+                if success == false {
+                    NSLog(" Display not allowed")
+                }
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
