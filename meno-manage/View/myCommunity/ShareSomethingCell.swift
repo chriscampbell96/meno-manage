@@ -12,8 +12,10 @@ import Firebase
 
 class ShareSomethingCell: UITableViewCell {
     
-    //video 3 -- GET image
-
+    @IBOutlet weak var postCat: UILabel!
+    @IBOutlet weak var catDesc: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +28,9 @@ class ShareSomethingCell: UITableViewCell {
     }
     
     func configCell(){
+        self.postCat.text = "Change Category"
+        self.catDesc.text = "Click to change the category of posts!"
+
         
     }
 

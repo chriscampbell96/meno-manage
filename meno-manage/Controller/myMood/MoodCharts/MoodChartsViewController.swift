@@ -31,8 +31,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     //chart 1
-    let locationNames = ["Total Mood Count", "Monthly Mood Count", "Activity Count", "Average Daily Mood", "Often Together", "Moods + Activities"]
-    let locationDescription = ["How are you feeling today?","Your average daily mood for each day of the week.", "A count of every mood since they day yo first logged.", "A count of all the moods in the month of", "Find out which activities are assosiated with your moods!", "This is a test"]
+    let locationNames = ["Total Mood Count", "Average Daily Mood", "Moods & Activity", "Todays Activity", "Last Note", " Symptoms & Activities Past Week"]
+    let locationDescription = ["How are you feeling today?","Time of day & your mood", "Your Mood vs Activity - Past Week", "Todays Activity", "Last Diary Entry", "From your past weeks jpurnal. "]
 
     
     let months = ["Great", "Good", "Meh", "Sad", "Awful"]
@@ -117,7 +117,6 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let GROther = String(getGreatOther())
         
         
-        let s1Data2: [String] = ["Row 3", "Row 3", "Row 3"]
         let s2Data2: [String] = [IP, VG, flash, chills, NS, PS, libido, DS, TH, BF]
         let s3Data2: [String] = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
         let greatActivity: [String] = [GRWork, GRFriends, GRRelax, GRDate, GRSport, GRShopping, GRGaming, GRReading, GRRelaxing, GRTravelling, GRCleaning, GRCooking, GROther]
@@ -551,7 +550,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -582,53 +581,13 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             return cell
         }
         if indexPath.row == 1 {
-            let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! CollectionViewCell
-            
-            cell2.ChartName.text = locationNames[indexPath.row]
-            cell2.ChartDescription.text = locationDescription[indexPath.row]
-            cell2.configure(dataPoints: moodList, values: getMoodList)
-            
-            cell2.contentView.layer.cornerRadius = 4.0
-            cell2.contentView.layer.borderWidth = 1.0
-            cell2.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell2.contentView.layer.masksToBounds = false
-            cell2.layer.shadowColor = UIColor.gray.cgColor
-            cell2.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            cell2.layer.shadowRadius = 4.0
-            cell2.layer.shadowOpacity = 1.0
-            cell2.layer.masksToBounds = false
-            cell2.layer.shadowPath = UIBezierPath(roundedRect: cell2.bounds, cornerRadius: cell2.contentView.layer.cornerRadius).cgPath
-            
-            return cell2
-        }
-        if indexPath.row == 2 {
-            let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! SecondCollectionViewCell
-            
-            cell3.NewDesc.text = locationNames[indexPath.row]
-            cell3.NewLabel.text = locationDescription[indexPath.row]
-            cell3.configure(dataPoints: moodList, values: getMoodList)
-            
-            cell3.contentView.layer.cornerRadius = 4.0
-            cell3.contentView.layer.borderWidth = 1.0
-            cell3.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell3.contentView.layer.masksToBounds = false
-            cell3.layer.shadowColor = UIColor.gray.cgColor
-            cell3.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            cell3.layer.shadowRadius = 4.0
-            cell3.layer.shadowOpacity = 1.0
-            cell3.layer.masksToBounds = false
-            cell3.layer.shadowPath = UIBezierPath(roundedRect: cell3.bounds, cornerRadius: cell3.contentView.layer.cornerRadius).cgPath
-            
-            return cell3
-        }
-        if indexPath.row == 3 {
             let cell4 = collectionView.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! DayTimeCollectionViewCell
             
             cell4.cellTitle.text = locationNames[indexPath.row]
             cell4.cellDescription.text = locationDescription[indexPath.row]
-            cell4.morningLabel.text = "testing"
-            cell4.nightLabel.text = "working?"
-            cell4.nightLabel.text = "Please"
+            cell4.morningLabel.text = "Good"
+            cell4.afternoonLabel.text = "Meh"
+            cell4.nightLabel.text = "Great"
             
             
             cell4.contentView.layer.cornerRadius = 4.0

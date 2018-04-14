@@ -17,7 +17,7 @@ class MyUIAlertController: UIAlertController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        view.tintColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        view.tintColor = #colorLiteral(red: 0.7501883494, green: 0.1651857008, blue: 0.7452709142, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,11 +1,10 @@
 //
-//  HomeViewController.swift
-//  Reader
+//  ProfileViewController.swift
+//  meno-manage
 //
-//  Created by Francesco Marisaldi on 03/04/17.
-//  Copyright © 2017 Francesco Marisaldi. All rights reserved.
+//  Created by Christopher Campbell on 01/02/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
-
 import UIKit
 import MWFeedParser
 import DZNEmptyDataSet
@@ -34,6 +33,7 @@ class HomeViewController: UITableViewController, MWFeedParserDelegate, DZNEmptyD
     }
     
     override func viewDidAppear(_ animated: Bool) {
+         print(DataManager.shared.feedsArray)
         print(DataManager.shared.feedsArray.count)
     }
     
@@ -107,6 +107,7 @@ class HomeViewController: UITableViewController, MWFeedParserDelegate, DZNEmptyD
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(DataManager.shared.feedsArray)
         return DataManager.shared.feedsArray.count
     }
 
@@ -162,11 +163,11 @@ class HomeViewController: UITableViewController, MWFeedParserDelegate, DZNEmptyD
     }
     
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: "You haven't added any feed yet!", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18.0), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+        return NSAttributedString(string: "Sorry Your Feed Is Empty!", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 18.0), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
     }
     
     func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControlState) -> NSAttributedString! {
-        return NSAttributedString(string: "Add your first feed", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16.0), NSAttributedStringKey.foregroundColor: UIColor.red])
+        return NSAttributedString(string: "Add your first feed", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16.0), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
     }
     
     func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {

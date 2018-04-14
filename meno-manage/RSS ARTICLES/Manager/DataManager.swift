@@ -26,6 +26,7 @@ class DataManager: NSObject {
     
     func initDataManager() {
         if FileManager.default.fileExists(atPath: feedsPath) {
+            print("true")
             feedsArray = NSKeyedUnarchiver.unarchiveObject(withFile: feedsPath) as! [MWFeedInfo]
         }
         if FileManager.default.fileExists(atPath: favoritesPath) {

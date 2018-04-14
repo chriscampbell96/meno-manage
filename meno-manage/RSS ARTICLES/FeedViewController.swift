@@ -1,9 +1,9 @@
 //
-//  FeedViewController.swift
-//  Reader
+//  ProfileViewController.swift
+//  meno-manage
 //
-//  Created by Francesco Marisaldi on 03/04/17.
-//  Copyright © 2017 Francesco Marisaldi. All rights reserved.
+//  Created by Christopher Campbell on 01/02/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
 
 import UIKit
@@ -30,12 +30,12 @@ class FeedViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmpty
         tableView.emptyDataSetDelegate = self
         
         refreshControl = UIRefreshControl()
-        refreshControl?.tintColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        refreshControl?.tintColor = #colorLiteral(red: 0.7501883494, green: 0.1651857008, blue: 0.7452709142, alpha: 1)
         refreshControl?.addTarget(self, action: #selector(initParser), for: .valueChanged)
         
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
         activityIndicator.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/2)
-        activityIndicator.color = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        activityIndicator.color = #colorLiteral(red: 0.7501883494, green: 0.1651857008, blue: 0.7452709142, alpha: 1)
         activityIndicator.hidesWhenStopped = true
         view.addSubview(activityIndicator)
         
@@ -146,7 +146,7 @@ class FeedViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmpty
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = feedItems[indexPath.row]
         let detailController = SFSafariViewController(url: URL(string: item.link)!, entersReaderIfAvailable: true)
-        detailController.preferredControlTintColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        detailController.preferredControlTintColor = #colorLiteral(red: 0.7501883494, green: 0.1651857008, blue: 0.7452709142, alpha: 1)
         navigationController?.present(detailController, animated: true, completion: nil)
     }
     
@@ -190,7 +190,7 @@ class FeedViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmpty
             guard let cell = tableView.cellForRow(at: path) else { return nil }
             let item = feedItems[path.row]
             let detailController = SFSafariViewController(url: URL(string: item.link)!, entersReaderIfAvailable: true)
-            detailController.preferredControlTintColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+            detailController.preferredControlTintColor = #colorLiteral(red: 0.7501883494, green: 0.1651857008, blue: 0.7452709142, alpha: 1)
             previewingContext.sourceRect = view.convert(cell.frame, from: view)
             return detailController
         }

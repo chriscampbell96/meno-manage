@@ -88,13 +88,20 @@ class CommunityViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return 1 + posts.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
+        if indexPath.row == 0 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ShareSomethingCell") as? ShareSomethingCell {
+                cell.configCell()
+                return cell
+            }
+        }
+        
+//        let post = posts[indexPath.row - 1]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            cell.configCell(post: post)
+            cell.configCell(post: posts[indexPath.row - 1])
             refreshControl?.endRefreshing()
             cell.commentBtn.addTarget(self, action: #selector(toComments(_:)), for: .touchUpInside)
             return cell
@@ -103,12 +110,15 @@ class CommunityViewController: UITableViewController {
         }
     }
     
+
+    
+    
     @objc func toComments(_ sender: AnyObject) {
         
         let buttonPosition = sender.convert(CGPoint.zero, to: tableView)
         let indexPath: IndexPath? =  tableView.indexPathForRow(at: buttonPosition)
         
-        selectedPost = posts[(indexPath?.row)!]
+        selectedPost = posts[(indexPath?.row)! - 1]
         performSegue(withIdentifier: "toComments", sender: nil)
         
     }

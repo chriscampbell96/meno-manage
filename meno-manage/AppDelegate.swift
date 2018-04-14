@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         FirebaseApp.configure()
+        DataManager.shared.initDataManager()
+
         return true
     }
 

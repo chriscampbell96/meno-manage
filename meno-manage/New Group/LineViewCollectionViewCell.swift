@@ -37,8 +37,14 @@ class LineViewCollectionViewCell: UICollectionViewCell {
         let chartDataSet = BarChartDataSet(values: dataEntries, label: nil)
         self.chartView.legend.enabled = false
         chartView.xAxis.valueFormatter = xAxis.valueFormatter
-
+        
+        chartView.fitBars = true
+        
+        
         let chartData = BarChartData(dataSet: chartDataSet)
+        chartData.barWidth = Double(0.90)
+        chartDataSet.colors = [UIColor(red: 169/255, green: 197/255, blue: 177/255, alpha: 1.0)]
+
         chartView.data = chartData
         
         

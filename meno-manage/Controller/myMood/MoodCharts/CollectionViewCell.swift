@@ -42,10 +42,14 @@ class CollectionViewCell: UICollectionViewCell {
         let xAxis = XAxis()
         xAxis.valueFormatter = formatter
         
+        ChartIMG.fitBars = true
+        
         ChartIMG.xAxis.valueFormatter = xAxis.valueFormatter
         let chartData = BarChartData(dataSet: chartDataSet)
+        chartData.barWidth = Double(0.90)
+        chartDataSet.colors = [UIColor(red: 169/255, green: 197/255, blue: 177/255, alpha: 1.0)]
         ChartIMG.data = chartData
-        
+
         
     }
     

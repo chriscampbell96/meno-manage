@@ -37,25 +37,32 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         let allTimeLogged = getAllTime()
         let totalSessions = getTotalSessions()
         let todayLogged = getToday()
+        let dayAVG = getdailyAverage()
         let currentWeekThis = getCurrentWeek()
 
-        statlabels = [todayLogged, "🗓 7 Days", "🗓 30 Days", "📊 All Time", "🔥 Best Streak" , "📈 Total Sessions Logged"]
-        stats = [todayLogged + "sec", "coming soon", "coming soon", allTimeLogged + "sec", "coming soon", totalSessions]
-        weekdays = ["M","T","W","T","F","S","S"]
+        
+        statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time", "📈 Daily Average" , "📈 Total Sessions Logged"]
+        stats = [todayLogged + "sec", "30 sec", allTimeLogged + "sec", allTimeLogged + "sec", dayAVG, totalSessions]
+//        weekdays = [currentWeekThis]
+        weekdays = currentWeekThis
  
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.mainStats.reloadData()
-        getAllTime()
         let totalSessions = getTotalSessions()
         let todayLogged = getToday()
         let allTimeLogged = getAllTime()
+        let dayAVG = getdailyAverage()
 
+        
         let currentWeekThis = getCurrentWeek()
+
         print(currentWeekThis)
-        statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time", "🔥 Best Streak" , "📈 Total Sessions Logged"]
-        stats = [todayLogged + "sec", "coming soon", "coming soon", allTimeLogged + "sec", "coming soon", totalSessions]
+
+    
+        statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time", "📈 Daily Average" , "📈 Total Sessions Logged"]
+        stats = [todayLogged + "sec", "coming soon", "coming soon", allTimeLogged + " sec", dayAVG + " sec", totalSessions]
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +73,15 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
     func getRelax(){
 //        let reading = realm.objects(Relax.self)
 
+    }
+    
+    func getdailyAverage() -> String{
+        let getAll: Double = realm.objects(Relax.self).sum(ofProperty: "duration")
+        let getCount: Double = Double(realm.objects(Relax.self).count)
+        
+        let dailyAverage = getAll / getCount
+        
+        return String(dailyAverage)
     }
 
     
@@ -133,7 +149,7 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
             
             cell.chartTitle.text = "Weekly Session Overview"
             cell.chartDescription.text = "A count of the sessions logged for the past week."
-            cell.configure(dataPoints: weekdays, values: [1.0,2.0,3.0,4.0,5.0,6.0,7.0])
+            cell.configure(dataPoints: weekdays, values: [5.0,1.0,2.0,8.0,2.0])
             
             cell.contentView.layer.cornerRadius = 4.0
             cell.contentView.layer.borderWidth = 1.0
@@ -151,44 +167,29 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         return UICollectionViewCell()
         
     }
-    func getCurrentWeek() -> [Date]{
+    func getCurrentWeek() -> [String]{
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
         let dayOfWeek = calendar.component(.weekday, from: today)
         let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
         
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .none
-        
+        formatter.dateFormat = "MM-dd"
+
         
         
         let days = (weekdays.lowerBound ..< weekdays.upperBound)
-            .flatMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: today) }  // use `compactMap` in Xcode 9.3 and later
+            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: today) }
             .filter { !calendar.isDateInWeekend($0) }
+
         
-        let startOfWeek = Date().startOfWeek
-        let endOfWeek = Date().endOfWeek
-//        print(startOfWeek as Any)
-//        print(endOfWeek as Any)
-        return days
+        return days.map{ formatter.string(from: $0) }
+
     }
     
     
 
 
 }
-//extension Date {
-//    var startOfWeek: Date? {
-//        let gregorian = Calendar(identifier: .gregorian)
-//        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
-//        return gregorian.date(byAdding: .day, value: 1, to: sunday)
-//    }
-//
-//    var endOfWeek: Date? {
-//        let gregorian = Calendar(identifier: .gregorian)
-//        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
-//        return gregorian.date(byAdding: .day, value: 7, to: sunday)
-//    }
-//}
+
 

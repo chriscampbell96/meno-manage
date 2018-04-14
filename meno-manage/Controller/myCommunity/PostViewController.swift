@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftyPickerPopover
 
 class PostViewController: UIViewController {
     
@@ -30,6 +31,16 @@ class PostViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    
+    @IBAction func addCat(_ sender: UITextField) {
+        StringPickerPopover(title: "Add Mood", choices: ["Health","Medication", "Mood", "Symptoms",  "Chat", "Exercise"])
+            .setDoneButton(action: { popover, selectedRow, selectedString in
+                sender.text = selectedString
+            })
+            .appear(originView: sender, baseViewController: self)
+    }
+    
     
     
 
