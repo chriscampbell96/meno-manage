@@ -15,6 +15,10 @@
 		ED09CBFC2052D8F40043FCDD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */; };
 		ED15530A2059B62D0065B143 /* BreatheHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1553092059B62D0065B143 /* BreatheHomeViewController.swift */; };
 		ED1AAA9A20826C7E00E7BE3F /* MoodHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAA9920826C7E00E7BE3F /* MoodHomeTableViewCell.swift */; };
+		ED1AAA9D20828BD500E7BE3F /* moodActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAA9C20828BD500E7BE3F /* moodActivityCollectionViewCell.swift */; };
+		ED1AAA9F20828BED00E7BE3F /* todayActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAA9E20828BED00E7BE3F /* todayActivityCollectionViewCell.swift */; };
+		ED1AAAA120828BFF00E7BE3F /* lastNoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAAA020828BFF00E7BE3F /* lastNoteCollectionViewCell.swift */; };
+		ED1AAAA320828C1500E7BE3F /* symptomActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAAA220828C1500E7BE3F /* symptomActivityCollectionViewCell.swift */; };
 		ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC62021E102005DEE2E /* AppDelegate.swift */; };
 		ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC82021E102005DEE2E /* ViewController.swift */; };
 		ED1CDDCC2021E103005DEE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDCA2021E103005DEE2E /* Main.storyboard */; };
@@ -89,6 +93,10 @@
 		ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		ED1553092059B62D0065B143 /* BreatheHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BreatheHomeViewController.swift; path = "meno-manage/Breathe/BreatheHomeViewController.swift"; sourceTree = SOURCE_ROOT; };
 		ED1AAA9920826C7E00E7BE3F /* MoodHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeTableViewCell.swift; sourceTree = "<group>"; };
+		ED1AAA9C20828BD500E7BE3F /* moodActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moodActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED1AAA9E20828BED00E7BE3F /* todayActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED1AAAA020828BFF00E7BE3F /* lastNoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lastNoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED1AAAA220828C1500E7BE3F /* symptomActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symptomActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED1CDDC32021E102005DEE2E /* meno-manage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meno-manage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDDC62021E102005DEE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1CDDC82021E102005DEE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,12 +199,24 @@
 		ED09CBF42052D4550043FCDD /* MoodCharts */ = {
 			isa = PBXGroup;
 			children = (
+				ED1AAA9B20828B9300E7BE3F /* Chart Cells */,
 				ED09CBFA2052D8F40043FCDD /* CollectionViewCell.swift */,
 				ED09CBF92052D8F40043FCDD /* MoodChartsViewController.swift */,
 				ED284BB22069931F00B0F11A /* DayTimeCollectionViewCell.swift */,
 				ED1AAA9920826C7E00E7BE3F /* MoodHomeTableViewCell.swift */,
 			);
 			path = MoodCharts;
+			sourceTree = "<group>";
+		};
+		ED1AAA9B20828B9300E7BE3F /* Chart Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED1AAA9C20828BD500E7BE3F /* moodActivityCollectionViewCell.swift */,
+				ED1AAA9E20828BED00E7BE3F /* todayActivityCollectionViewCell.swift */,
+				ED1AAAA020828BFF00E7BE3F /* lastNoteCollectionViewCell.swift */,
+				ED1AAAA220828C1500E7BE3F /* symptomActivityCollectionViewCell.swift */,
+			);
+			path = "Chart Cells";
 			sourceTree = "<group>";
 		};
 		ED1CDDBA2021E102005DEE2E = {
@@ -698,17 +718,20 @@
 				ED611F4D204EE7A60087697C /* BreatheViewController.swift in Sources */,
 				EDEB8A102063D9AD005FEE7E /* MyPostsTableViewCell.swift in Sources */,
 				ED611F47204EE7A60087697C /* Math.swift in Sources */,
+				ED1AAA9D20828BD500E7BE3F /* moodActivityCollectionViewCell.swift in Sources */,
 				ED3D72C32054263C00B3E22C /* XmlParserManager.swift in Sources */,
 				ED66B4A52028951B004E84B5 /* ShareSomethingCell.swift in Sources */,
 				ED66B4A92028C001004E84B5 /* ShareSomething.swift in Sources */,
 				ED1AAA9A20826C7E00E7BE3F /* MoodHomeTableViewCell.swift in Sources */,
 				ED66B4AB2028C227004E84B5 /* CommunityViewController.swift in Sources */,
 				ED007544205D679800308502 /* ArticleListTableViewController.swift in Sources */,
+				ED1AAAA320828C1500E7BE3F /* symptomActivityCollectionViewCell.swift in Sources */,
 				ED3D72C12054263C00B3E22C /* FeedItemViewController.swift in Sources */,
 				EDEB8A0A2063D396005FEE7E /* LineViewCollectionViewCell.swift in Sources */,
 				ED3D72C22054263C00B3E22C /* FeedListViewController.swift in Sources */,
 				ED490ACB2037581B0042136F /* LearnTableViewController.swift in Sources */,
 				ED4BBB05202CD59800CBD69E /* CommentViewController.swift in Sources */,
+				ED1AAAA120828BFF00E7BE3F /* lastNoteCollectionViewCell.swift in Sources */,
 				ED757472203F03B400DF0610 /* MoodHomeViewController.swift in Sources */,
 				EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */,
 				ED33EE47205F2F4E00ECC133 /* BreatheCollectionViewCell.swift in Sources */,
@@ -724,6 +747,7 @@
 				ED8B069C206FB38900287CEF /* FavoriteItem.swift in Sources */,
 				ED490AC92037543B0042136F /* videoModel.swift in Sources */,
 				ED33EE44205F04CF00ECC133 /* ReadingsTableViewCell.swift in Sources */,
+				ED1AAA9F20828BED00E7BE3F /* todayActivityCollectionViewCell.swift in Sources */,
 				ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,
 				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,

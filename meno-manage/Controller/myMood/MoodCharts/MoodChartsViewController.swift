@@ -32,7 +32,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     //chart 1
     let locationNames = ["Total Mood Count", "Average Daily Mood", "Moods & Activity", "Todays Activity", "Last Note", " Symptoms & Activities Past Week"]
-    let locationDescription = ["How are you feeling today?","Time of day & your mood", "Your Mood vs Activity - Past Week", "Todays Activity", "Last Diary Entry", "From your past weeks jpurnal. "]
+    let locationDescription = ["How are you feeling today?","Time of day & your mood", "Your Mood vs Activity - Past Week", "Todays Activity", "Last Diary Entry", "From your past weeks journal. "]
 
     
     let months = ["Great", "Good", "Meh", "Sad", "Awful"]
@@ -550,7 +550,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -603,6 +603,45 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             
             return cell4
         }
+        if indexPath.row == 2 {
+            let moodCell = collectionView.dequeueReusableCell(withReuseIdentifier: "moodToExercise", for: indexPath) as! moodActivityCollectionViewCell
+            
+            moodCell.title.text = locationNames[indexPath.row]
+            moodCell.desc.text = locationDescription[indexPath.row]
+            
+            moodCell.contentView.layer.cornerRadius = 4.0
+            moodCell.contentView.layer.borderWidth = 1.0
+            moodCell.contentView.layer.borderColor = UIColor.clear.cgColor
+            moodCell.contentView.layer.masksToBounds = false
+            moodCell.layer.shadowColor = UIColor.gray.cgColor
+            moodCell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            moodCell.layer.shadowRadius = 4.0
+            moodCell.layer.shadowOpacity = 1.0
+            moodCell.layer.masksToBounds = false
+            moodCell.layer.shadowPath = UIBezierPath(roundedRect: moodCell.bounds, cornerRadius: moodCell.contentView.layer.cornerRadius).cgPath
+            
+            return moodCell
+        }
+        if indexPath.row == 3 {
+            let lastNoteCell = collectionView.dequeueReusableCell(withReuseIdentifier: "lastNote", for: indexPath) as! lastNoteCollectionViewCell
+            
+            lastNoteCell.title.text = locationNames[indexPath.row]
+            lastNoteCell.label.text = locationDescription[indexPath.row]
+ 
+            lastNoteCell.contentView.layer.cornerRadius = 4.0
+            lastNoteCell.contentView.layer.borderWidth = 1.0
+            lastNoteCell.contentView.layer.borderColor = UIColor.clear.cgColor
+            lastNoteCell.contentView.layer.masksToBounds = false
+            lastNoteCell.layer.shadowColor = UIColor.gray.cgColor
+            lastNoteCell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            lastNoteCell.layer.shadowRadius = 4.0
+            lastNoteCell.layer.shadowOpacity = 1.0
+            lastNoteCell.layer.masksToBounds = false
+            lastNoteCell.layer.shadowPath = UIBezierPath(roundedRect: lastNoteCell.bounds, cornerRadius: lastNoteCell.contentView.layer.cornerRadius).cgPath
+            
+            return lastNoteCell
+        }
+        
         
         return UICollectionViewCell()
 
