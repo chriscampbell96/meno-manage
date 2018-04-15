@@ -4,6 +4,7 @@ import RealmSwift
 import Charts
 import ChartsRealm
 import EPCalendarPicker
+import HealthKit
 
 
 class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, EPCalendarPickerDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -27,12 +28,14 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
 
+    let healthStore = HKHealthStore()
+    
     
     
     
     //chart 1
-    let locationNames = ["Total Mood Count", "Average Daily Mood", "Moods & Activity", "Todays Activity", "Last Note", " Symptoms & Activities Past Week"]
-    let locationDescription = ["How are you feeling today?","Time of day & your mood", "Your Mood vs Activity - Past Week", "Todays Activity", "Last Diary Entry", "From your past weeks journal. "]
+    let locationNames = ["Total Mood Count", "Average Daily Mood", "Moods & Activity",  "Last Note", "Todays Activity", " Symptoms - Past Week"]
+    let locationDescription = ["How are you feeling today?","Time of day & your mood", "Your Mood vs Activity - Past week", "Last diary entry! Add more now!", "Todays activity",  "From your past weeks journal. "]
 
     
     let months = ["Great", "Good", "Meh", "Sad", "Awful"]
@@ -44,6 +47,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     var moodList: [String]!
     var getMoodList: [Double]!
     var changed: String!
+    var lastPost: String!
     
     var weekList: [String]!
         //global v's
@@ -116,6 +120,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let GRCooking = String(getGreatCooking())
         let GROther = String(getGreatOther())
         
+        let lastPost = getLastPost()
         
         let s2Data2: [String] = [IP, VG, flash, chills, NS, PS, libido, DS, TH, BF]
         let s3Data2: [String] = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
@@ -130,10 +135,23 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         
         statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
         stats = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
+    
         
-        print(getGreatWork())
-
-        print(getIPeriod())
+        
+        getActiveEnergy(currentDate: Date(), completion: { (totalEnergyBurned) -> Void in
+            print(totalEnergyBurned)
+        })
+        
+        updateSteps(completion: { (resultCount) -> Double in
+            
+            print(resultCount)
+            return resultCount
+        })
+        
+        
+//        print(getGreatWork())
+//
+//        print(getIPeriod())
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -149,6 +167,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let meh = getMehMood()
         let sad = getSadMood()
         let awful = getAwfulMood()
+        let workingNow = getLastPost()
+        print(lastPost)
         
         moodList = ["Great", "Good", "Meh", "Sad", "Awful"]
         getMoodList = [great, good, meh, sad, awful]
@@ -158,6 +178,84 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time", "🔥 Best Streak" , "📈 Total Sessions Logged"]
         stats = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
 
+        updateSteps(completion: { (resultCount) -> Double in
+            
+            print(resultCount)
+            return resultCount
+        })
+
+        
+    }
+    
+
+    
+    func updateSteps(completion: @escaping (Double) -> Double) {
+        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+        
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let query = HKStatisticsQuery(quantityType: stepsQuantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { (_, result, error) in
+            var resultCount = 0.0
+            
+            guard let result = result else {
+                print("\(String(describing: error?.localizedDescription)) ")
+                completion(resultCount)
+                return 
+            }
+            
+            if let sum = result.sumQuantity() {
+                resultCount = sum.doubleValue(for: HKUnit.count())
+            }
+            
+            DispatchQueue.main.async {
+                completion(resultCount)
+            }
+        }
+        
+        healthStore.execute(query)
+    }
+    
+    func getActiveEnergy(currentDate: Date ,completion: @escaping ((_ totalEnergy: Double) -> Void)) {
+        let calendar = Calendar.current
+        var totalBurnedEnergy = Double()
+        let startOfDay = Int((currentDate.timeIntervalSince1970/86400)+1)*86400
+        let startOfDayDate = Date(timeIntervalSince1970: Double(startOfDay))
+        //   Get the start of the day
+        let newDate = calendar.startOfDay(for: startOfDayDate)
+        let startDate: Date = calendar.date(byAdding: Calendar.Component.day, value: -1, to: newDate)!
+        
+        //  Set the Predicates
+        let predicate = HKQuery.predicateForSamples(withStart: startDate as Date, end: newDate as Date, options: .strictStartDate)
+        
+        //  Perform the Query
+        let energySampleType = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)
+        
+        let query = HKSampleQuery(sampleType: energySampleType!, predicate: predicate, limit: 0, sortDescriptors: nil, resultsHandler: {
+            (query, results, error) in
+            if results == nil {
+                print("There was an error running the query: \(error)")
+            }
+            
+            DispatchQueue.main.async {
+                
+                for activity in results as! [HKQuantitySample]
+                {
+                    let calories = activity.quantity.doubleValue(for: HKUnit.kilocalorie())
+                    totalBurnedEnergy = totalBurnedEnergy + calories
+                }
+                completion(totalBurnedEnergy)
+            }
+        })
+        self.healthStore.execute(query)
+    }
+
+    
+    func getLastPost() -> String{
+        let lastPost = realm.objects(Mood.self).last
+        print(lastPost!.comment)
+        return lastPost!.comment
     }
     
     
@@ -550,7 +648,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 6
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -627,6 +725,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             
             lastNoteCell.title.text = locationNames[indexPath.row]
             lastNoteCell.label.text = locationDescription[indexPath.row]
+            lastNoteCell.lastEntry.text = getLastPost()
  
             lastNoteCell.contentView.layer.cornerRadius = 4.0
             lastNoteCell.contentView.layer.borderWidth = 1.0
@@ -640,6 +739,58 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             lastNoteCell.layer.shadowPath = UIBezierPath(roundedRect: lastNoteCell.bounds, cornerRadius: lastNoteCell.contentView.layer.cornerRadius).cgPath
             
             return lastNoteCell
+        }
+        if indexPath.row == 4 {
+            let todayActivityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "todaysActivity", for: indexPath) as! todayActivityCollectionViewCell
+            
+            
+            var resultCount: Double = 873
+
+            
+            var todaysCals: Double = 204
+
+            updateSteps(completion: { (resultCount) -> Double in
+
+                    return resultCount
+
+            })
+            
+            todayActivityCell.title.text = locationNames[indexPath.row]
+            todayActivityCell.desc.text = locationDescription[indexPath.row]
+            todayActivityCell.cals.text = String(todaysCals)
+            todayActivityCell.stepCountlbl.text = String(resultCount)
+            
+            todayActivityCell.contentView.layer.cornerRadius = 4.0
+            todayActivityCell.contentView.layer.borderWidth = 1.0
+            todayActivityCell.contentView.layer.borderColor = UIColor.clear.cgColor
+            todayActivityCell.contentView.layer.masksToBounds = false
+            todayActivityCell.layer.shadowColor = UIColor.gray.cgColor
+            todayActivityCell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            todayActivityCell.layer.shadowRadius = 4.0
+            todayActivityCell.layer.shadowOpacity = 1.0
+            todayActivityCell.layer.masksToBounds = false
+            todayActivityCell.layer.shadowPath = UIBezierPath(roundedRect: todayActivityCell.bounds, cornerRadius: todayActivityCell.contentView.layer.cornerRadius).cgPath
+            
+            return todayActivityCell
+        }
+        if indexPath.row == 5 {
+            let symActivityCell = collectionView.dequeueReusableCell(withReuseIdentifier: "symptomActivity", for: indexPath) as! symptomActivityCollectionViewCell
+            
+            symActivityCell.title.text = locationNames[indexPath.row]
+            symActivityCell.desc.text = locationDescription[indexPath.row]
+            
+            symActivityCell.contentView.layer.cornerRadius = 4.0
+            symActivityCell.contentView.layer.borderWidth = 1.0
+            symActivityCell.contentView.layer.borderColor = UIColor.clear.cgColor
+            symActivityCell.contentView.layer.masksToBounds = false
+            symActivityCell.layer.shadowColor = UIColor.gray.cgColor
+            symActivityCell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            symActivityCell.layer.shadowRadius = 4.0
+            symActivityCell.layer.shadowOpacity = 1.0
+            symActivityCell.layer.masksToBounds = false
+            symActivityCell.layer.shadowPath = UIBezierPath(roundedRect: symActivityCell.bounds, cornerRadius: symActivityCell.contentView.layer.cornerRadius).cgPath
+            
+            return symActivityCell
         }
         
         

@@ -1576,7 +1576,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're doing great!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekw-zi-qR7">
-                                                    <rect key="frame" x="80" y="135" width="189" height="30"/>
+                                                    <rect key="frame" x="80" y="135" width="189" height="57"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                                     <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1587,10 +1587,10 @@
                                         <constraints>
                                             <constraint firstItem="TGo-Kc-Vwj" firstAttribute="top" secondItem="08L-5N-sXA" secondAttribute="bottom" constant="10" id="1iB-Sv-rHZ"/>
                                             <constraint firstItem="XBn-Cw-EWN" firstAttribute="leading" secondItem="R90-ei-bw4" secondAttribute="leadingMargin" constant="5" id="4RV-8A-mFx"/>
-                                            <constraint firstItem="Ekw-zi-qR7" firstAttribute="centerY" secondItem="R90-ei-bw4" secondAttribute="centerY" id="8r2-6I-ubd"/>
+                                            <constraint firstItem="Ekw-zi-qR7" firstAttribute="centerY" secondItem="R90-ei-bw4" secondAttribute="centerY" constant="13.5" id="8r2-6I-ubd"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="CAz-Vy-nhn" secondAttribute="bottom" constant="5" id="DAw-jP-zfq"/>
                                             <constraint firstItem="08L-5N-sXA" firstAttribute="leading" secondItem="TGo-Kc-Vwj" secondAttribute="leading" id="Hh4-fb-fke"/>
-                                            <constraint firstItem="XBn-Cw-EWN" firstAttribute="top" secondItem="Ekw-zi-qR7" secondAttribute="bottom" constant="52" id="OkB-NR-YkC"/>
+                                            <constraint firstItem="XBn-Cw-EWN" firstAttribute="top" secondItem="Ekw-zi-qR7" secondAttribute="bottom" constant="25" id="OkB-NR-YkC"/>
                                             <constraint firstItem="CAz-Vy-nhn" firstAttribute="top" secondItem="XBn-Cw-EWN" secondAttribute="bottom" constant="4" id="QQS-oy-yUh"/>
                                             <constraint firstItem="Ekw-zi-qR7" firstAttribute="top" secondItem="TGo-Kc-Vwj" secondAttribute="bottom" constant="45" id="RlX-0W-5CS"/>
                                             <constraint firstItem="TGo-Kc-Vwj" firstAttribute="trailing" secondItem="CAz-Vy-nhn" secondAttribute="trailing" id="Tfh-Fj-JLm"/>
@@ -1614,7 +1614,7 @@
                                         <connections>
                                             <outlet property="cals" destination="08L-5N-sXA" id="CH7-Nu-Jyf"/>
                                             <outlet property="desc" destination="CAz-Vy-nhn" id="16c-fb-rKV"/>
-                                            <outlet property="steps" destination="TGo-Kc-Vwj" id="AYU-zj-hQk"/>
+                                            <outlet property="stepCountlbl" destination="TGo-Kc-Vwj" id="LJj-ra-dtp"/>
                                             <outlet property="title" destination="XBn-Cw-EWN" id="qsf-Kc-Lwm"/>
                                         </connections>
                                     </collectionViewCell>

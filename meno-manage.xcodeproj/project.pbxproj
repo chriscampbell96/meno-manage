@@ -19,6 +19,7 @@
 		ED1AAA9F20828BED00E7BE3F /* todayActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAA9E20828BED00E7BE3F /* todayActivityCollectionViewCell.swift */; };
 		ED1AAAA120828BFF00E7BE3F /* lastNoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAAA020828BFF00E7BE3F /* lastNoteCollectionViewCell.swift */; };
 		ED1AAAA320828C1500E7BE3F /* symptomActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAAA220828C1500E7BE3F /* symptomActivityCollectionViewCell.swift */; };
+		ED1AAAA52082CF0F00E7BE3F /* PastWeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AAAA42082CF0F00E7BE3F /* PastWeekCollectionViewCell.swift */; };
 		ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC62021E102005DEE2E /* AppDelegate.swift */; };
 		ED1CDDC92021E102005DEE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDDC82021E102005DEE2E /* ViewController.swift */; };
 		ED1CDDCC2021E103005DEE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDDCA2021E103005DEE2E /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		ED1AAA9E20828BED00E7BE3F /* todayActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED1AAAA020828BFF00E7BE3F /* lastNoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lastNoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED1AAAA220828C1500E7BE3F /* symptomActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = symptomActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED1AAAA42082CF0F00E7BE3F /* PastWeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWeekCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED1CDDC32021E102005DEE2E /* meno-manage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meno-manage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDDC62021E102005DEE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1CDDC82021E102005DEE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				ED1AAA9E20828BED00E7BE3F /* todayActivityCollectionViewCell.swift */,
 				ED1AAAA020828BFF00E7BE3F /* lastNoteCollectionViewCell.swift */,
 				ED1AAAA220828C1500E7BE3F /* symptomActivityCollectionViewCell.swift */,
+				ED1AAAA42082CF0F00E7BE3F /* PastWeekCollectionViewCell.swift */,
 			);
 			path = "Chart Cells";
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				ED1AAA9F20828BED00E7BE3F /* todayActivityCollectionViewCell.swift in Sources */,
 				ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,
+				ED1AAAA52082CF0F00E7BE3F /* PastWeekCollectionViewCell.swift in Sources */,
 				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,
 				ED611F4E204EE7A60087697C /* CAMediaTimingFunction+CustomTypes.swift in Sources */,
 				ED2C50BE20338A9100CB828C /* Mood.swift in Sources */,
