@@ -12,7 +12,7 @@ import ResearchKit
 public var ConsentTask: ORKOrderedTask {
     
     let Document = ORKConsentDocument()
-    Document.title = "Test Consent"
+    Document.title = "meno-manage Application Concent!"
     
     let sectionTypes: [ORKConsentSectionType] = [
         .overview,
@@ -20,15 +20,15 @@ public var ConsentTask: ORKOrderedTask {
         .privacy,
         .dataUse,
         .timeCommitment,
-        .studySurvey,
         .studyTasks,
         .withdrawing
     ]
     
     let consentSections: [ORKConsentSection] = sectionTypes.map { contentSectionType in
         let consentSection = ORKConsentSection(type: contentSectionType)
-        consentSection.summary = "Complete the study"
-        consentSection.content = "This research study will last a total of 1 week."
+        consentSection.summary = "This feild study:"
+        consentSection.content = "This research study will last a total of 1 week.You can opt out at any point, by just deleting the applcaition and emailling: chriscampbell.info@gmail.com. DATA GATHERING: data will be deleted after the 1 week period. Personal information will never be disclosed. Information held on the device will be removed wehn the applcaition is deleted. You are not required but are encouraged to ue the applcaition thoughout your daily taks/activities. Any further questions, please get in touch!"
+        
         return consentSection
     }
     

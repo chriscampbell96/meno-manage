@@ -73,6 +73,9 @@
 		ED8B06A2206FB38900287CEF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B069A206FB38800287CEF /* DataManager.swift */; };
 		ED8B06A3206FB38900287CEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B069B206FB38800287CEF /* HomeViewController.swift */; };
 		ED8B06A5206FC05B00287CEF /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8B06A4206FC05B00287CEF /* SafariServices.framework */; };
+		ED91EF41208418980056CF9A /* feelBadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED91EF40208418980056CF9A /* feelBadCollectionViewCell.swift */; };
+		ED91EF43208428790056CF9A /* ChangeTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED91EF42208428790056CF9A /* ChangeTagViewController.swift */; };
+		ED91EF45208428E80056CF9A /* ChangeTagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED91EF44208428E80056CF9A /* ChangeTagTableViewCell.swift */; };
 		ED9216042069534B00B42509 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9216032069534B00B42509 /* HealthKit.framework */; };
 		EDCC3AB3202385630051B132 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC3AB2202385630051B132 /* ProfileViewController.swift */; };
 		EDEB8A0A2063D396005FEE7E /* LineViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEB8A092063D396005FEE7E /* LineViewCollectionViewCell.swift */; };
@@ -154,6 +157,9 @@
 		ED8B069A206FB38800287CEF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ED8B069B206FB38800287CEF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ED8B06A4206FC05B00287CEF /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		ED91EF40208418980056CF9A /* feelBadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feelBadCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED91EF42208428790056CF9A /* ChangeTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTagViewController.swift; sourceTree = "<group>"; };
+		ED91EF44208428E80056CF9A /* ChangeTagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTagTableViewCell.swift; sourceTree = "<group>"; };
 		ED9216022069533F00B42509 /* meno-manage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "meno-manage.entitlements"; sourceTree = "<group>"; };
 		ED9216032069534B00B42509 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		EDCC3AB2202385630051B132 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 				ED1AAAA020828BFF00E7BE3F /* lastNoteCollectionViewCell.swift */,
 				ED1AAAA220828C1500E7BE3F /* symptomActivityCollectionViewCell.swift */,
 				ED1AAAA42082CF0F00E7BE3F /* PastWeekCollectionViewCell.swift */,
+				ED91EF40208418980056CF9A /* feelBadCollectionViewCell.swift */,
 			);
 			path = "Chart Cells";
 			sourceTree = "<group>";
@@ -287,6 +294,8 @@
 				ED1DA6D62031B5FD0033A440 /* CommentPostViewController.swift */,
 				EDEB8A0D2063D962005FEE7E /* MyPostsTableViewController.swift */,
 				EDEB8A0F2063D9AD005FEE7E /* MyPostsTableViewCell.swift */,
+				ED91EF42208428790056CF9A /* ChangeTagViewController.swift */,
+				ED91EF44208428E80056CF9A /* ChangeTagTableViewCell.swift */,
 			);
 			path = myCommunity;
 			sourceTree = "<group>";
@@ -751,7 +760,9 @@
 				ED490AC92037543B0042136F /* videoModel.swift in Sources */,
 				ED33EE44205F04CF00ECC133 /* ReadingsTableViewCell.swift in Sources */,
 				ED1AAA9F20828BED00E7BE3F /* todayActivityCollectionViewCell.swift in Sources */,
+				ED91EF41208418980056CF9A /* feelBadCollectionViewCell.swift in Sources */,
 				ED611F48204EE7A60087697C /* UIColor+Hex.swift in Sources */,
+				ED91EF45208428E80056CF9A /* ChangeTagTableViewCell.swift in Sources */,
 				ED1CDDC72021E102005DEE2E /* AppDelegate.swift in Sources */,
 				ED1AAAA52082CF0F00E7BE3F /* PastWeekCollectionViewCell.swift in Sources */,
 				ED66B4AD2028C793004E84B5 /* SetImageViewController.swift in Sources */,
@@ -761,6 +772,7 @@
 				ED3D72BD2054262100B3E22C /* RSSwift.xcdatamodeld in Sources */,
 				ED2C50AF20337CB400CB828C /* MoodTableViewController.swift in Sources */,
 				ED490AC6203753790042136F /* Video.swift in Sources */,
+				ED91EF43208428790056CF9A /* ChangeTagViewController.swift in Sources */,
 				EDFBD4BF2029078F008C2A88 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

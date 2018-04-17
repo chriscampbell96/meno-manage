@@ -149,7 +149,7 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
             
             cell.chartTitle.text = "Weekly Session Overview"
             cell.chartDescription.text = "A count of the sessions logged for the past week."
-            cell.configure(dataPoints: weekdays, values: [5.0,1.0,2.0,8.0,2.0])
+            cell.configure(dataPoints: getCurrentWeek(), values: [5.0,1.0,2.0,8.0,2.0,0.0,0.0])
             
             cell.contentView.layer.cornerRadius = 4.0
             cell.contentView.layer.borderWidth = 1.0
@@ -168,25 +168,19 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
         
     }
     func getCurrentWeek() -> [String]{
-        let calendar = Calendar.current
-        let today = calendar.startOfDay(for: Date())
-        let dayOfWeek = calendar.component(.weekday, from: today)
-        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
-        
+        let cal = Calendar.current
+        var date = cal.startOfDay(for: Date())
+        var days = [String]()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd"
-
-        
-        
-        let days = (weekdays.lowerBound ..< weekdays.upperBound)
-            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: today) }
-            .filter { !calendar.isDateInWeekend($0) }
-
-        
-        return days.map{ formatter.string(from: $0) }
-
+        for i in 1 ... 7 {
+            let day = cal.component(.day, from: date)
+            days.append(String(day))
+            date = cal.date(byAdding: .day, value: -1, to: date)!
+        }
+        print(days)
+        return days
     }
-    
     
 
 

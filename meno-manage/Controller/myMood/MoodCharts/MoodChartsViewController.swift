@@ -34,8 +34,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     //chart 1
-    let locationNames = ["Total Mood Count", "Average Daily Mood", "Moods & Activity",  "Last Note", "Todays Activity", " Symptoms - Past Week"]
-    let locationDescription = ["How are you feeling today?","Time of day & your mood", "Your Mood vs Activity - Past week", "Last diary entry! Add more now!", "Todays activity",  "From your past weeks journal. "]
+    let locationNames = ["Total Mood Count", "Time Average Mood", "Great Mood vs Activity",  "Last Note", "Todays Activity", " Symptoms Distribution", "Past Week Mood", "Awful Mood vs Activity"]
+    let locationDescription = ["How are you feeling today?","Time of day & your mood", "Activities that make you feel great!", "Last diary entry! Add more now!", "Todays activity",  "From your past weeks journal. ",  "Your moods logged from the past 5 days", "Activities where you are in an awful mood."]
 
     
     let months = ["Great", "Good", "Meh", "Sad", "Awful"]
@@ -48,6 +48,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     var getMoodList: [Double]!
     var changed: String!
     var lastPost: String!
+        var weekdays: [String]!
+    var workThis: [String]!
     
     var weekList: [String]!
         //global v's
@@ -60,7 +62,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let s1Data: [String] = ["Row 3", "Row 3", "Row 3"]
     let s2Data: [String] = ["Irregular period", "Vaginal dryness", "Hot flashes", "Chills", "Night sweats", "Poor sleep", "Loss of libido", "Dry skin", "Thinning of hair", "Loss of breast fullness"]
-    let s3Data: [String] = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
+    let s3Data: [String] = ["🗓 Today", "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
     
             let newData: [String] = ["Work","Friends", "Relax", "Date", "Sports", "Shopping", "Gaming", "Reading", "Relaxing", "Travelling", "Cleaning", "Cooking", "Other"]
     
@@ -89,7 +91,6 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         
         let totalMoods = getTotalSessions()
         let allTimeAverage = getAverage()
-        getCurrentWeek()
         
         //    "Irregular period", "Vaginal dryness", "Hot flash", "Chills", "Night sweats", "Poor sleep", "Loss of libido", "Dry skin", "Thinning of hair", "Loss of breast fullness"
         //SYMPTOM DATA
@@ -120,23 +121,88 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let GRCooking = String(getGreatCooking())
         let GROther = String(getGreatOther())
         
+        let GGWork = String(getGoodWork())
+        let GGFriends = String(getGoodFriends())
+        let GGRelax = String(getGoodRelax())
+        let GGDate = String(getGoodDate())
+        let GGSport = String(getGoodSport())
+        let GGShopping = String(getGoodShopping())
+        let GGGaming = String(getGoodGaming())
+        let GGReading = String(getGoodReading())
+        let GGRelaxing = String(getGoodRelaxing())
+        let GGTravelling = String(getGoodTravelling())
+        let GGCleaning = String(getGoodCleaning())
+        let GGCooking = String(getGoodCooking())
+        let GGOther = String(getGoodOther())
+        
+        let MMWork = String(getMehWork())
+        let MMFriends = String(getMehFriends())
+        let MMRelax = String(getMehRelax())
+        let MMDate = String(getMehDate())
+        let MMSport = String(getMehSport())
+        let MMShopping = String(getMehShopping())
+        let MMGaming = String(getMehGaming())
+        let MMReading = String(getMehReading())
+        let MMRelaxing = String(getMehRelaxing())
+        let MMTravelling = String(getMehTravelling())
+        let MMCleaning = String(getMehCleaning())
+        let MMCooking = String(getMehCooking())
+        let MMOther = String(getMehOther())
+        
+        let SSWork = String(getSadWork())
+        let SSFriends = String(getSadFriends())
+        let SSRelax = String(getSadRelax())
+        let SSDate = String(getSadDate())
+        let SSSport = String(getSadSport())
+        let SSShopping = String(getSadShopping())
+        let SSGaming = String(getSadGaming())
+        let SSReading = String(getSadReading())
+        let SSRelaxing = String(getSadRelaxing())
+        let SSTravelling = String(getSadTravelling())
+        let SSCleaning = String(getSadCleaning())
+        let SSCooking = String(getSadCooking())
+        let SSOther = String(getSadOther())
+        
+        let AWork = String(getAwfulWork())
+        let AFriends = String(getAwfulFriends())
+        let ARelax = String(getAwfulRelax())
+        let ADate = String(getAwfulDate())
+        let ASport = String(getAwfulSport())
+        let AShopping = String(getAwfulShopping())
+        let AGaming = String(getAwfulGaming())
+        let AReading = String(getAwfulReading())
+        let ARelaxing = String(getAwfulRelaxing())
+        let ATravelling = String(getAwfulTravelling())
+        let ACleaning = String(getAwfulCleaning())
+        let ACooking = String(getAwfulCooking())
+        let AOther = String(getAwfulOther())
+        
+        
+        let currentWeekThis = getThisWeek()
+        
+        let thisWeek = currentWeekThis
+        
         let lastPost = getLastPost()
         
         let s2Data2: [String] = [IP, VG, flash, chills, NS, PS, libido, DS, TH, BF]
-        let s3Data2: [String] = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
+        let s3Data2: [String] = ["Great", allTimeAverage, "3",  totalMoods]
         let greatActivity: [String] = [GRWork, GRFriends, GRRelax, GRDate, GRSport, GRShopping, GRGaming, GRReading, GRRelaxing, GRTravelling, GRCleaning, GRCooking, GROther]
+        let goodActivity: [String] = [GGWork, GGFriends, GGRelax, GGDate, GGSport, GGShopping, GGGaming, GGReading, GGRelaxing, GGTravelling, GGCleaning, GGCooking, GGOther]
+        let sadActivity: [String] = [SSWork, SSFriends, SSRelax, SSDate, SSSport, SSShopping,SSGaming, SSReading, SSRelaxing, SSTravelling, SSCleaning, SSCooking, SSOther]
+        let mehActivity: [String] = [MMWork, MMFriends, MMRelax, MMDate, MMSport, MMShopping,MMGaming, MMReading, MMRelaxing, MMTravelling, MMCleaning, MMCooking, MMOther]
+        let awfulActivity: [String] = [AWork, AFriends, ARelax, ADate, ASport, AShopping,AGaming, AReading, ARelaxing, ATravelling, ACleaning, ACooking, AOther]
 
         sectionData = [0:s3Data, 1:s2Data, 2:newData, 3:newData, 4:newData,5:newData,6:newData]
-        sectionData2 = [0:s3Data2, 1:s2Data2, 2:greatActivity, 3:newData2, 4:newData2,5:newData2,6:newData2 ]
+        sectionData2 = [0:s3Data2, 1:s2Data2, 2:greatActivity, 3:goodActivity, 4:mehActivity,5:sadActivity,6:awfulActivity ]
 
 
         moodList = ["Great", "Good", "Meh", "Sad", "Awful"]
         getMoodList = [great, good, meh, sad, awful]
         
-        statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
-        stats = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
+        statlabels = ["🗓 Today",  "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
+        stats = ["sec", allTimeAverage, "3",  totalMoods]
     
-        
+        let workThis = getGreatMoodActivity()
         
         getActiveEnergy(currentDate: Date(), completion: { (totalEnergyBurned) -> Void in
             print(totalEnergyBurned)
@@ -154,12 +220,12 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
 //        print(getIPeriod())
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         self.mainCollection.reloadData()
         self.mainTableView.reloadData()
         
         let totalMoods = getTotalSessions()
-                getCurrentWeek()
         let allTimeAverage = getAverage()
 
         let great = getGreatMood()
@@ -168,23 +234,25 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let sad = getSadMood()
         let awful = getAwfulMood()
         let workingNow = getLastPost()
-        print(lastPost)
         
         moodList = ["Great", "Good", "Meh", "Sad", "Awful"]
         getMoodList = [great, good, meh, sad, awful]
         
         weekList = ["S", "M", "T", "W", "T", "F", "S" ]
         
-        statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time", "🔥 Best Streak" , "📈 Total Sessions Logged"]
-        stats = ["sec", "coming soon", "coming soon", allTimeAverage, "coming soon",  totalMoods]
+        statlabels = ["🗓 Today", "📊 All Time", "🔥 Best Streak" , "📈 Total Sessions Logged"]
+        stats = ["sec", allTimeAverage, "3",  totalMoods]
 
         updateSteps(completion: { (resultCount) -> Double in
             
             print(resultCount)
             return resultCount
         })
-
         
+        getThisWeek()
+let workThis = getGreatMoodActivity()
+        print(workThis)
+
     }
     
 
@@ -258,6 +326,19 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         return lastPost!.comment
     }
     
+    
+    
+    func getGreatMoodActivity() -> [String]{
+        let greatMoodActivity = realm.objects(Mood.self).filter("mood = 'Great'").map({$0.activities})
+        print(Array(greatMoodActivity))
+        return Array(greatMoodActivity)
+    }
+    
+    func getAwfulMoodActivity() -> [String]{
+        let greatMoodActivity = realm.objects(Mood.self).filter("mood = 'Awful'").map({$0.activities})
+        print(Array(greatMoodActivity))
+        return Array(greatMoodActivity)
+    }
     
     //get moods
     func getGreatMood() -> Double{
@@ -648,7 +729,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 8
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -703,10 +784,14 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         }
         if indexPath.row == 2 {
             let moodCell = collectionView.dequeueReusableCell(withReuseIdentifier: "moodToExercise", for: indexPath) as! moodActivityCollectionViewCell
+
+
             
             moodCell.title.text = locationNames[indexPath.row]
             moodCell.desc.text = locationDescription[indexPath.row]
-            
+            moodCell.activityArray.text = "\(getGreatMoodActivity().minimalDescription)"
+//            moodCell.activityArray.text = "\(workThis)"
+
             moodCell.contentView.layer.cornerRadius = 4.0
             moodCell.contentView.layer.borderWidth = 1.0
             moodCell.contentView.layer.borderColor = UIColor.clear.cgColor
@@ -778,6 +863,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             
             symActivityCell.title.text = locationNames[indexPath.row]
             symActivityCell.desc.text = locationDescription[indexPath.row]
+            symActivityCell.configure(dataPoints: s2Data, values: [1.0,4.0,0.0,1.0,0.0,0.0,2.0,1.0,2.0,0.0])
             
             symActivityCell.contentView.layer.cornerRadius = 4.0
             symActivityCell.contentView.layer.borderWidth = 1.0
@@ -791,6 +877,48 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
             symActivityCell.layer.shadowPath = UIBezierPath(roundedRect: symActivityCell.bounds, cornerRadius: symActivityCell.contentView.layer.cornerRadius).cgPath
             
             return symActivityCell
+        }
+        if indexPath.row == 6 {
+            let pasWeekCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PastWeekCell", for: indexPath) as! PastWeekCollectionViewCell
+            
+            pasWeekCell.title.text = locationNames[indexPath.row]
+            pasWeekCell.desc.text = locationDescription[indexPath.row]
+            pasWeekCell.configure(dataPoints: getThisWeek(), values: [2.0,3.0,0.0,9.0,1.0,0.0,0.0])
+            
+            
+            pasWeekCell.contentView.layer.cornerRadius = 4.0
+            pasWeekCell.contentView.layer.borderWidth = 1.0
+            pasWeekCell.contentView.layer.borderColor = UIColor.clear.cgColor
+            pasWeekCell.contentView.layer.masksToBounds = false
+            pasWeekCell.layer.shadowColor = UIColor.gray.cgColor
+            pasWeekCell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            pasWeekCell.layer.shadowRadius = 4.0
+            pasWeekCell.layer.shadowOpacity = 1.0
+            pasWeekCell.layer.masksToBounds = false
+            pasWeekCell.layer.shadowPath = UIBezierPath(roundedRect: pasWeekCell.bounds, cornerRadius: pasWeekCell.contentView.layer.cornerRadius).cgPath
+            
+            return pasWeekCell
+        }
+        if indexPath.row == 7 {
+            let awfulCell = collectionView.dequeueReusableCell(withReuseIdentifier: "feelBadCell", for: indexPath) as! feelBadCollectionViewCell
+            
+            awfulCell.title.text = locationNames[indexPath.row]
+            awfulCell.desc.text = locationDescription[indexPath.row]
+            awfulCell.listArray.text = "\(getAwfulMoodActivity().minimalDescription)"
+        
+            
+            awfulCell.contentView.layer.cornerRadius = 4.0
+            awfulCell.contentView.layer.borderWidth = 1.0
+            awfulCell.contentView.layer.borderColor = UIColor.clear.cgColor
+            awfulCell.contentView.layer.masksToBounds = false
+            awfulCell.layer.shadowColor = UIColor.gray.cgColor
+            awfulCell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            awfulCell.layer.shadowRadius = 4.0
+            awfulCell.layer.shadowOpacity = 1.0
+            awfulCell.layer.masksToBounds = false
+            awfulCell.layer.shadowPath = UIBezierPath(roundedRect: awfulCell.bounds, cornerRadius: awfulCell.contentView.layer.cornerRadius).cgPath
+            
+            return awfulCell
         }
         
         
@@ -864,29 +992,45 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         print("User selected dates: \n\(dates)")
     }
     
-    func getCurrentWeek(){
+    func getCurrentWeek() -> [String]{
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
         let dayOfWeek = calendar.component(.weekday, from: today)
         let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
         
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .none
+        formatter.dateFormat = "MM-dd"
         
         
         
         let days = (weekdays.lowerBound ..< weekdays.upperBound)
-            .flatMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: today) }  // use `compactMap` in Xcode 9.3 and later
+            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: today) }
             .filter { !calendar.isDateInWeekend($0) }
         
-        let startOfWeek = Date().startOfWeek
-        let endOfWeek = Date().endOfWeek
-//        print(startOfWeek as Any)
-//        print(endOfWeek as Any)
-//        print(days)
+        
+        return days.map{ formatter.string(from: $0) }
+        
+    }
+    
+    func getThisWeek() -> [String]{
+        let cal = Calendar.current
+        var date = cal.startOfDay(for: Date())
+        var days = [String]()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd"
+        for i in 1 ... 7 {
+            let day = cal.component(.day, from: date)
+            days.append(String(day))
+            date = cal.date(byAdding: .day, value: -1, to: date)!
+        }
+        print(days)
+        return days
     }
     
 
 }
-
+extension Sequence {
+    var minimalDescription: String {
+        return map { "\($0)" }.joined(separator: " ")
+    }
+}

@@ -9,7 +9,8 @@
 import UIKit
 import HealthKit
 import DZNEmptyDataSet
-
+import SwiftKeychainWrapper
+import Firebase
 
 
 class HealthHomeViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
@@ -21,8 +22,8 @@ class HealthHomeViewController: UIViewController,  UITableViewDataSource, UITabl
     
     @IBOutlet weak var tableList: UITableView!
     
-    let titles: [String] = ["Step Count", "Active Energy"]
-    let values: [String] = ["0", "0"]
+    let titles: [String] = ["Step Count", "Active Energy", "Weight", "Height","Age"]
+    let values: [String] = ["204", "873", "N/A", "5'10.87", "0.0"]
     
 
 
@@ -91,7 +92,16 @@ class HealthHomeViewController: UIViewController,  UITableViewDataSource, UITabl
         return cell
     }
     
-    
+    @IBAction func logoutPress(_ sender: Any) {
+        KeychainWrapper.standard.removeObject(forKey: "uid")
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 
 
 

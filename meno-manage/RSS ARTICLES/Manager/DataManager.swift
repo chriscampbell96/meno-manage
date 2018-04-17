@@ -17,16 +17,15 @@ class DataManager: NSObject {
     var favoritesArray : [FavoriteItem] = []
     
     var feedsPath : String {
-        return documentsPath() + "/../feeds.plist"
+        return documentsPath() + "/feeds.plist"
     }
     
     var favoritesPath : String {
-        return documentsPath() + "/../favorites.plist"
+        return documentsPath() + "/favorites.plist"
     }
     
     func initDataManager() {
         if FileManager.default.fileExists(atPath: feedsPath) {
-            print("true")
             feedsArray = NSKeyedUnarchiver.unarchiveObject(withFile: feedsPath) as! [MWFeedInfo]
         }
         if FileManager.default.fileExists(atPath: favoritesPath) {

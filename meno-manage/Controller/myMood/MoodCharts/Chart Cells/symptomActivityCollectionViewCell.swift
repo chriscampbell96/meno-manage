@@ -12,41 +12,64 @@ import ChartsRealm
 
 class symptomActivityCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var chartIMG: BarChartView!
+    @IBOutlet weak var chartIMG: PieChartView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var desc: UILabel!
     
     func configure (dataPoints: [String], values: [Double]) {
         chartIMG.noDataText = "Please Insert Some Data!"
         
-        
-        
-        chartIMG.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
-        
-        
-        var dataEntries: [BarChartDataEntry] = []
+        var dataEntries: [ChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
+            let dataEntry = ChartDataEntry(x: values[i], y: Double(i))
             dataEntries.append(dataEntry)
+            
+
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: nil)
-        chartIMG.chartDescription?.enabled = false
-        self.chartIMG.legend.enabled = false
+//        let dataSet = PieChartDataSet(values: dataEntries, label: nil)
+
         
-        let formatter = BarChartFormatter(values: dataPoints)
-        let xAxis = XAxis()
-        xAxis.valueFormatter = formatter
+        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Symptoms")
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        chartIMG.data = pieChartData
         
-        chartIMG.fitBars = true
+        let noZeroFormatter = NumberFormatter()
+        noZeroFormatter.zeroSymbol = ""
+        pieChartDataSet.valueFormatter = DefaultValueFormatter(formatter: noZeroFormatter)
         
-        chartIMG.xAxis.valueFormatter = xAxis.valueFormatter
-        let chartData = BarChartData(dataSet: chartDataSet)
-        chartData.barWidth = Double(0.90)
-        chartDataSet.colors = [UIColor(red: 169/255, green: 197/255, blue: 177/255, alpha: 1.0)]
-        chartIMG.data = chartData
+        var colors: [UIColor] = []
+        
+        for i in 0..<dataPoints.count {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
         
         
+        chartIMG.highlightPerTapEnabled = false
+        chartIMG.usePercentValuesEnabled = false
+        chartIMG.drawEntryLabelsEnabled = true
+        chartIMG.centerText = "%"
+        
+        
+        let legend = chartIMG.legend
+        legend.font = UIFont(name: "Arial", size: 11)!
+        legend.textColor = UIColor.black
+        legend.form = .circle
+
+        chartIMG.animate(xAxisDuration: 2, yAxisDuration: 2)
+
+        pieChartDataSet.colors = colors
+        pieChartDataSet.selectionShift = 0
+        pieChartDataSet.sliceSpace = 2.5
+        
+
     }
-}
+
+    }
+
