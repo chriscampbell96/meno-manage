@@ -2,8 +2,8 @@
 //  Math.swift
 //  BreatheView
 //
-//  Created by Oleh Zayats on 12/29/17.
-//  Copyright © 2017 Oleh Zayats. All rights reserved.
+//  Created by Chris Campbell on 14/03/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
 
 import UIKit
