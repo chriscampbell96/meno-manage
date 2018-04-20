@@ -1,11 +1,9 @@
 //
 //  FavoriteItem.swift
 //  Reader
+//  Created by Chris Campbell on 14/03/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
-//  Created by Francesco Marisaldi on 07/04/17.
-//  Copyright © 2017 Francesco Marisaldi. All rights reserved.
-//
-
 import UIKit
 import MWFeedParser
 
