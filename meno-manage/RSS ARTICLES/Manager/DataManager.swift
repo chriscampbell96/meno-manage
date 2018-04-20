@@ -2,8 +2,8 @@
 //  DataManager.swift
 //  Reader
 //
-//  Created by Francesco Marisaldi on 03/03/17.
-//  Copyright © 2017 Francesco Marisaldi. All rights reserved.
+//  Created by Chris Campbell on 14/03/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
 
 import UIKit
