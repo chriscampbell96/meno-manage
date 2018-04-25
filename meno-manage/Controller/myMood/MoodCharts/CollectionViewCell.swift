@@ -1,11 +1,10 @@
 //
 //  CollectionViewCell.swift
-//  cardLayout
+//  meno-manage
 //
-//  Created by Riley Norris on 11/4/17.
-//  Copyright © 2017 Riley Norris. All rights reserved.
+//  Created by Chris Campbell on 07/04/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
-
 import UIKit
 import Charts
 import ChartsRealm

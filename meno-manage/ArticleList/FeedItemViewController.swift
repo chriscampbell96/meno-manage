@@ -1,9 +1,9 @@
 //
-//  FeedItemViewController.swift
-//  Rsswift
+//  HealthTableViewCell.swift
+//  meno-manage
 //
-//  Created by Arled Kola on 18/11/2016.
-//  Copyright © 2016 ArledKola. All rights reserved.
+//  Created by Chris Campbell on 07/04/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
 
 import UIKit

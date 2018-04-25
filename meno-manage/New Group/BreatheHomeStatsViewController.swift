@@ -101,7 +101,7 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
     }
     func get30Days(){
         
-//        let predicate = NSPredicate(format: "%@ >= start AND %@ <= end", time, time)
+
 
         
     }
@@ -149,7 +149,7 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
             
             cell.chartTitle.text = "Weekly Session Overview"
             cell.chartDescription.text = "A count of the sessions logged for the past week."
-            cell.configure(dataPoints: getCurrentWeek(), values: [5.0,1.0,2.0,8.0,2.0,0.0,0.0])
+            cell.configure(dataPoints: getCurrentWeek(), values: [0.0,1.0,0.0,0.0,0.0,3.0,2.0])
             
             cell.contentView.layer.cornerRadius = 4.0
             cell.contentView.layer.borderWidth = 1.0

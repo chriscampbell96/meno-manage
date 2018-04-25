@@ -5,6 +5,7 @@
 //  Created by Christopher Campbell on 01/02/2018.
 //  Copyright © 2018 DevChris. All rights reserved.
 //
+
 import UIKit
 import MWFeedParser
 import DZNEmptyDataSet
@@ -60,7 +61,6 @@ class HomeViewController: UITableViewController, MWFeedParserDelegate, DZNEmptyD
         present(fieldAlert, animated: true, completion: nil)
     }
     
-    // MARK: - Feed parser delegate
     
     func initParser(withFeed feed: String) {
         activityIndicator.startAnimating()
@@ -134,7 +134,6 @@ class HomeViewController: UITableViewController, MWFeedParserDelegate, DZNEmptyD
         }   
     }
 
-    // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showFeed" {
@@ -156,7 +155,6 @@ class HomeViewController: UITableViewController, MWFeedParserDelegate, DZNEmptyD
         showAddFeedAlert()
     }
     
-    // MARK: - DZNEmptyDataSet Source
     
     private func image(forEmptyDataSet scrollView: UIScrollView!) -> String! {
         return  "Please enter..."

@@ -79,10 +79,16 @@ class MyPostsTableViewController: UITableViewController {
             return PostCell()
         }
     }
+    var refresher: UIRefreshControl!
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-        print("delete")
+            selectedPost = posts[(indexPath.row)]
+
+            Database.database().reference().child("postText").child(selectedPost.postKey).removeValue()
+            self.tableView.reloadData()
+
+
     }
     }
 }

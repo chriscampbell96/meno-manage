@@ -1,6 +1,9 @@
-
-//  Created by Chris Campbell on 18/11/2016.
-//  Copyright © 2018 Chris Campbell. All rights reserved.
+//
+//  HealthTableViewCell.swift
+//  meno-manage
+//
+//  Created by Chris Campbell on 07/04/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
 
 import UIKit

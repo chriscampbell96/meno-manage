@@ -149,9 +149,7 @@ class FeedViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmpty
         detailController.preferredControlTintColor = #colorLiteral(red: 0.7501883494, green: 0.1651857008, blue: 0.7452709142, alpha: 1)
         navigationController?.present(detailController, animated: true, completion: nil)
     }
-    
-    // MARK: - DZNEmptyDataSet source
-    
+        
     func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
         return  #imageLiteral(resourceName: "EmptyItemsIcon")
     }
@@ -177,8 +175,6 @@ class FeedViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmpty
     func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!) {
         refresh()
     }
-    
-    // MARK: - 3DTouch delegate
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         if presentedViewController is SFSafariViewController {

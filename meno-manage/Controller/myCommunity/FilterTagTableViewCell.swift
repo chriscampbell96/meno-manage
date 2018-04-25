@@ -1,19 +1,17 @@
 //
-//  ProfileViewController.swift
+//  FilterTagTableViewCell.swift
 //  meno-manage
 //
-//  Created by Christopher Campbell on 01/02/2018.
+//  Created by Chris Campbell on 25/04/2018.
 //  Copyright © 2018 DevChris. All rights reserved.
 //
 
 import UIKit
 
-class ItemCell: UITableViewCell {
+class FilterTagTableViewCell: UITableViewCell {
 
-    @IBOutlet var labelTitle: UILabel!
-    @IBOutlet var labelSummary: UILabel!
-    @IBOutlet var labelDate: UILabel!
-    @IBOutlet var labelFeed: UILabel!
+
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +20,7 @@ class ItemCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
 

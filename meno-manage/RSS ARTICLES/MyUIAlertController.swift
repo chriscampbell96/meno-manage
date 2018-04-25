@@ -1,10 +1,11 @@
 //
-//  MyUIAlertController.swift
-//  Reader
+//  ProfileViewController.swift
+//  meno-manage
 //
-//  Created by Francesco Marisaldi on 15/04/17.
-//  Copyright © 2017 Francesco Marisaldi. All rights reserved.
+//  Created by Christopher Campbell on 01/02/2018.
+//  Copyright © 2018 DevChris. All rights reserved.
 //
+
 
 import UIKit
 

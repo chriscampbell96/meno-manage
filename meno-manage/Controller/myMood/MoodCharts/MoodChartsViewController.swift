@@ -43,6 +43,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let months1 = ["Great", "Good", "Meh", "Sad", "Awful"]
 
+    
+    var symptomList: [Double]!
 
     var moodList: [String]!
     var getMoodList: [Double]!
@@ -104,6 +106,19 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
         let DS = String(getDrySkin())
         let TH = String(getHair())
         let BF = String(getBreast())
+        
+        
+        //double
+        let IPs = getIPeriods()
+        let VGs = getVags()
+        let flashs = getFlashs()
+        let chillss = getChillss()
+        let NSs = getNightSweatss()
+        let PSs = getPoorSleeps()
+        let libidos = getLossLibidos()
+        let DSs = getDrySkins()
+        let THs = getHairs()
+        let BFs = getBreasts()
         
         //"Work","Friends", "Relax", "Date", "Sports", "Shopping", "Gaming", "Reading", "Relaxing", "Travelling", "Cleaning", "Cooking", "Other"
         // GET GREAT ACTIVITIES:
@@ -198,6 +213,8 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
 
         moodList = ["Great", "Good", "Meh", "Sad", "Awful"]
         getMoodList = [great, good, meh, sad, awful]
+        symptomList = [IPs,VGs,flashs,chillss,NSs,PSs,libidos,DSs,THs,BFs]
+
         
         statlabels = ["🗓 Today",  "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
         stats = ["sec", allTimeAverage, "3",  totalMoods]
@@ -677,7 +694,49 @@ let workThis = getGreatMoodActivity()
         return Int(AwfulOther.count)
     }
     
+
     
+    // GET SYMPTOMS DOUBLE
+    func getIPeriods() -> Double{
+        let IPsymptom = realm.objects(Mood.self).filter("symptom = 'Irregular period'")
+        return Double(IPsymptom.count)
+    }
+    func getVags() -> Double{
+        let vagDry = realm.objects(Mood.self).filter("symptom = 'Vaginal dryness'")
+        return Double(vagDry.count)
+    }
+    func getFlashs() -> Double{
+        let hotFlash = realm.objects(Mood.self).filter("symptom = 'Hot flash'")
+        return Double(hotFlash.count)
+    }
+    func getChillss() -> Double{
+        let chills = realm.objects(Mood.self).filter("symptom = 'Chills'")
+        return Double(chills.count)
+    }
+    func getNightSweatss() -> Double{
+        let nightsweats = realm.objects(Mood.self).filter("symptom = 'Night sweats'")
+        return Double(nightsweats.count)
+    }
+    func getPoorSleeps() -> Double{
+        let poorsleep = realm.objects(Mood.self).filter("symptom = 'Poor sleep'")
+        return Double(poorsleep.count)
+    }
+    func getLossLibidos() -> Double{
+        let libido = realm.objects(Mood.self).filter("symptom = 'Loss of libido'")
+        return Double(libido.count)
+    }
+    func getDrySkins() -> Double{
+        let dryskin = realm.objects(Mood.self).filter("symptom = 'Dry skin'")
+        return Double(dryskin.count)
+    }
+    func getHairs() -> Double{
+        let hair = realm.objects(Mood.self).filter("symptom = 'Thinning of hair'")
+        return Double(hair.count)
+    }
+    func getBreasts() -> Double{
+        let breast = realm.objects(Mood.self).filter("symptom = 'Loss of breast fullness'")
+        return Double(breast.count)
+    }
     
     
     func getAverage() -> String{
@@ -863,7 +922,7 @@ let workThis = getGreatMoodActivity()
             
             symActivityCell.title.text = locationNames[indexPath.row]
             symActivityCell.desc.text = locationDescription[indexPath.row]
-            symActivityCell.configure(dataPoints: s2Data, values: [1.0,4.0,0.0,1.0,0.0,0.0,2.0,1.0,2.0,0.0])
+            symActivityCell.configure(dataPoints: s2Data, values: symptomList)
             
             symActivityCell.contentView.layer.cornerRadius = 4.0
             symActivityCell.contentView.layer.borderWidth = 1.0

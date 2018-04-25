@@ -14,10 +14,6 @@ class ChangeTagViewController: UIViewController,  UITableViewDataSource, UITable
     let titles: [String] = ["Health", "Food", "Diet", "Symptoms","Stress Relief"]
     let values: [String] = ["Health Posts","Food Posts","Diet Posts","Symptom Posts","Stress Posts"]
     
-    
-
-    
-
     @IBOutlet var mainTableView: UITableView!
     
     override func viewDidLoad() {
