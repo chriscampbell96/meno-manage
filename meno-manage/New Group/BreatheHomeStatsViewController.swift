@@ -62,7 +62,7 @@ class BreatheHomeStatsViewController: UIViewController, UITableViewDataSource, U
 
     
         statlabels = ["🗓 Today", "🗓 7 Days", "🗓 30 Days", "📊 All Time", "📈 Daily Average" , "📈 Total Sessions Logged"]
-        stats = [todayLogged + "sec", "coming soon", "coming soon", allTimeLogged + " sec", dayAVG + " sec", totalSessions]
+        stats = [todayLogged + "sec", "err", "err", allTimeLogged + " sec", dayAVG + " sec", totalSessions]
     }
 
     override func didReceiveMemoryWarning() {

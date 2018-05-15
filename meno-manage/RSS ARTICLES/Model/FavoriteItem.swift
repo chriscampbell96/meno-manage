@@ -1,10 +1,3 @@
-//
-//  ProfileViewController.swift
-//  meno-manage
-//
-//  Created by Christopher Campbell on 01/02/2018.
-//  Copyright © 2018 DevChris. All rights reserved.
-//
 
 import UIKit
 import MWFeedParser

@@ -64,7 +64,7 @@ class MoodChartsViewController: UIViewController, UICollectionViewDelegate, UICo
     
     let s1Data: [String] = ["Row 3", "Row 3", "Row 3"]
     let s2Data: [String] = ["Irregular period", "Vaginal dryness", "Hot flashes", "Chills", "Night sweats", "Poor sleep", "Loss of libido", "Dry skin", "Thinning of hair", "Loss of breast fullness"]
-    let s3Data: [String] = ["🗓 Today", "📊 All Time Average", "🔥 Best Streak" , "📈 Total Sessions Logged"]
+    let s3Data: [String] = ["🗓 Today", "📊 All Time Average", "🔥 Best Streak" , "📈 Total Moods Logged"]
     
             let newData: [String] = ["Work","Friends", "Relax", "Date", "Sports", "Shopping", "Gaming", "Reading", "Relaxing", "Travelling", "Cleaning", "Cooking", "Other"]
     
@@ -942,7 +942,7 @@ let workThis = getGreatMoodActivity()
             
             pasWeekCell.title.text = locationNames[indexPath.row]
             pasWeekCell.desc.text = locationDescription[indexPath.row]
-            pasWeekCell.configure(dataPoints: getThisWeek(), values: [2.0,3.0,0.0,9.0,1.0,0.0,0.0])
+            pasWeekCell.configure(dataPoints: getThisWeek(), values: [2.0,3.0,0.0,9.0,1.0,0.0,2.0])
             
             
             pasWeekCell.contentView.layer.cornerRadius = 4.0

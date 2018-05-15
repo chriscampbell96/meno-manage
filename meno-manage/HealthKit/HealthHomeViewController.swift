@@ -23,7 +23,7 @@ class HealthHomeViewController: UIViewController,  UITableViewDataSource, UITabl
     @IBOutlet weak var tableList: UITableView!
     
     let titles: [String] = ["Step Count", "Active Energy", "Weight", "Height","Age"]
-    let values: [String] = ["204", "873", "N/A", "5'10.87", "0.0"]
+    let values: [String] = ["204", "873", "77kg", "5'11", "21"]
     
 
 
